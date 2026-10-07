@@ -14,7 +14,7 @@ This gives constructive GHZ activation whenever `nu > 1`, the exact asymptotic a
 
 ## Inherited inputs
 
-Yoshino et al. supply the full planar compatibility norm, perimeter criterion, redundant-setting reduction, parent and optimal dual certificate. Plavala, Guhne and Quintino supply general incompatible-qubit activation and ask about familiar state families and party counts. Compatibility norm bounds, GHZ correlation algebra and regular-polygon constructions are also inherited. [ATTRIBUTION](../literature/ATTRIBUTION.md) identifies the inspected passages.
+Yoshino et al. supply the full planar compatibility norm, perimeter criterion, redundant-setting reduction, parent and optimal dual certificate. Plavala, Guhne and Quintino supply general incompatible-qubit activation and ask about familiar state families and party counts. Compatibility norm bounds, complex GHZ correlation algebra and regular-polygon amplification rates for every setting count are also inherited. [ATTRIBUTION](../literature/ATTRIBUTION.md) and the [source audit](../literature/SOURCE_AUDIT.md) identify the inspected passages.
 
 ## What the checks establish
 
@@ -26,4 +26,4 @@ The chosen GHZ state maximizes our constructed functional. It need not maximize 
 
 No exact smallest party count for an arbitrarily small violation; no theorem for biased/noncoplanar POVMs or arbitrary marginal terms; no genuine N-party nonlocality, entanglement-depth bound, self-testing, cryptographic rate, finite-sample efficiency, detector no-click robustness, or implemented GHZ preparation. Global white-state noise is not independent detector noise. The pure full-correlation behavior is normalized and involves no postselection.
 
-No external independent proof review, exhaustive priority clearance or external acceptance has occurred. The [internal contribution review](CONTRIBUTION_REVIEW.md) is complete, and the [README](../README.md) provides the compact exposition. The scientific scope remains frozen.
+No external independent proof review, exhaustive priority clearance or external acceptance has occurred. The [internal contribution review](CONTRIBUTION_REVIEW.md), [source audit](../literature/SOURCE_AUDIT.md) and [operational consequences](OPERATIONAL_CONSEQUENCES.md) record the completed scientific prerequisites. The [README](../README.md) provides the compact exposition. The scientific scope remains frozen.

@@ -1,11 +1,13 @@
 # Current bounded task
 
-**Compact exposition completed; scientific scope remains frozen.**
+**Scientific prerequisites completed; scientific scope remains fixed.**
 
-The [README](../README.md) now provides the short reading path: fixed-detector question, precise theorem, three-step proof mechanism, predecessor boundary and one finite-party illustration. [THEOREM](../research/THEOREM.md) remains the full mathematical account. [CONTRIBUTION_REVIEW](../research/CONTRIBUTION_REVIEW.md) records the completed internal proof and contribution review.
+The explicit prerequisite audit is recorded in [operational consequences](../research/OPERATIONAL_CONSEQUENCES.md) and the [source audit](../literature/SOURCE_AUDIT.md). It resolves the existing theorem's proof obligations, fixed-margin resource interpretation, noise conventions and conservative-certificate normalization. The stronger predecessor comparison attributes regular-polygon exponents for every setting count to Nagata-Laskowski-Paterek (2006).
 
-The completed exposition adds no theorem or scientific extension. The inherited planar compatibility norm is the optimal asymptotic full-correlation Bell-amplification factor for the fixed family, attained constructively by phase-adjusted canonical GHZ states. Preserve the ceiling `r nu^(N-1)`, the exact local normalization, all nonclaims, and the attribution of the geometric certificates and known symmetric exponent.
+The retained additional implication is the conversion of every fixed unbiased binary coplanar qubit family's inherited optimal certificate into real Bell coefficients and a phase-adjusted canonical GHZ state, with the matching all-state full-correlation rate. [THEOREM](../research/THEOREM.md) and its protected hash are unchanged. Preserve the ceiling `r nu^(N-1)`, exact local normalization, all nonclaims, authorship and attribution.
 
-There is no queued scientific extension. Further work should answer a concrete proof objection, a directly covering predecessor, a reader's identified difficulty or an explicit new development request. Do not repeat the review or create another equivalent exposition checkpoint without such a reason.
+No unresolved scientific premise was identified for this bounded claim. No new experiment, numerical extrapolation, stronger measurement model, or exact-party-number optimization is required to support it. The source comparison remains bounded and the review remains internal.
 
-For any edit, read live main and `AGENTS.md`, use a feature branch, review the exact diff and hosted artifact, merge only the reviewed head, and verify the separate merged-main run. Initialization and the preceding contribution review are already merged. No manuscript submission, release or external contact is initiated.
+Further scientific work requires a concrete proof objection, a directly covering source, or an explicitly requested new claim. Do not repeat completed audits or append equivalent progress checkpoints merely to create activity. No manuscript submission, release, external contact or repository-setting change is initiated.
+
+For any edit, read live main and `AGENTS.md`, use a feature branch, review the exact diff and source-matched hosted artifact, merge only the reviewed expected head, and verify the separate merged-main run.

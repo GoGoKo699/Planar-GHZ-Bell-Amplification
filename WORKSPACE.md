@@ -12,7 +12,7 @@ Read `AGENTS.md`, `STATUS.md`, `work_orders/CURRENT.md`, `research/THEOREM.md`, 
 
 The [focused contribution review](research/CONTRIBUTION_REVIEW.md) found no blocking proof error and retained the frozen theorem. It also made explicit that the four-setting regular construction in prior work already contains its special-case exponent. The exact retained implication is the explicit canonical-GHZ construction for arbitrary fixed planar families with the matching all-state full-correlation rate. Known ingredients alone are not a subsumption argument; unfamiliar notation is not evidence of novelty.
 
-The compact exposition is complete in the [README](README.md): fixed resources, theorem, proof mechanism, attribution and limits. [CURRENT](work_orders/CURRENT.md) records the stopping point and reasons to reopen work. Do not repeat the completed initialization, contribution review or exposition without a concrete new task.
+The compact exposition is complete in the [README](README.md): fixed resources, theorem, proof mechanism, attribution and limits. The explicitly requested scientific prerequisite audit is complete in [operational consequences](research/OPERATIONAL_CONSEQUENCES.md) and the [source audit](literature/SOURCE_AUDIT.md). The latter adds the 2006 regular-polygon predecessor for every setting count. [CURRENT](work_orders/CURRENT.md) records the stopping point and reasons to reopen work. Do not repeat completed work without a concrete new task.
 
 Do not begin another broad scout, add biased/noncoplanar measurements, general marginals, exact-party-number optimization, or device simulations by default. The current result can be assessed without solving those stronger questions. Do not represent internal checks as independent scientific review.
 

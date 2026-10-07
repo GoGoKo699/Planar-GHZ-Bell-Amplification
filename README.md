@@ -87,9 +87,9 @@ Dividing by the exact local bound can only improve this lower bound. The selecte
 
 ## What this adds to existing results
 
-Yoshino et al., [*Joint measurability of coplanar POVMs*](https://arxiv.org/abs/2609.38836v1), supply the entire compatibility geometry, perimeter criterion, parent and optimal dual certificate. General qubit incompatibility activation, compatibility-based Bell bounds and GHZ correlation methods also have direct predecessors. The four-setting symmetric construction of Designolle et al. already contains its special-case exponent.
+Yoshino et al., [*Joint measurability of coplanar POVMs*](https://arxiv.org/abs/2609.38836v1), supply the entire compatibility geometry, perimeter criterion, parent and optimal dual certificate. General qubit incompatibility activation, compatibility-based Bell bounds and complex GHZ correlation methods also have direct predecessors. Nagata, Laskowski and Paterek's [2006 multisetting construction](https://arxiv.org/abs/quant-ph/0601107v2) already contains the perimeter exponent for every regular setting polygon; Designolle et al. supply optimized symmetric constructions. The [source audit](literature/SOURCE_AUDIT.md) makes the fixed-detector phase comparison explicit.
 
-The additional implication is the conversion of **every fixed planar family** in the declared class into explicit Bell coefficients and a phase-adjusted canonical GHZ state, together with a matching exponential bound over **all states**. General activation alone does not prescribe a full-correlation witness or its rate. The argument is a short connection between established ingredients; the [focused contribution review](research/CONTRIBUTION_REVIEW.md) spells out the strongest predecessor comparisons and the [attribution record](literature/ATTRIBUTION.md) identifies the source passages.
+The additional implication is the conversion of **every fixed planar family** in the declared class into explicit Bell coefficients and a phase-adjusted canonical GHZ state, together with a matching exponential bound over **all states**. General activation alone does not prescribe a full-correlation witness or its rate. The argument is a short connection between established ingredients. [Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) give the finite logarithmic-rate estimate, fixed-margin party cost and precise noise interpretation; the [attribution record](literature/ATTRIBUTION.md) identifies the source passages.
 
 ## One finite-party illustration
 
@@ -105,7 +105,9 @@ The theorem does not cover biased or noncoplanar families, Bell expressions with
 |---|---|
 | [Model and claims](research/MODEL_AND_CLAIMS.md) | Precise resources, normalization and nonclaims. |
 | [Theorem and proof](research/THEOREM.md) | Complete construction, converse, degeneracies and party bounds. |
+| [Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) | Finite rate estimate, fixed-margin cost, noise conventions and certificate interpretation. |
 | [Focused contribution review](research/CONTRIBUTION_REVIEW.md) | Proof scrutiny and the precise predecessor boundary. |
+| [Source audit](literature/SOURCE_AUDIT.md) | Stronger regular-polygon predecessor and current primary-source comparison. |
 | [Attribution](literature/ATTRIBUTION.md) | Inherited results and source-reading depth. |
 | [Verification](VERIFICATION.md) | Original checks, preserved evidence and numerical comparison policy. |
 

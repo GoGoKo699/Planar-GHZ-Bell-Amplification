@@ -1,13 +1,15 @@
 # Status
 
-**Compact exposition completed; theorem and scientific scope unchanged.**
+**Scientific prerequisite audit completed within the fixed theorem's scope.**
 
-The repository is `GoGoKo699/Planar-GHZ-Bell-Amplification`. The [README](README.md) connects the fixed-detector question to the main theorem and its three-step proof: inherited geometric certificate, constructive GHZ witness, and all-state compatible-parent bound. The finite-party example follows the mechanism.
+The repository is `GoGoKo699/Planar-GHZ-Bell-Amplification`. [THEOREM](research/THEOREM.md) and [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md) specify the current result. The [README](README.md) supplies its compact reading path.
 
-The [focused contribution review](research/CONTRIBUTION_REVIEW.md), merged in [PR #2](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/pull/2), found no blocking proof error. It acknowledges that prior work already contains the four-setting symmetric exponent. The retained result covers every fixed family in the unbiased binary coplanar qubit class, including irregular directions and unequal sharpness, with a matching all-state full-correlation rate.
+[Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) resolve the logarithmic finite-size estimate, inclusive and strict fixed-margin party bounds, noise conventions, and interpretation of the archived conservative local-bound certificates. The dependency, normalization, phase, degeneracy and all-state-bound audit found no blocking proof gap or missing assumption in the declared model.
 
-The authoritative claim and all limitations remain in [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md) and [THEOREM](research/THEOREM.md). Internal scrutiny does not establish external independent review or exhaustive priority clearance.
+The [source audit](literature/SOURCE_AUDIT.md) strengthens the preceding [contribution review](research/CONTRIBUTION_REVIEW.md): Nagata-Laskowski-Paterek (2006) already contain the regular-polygon exponent for every setting count. The retained additional implication covers arbitrary fixed irregular, unequally sharp planar families with an explicit GHZ construction and a matching all-state full-correlation rate. The audit also checks the symmetric source's v2/v3 boundary and the identified complex/multilinear frameworks.
 
-The theorem, prior assessment and review, all 81 historical snapshot members, original scientific scripts, reference reports, tolerances and protected hashes are unchanged by the exposition pass. Each edit requires its own exact PR-head and separate merged-main evidence under [VERIFICATION](VERIFICATION.md); operational receipts belong in the corresponding pull request.
+No unresolved scientific prerequisite was identified for this bounded claim. This is internal scrutiny and a targeted source comparison, not external independent review or exhaustive priority clearance. All nonclaims remain in force.
 
-The [current work order](work_orders/CURRENT.md) is complete. No scientific extension is queued.
+The frozen theorem, preceding assessment, all 81 historical snapshot members, original scientific scripts, reference reports, scientific tolerances and protected hashes remain unchanged. Exact PR-head and separate merged-main evidence belongs in the corresponding pull request under [VERIFICATION](VERIFICATION.md).
+
+[CURRENT](work_orders/CURRENT.md) records the stopping boundary. No scientific extension is queued.

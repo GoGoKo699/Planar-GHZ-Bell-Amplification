@@ -26,7 +26,7 @@ For an independent check of the absolute local bound, let `alpha = pi/(2M)`. The
 $$
 L_N=\csc(\alpha)^N\cos\alpha,\qquad
 \lim_{N\to\infty}V(N,M)^{1/N}=M\sin\alpha
-=\frac{\operatorname{perimeter}(K_M)}4.
+=\frac{\mathrm{perimeter}(K_M)}4.
 $$
 
 Common sharpness t multiplies each full correlator by `t^N`, giving root rate `t M sin(alpha)`. The fixed-detector phase absorption and this noise translation are elementary inferences made here. No new priority is assigned to the regular-polygon exponent, its uniformly noisy version, or the complex product method. The paper's communication-complexity applications are not transferred to the present theorem.

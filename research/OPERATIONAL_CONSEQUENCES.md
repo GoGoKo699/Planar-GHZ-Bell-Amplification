@@ -1,13 +1,13 @@
 # Operational consequences and proof boundaries
 
-These consequences follow from [THEOREM](THEOREM.md) for the same fixed, finite, unbiased binary coplanar qubit family and full-correlation objective. They introduce no additional measurement resource or claim about experimental or statistical efficiency. The [source audit](../literature/SOURCE_AUDIT.md) supplies the strengthened predecessor comparison.
+These consequences follow from [THEOREM](../docs/THEOREM.md) for the same fixed, finite, unbiased binary coplanar qubit family and full-correlation objective. They introduce no additional measurement resource or claim about experimental or statistical efficiency. The [source audit](../literature/SOURCE_AUDIT.md) supplies the strengthened predecessor comparison.
 
 ## What the geometric quantity measures
 
 For the nonzero family, write
 
 $$
-\nu=\frac{\operatorname{perimeter}(\operatorname{conv}\{\pm\mathbf a_x\})}{4},
+\nu=\frac{\mathrm{perimeter}(\mathrm{conv}\{\pm\mathbf a_x\})}{4},
 \qquad r=\max_x\|\mathbf a_x\|.
 $$
 

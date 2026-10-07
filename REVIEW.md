@@ -4,7 +4,7 @@
 
 This bridge starts from the single tutorial anchor: Gühne, Haapasalo, Kraft, Pellonpää and Uola, [*Incompatible measurements in quantum information science*](https://arxiv.org/abs/2112.06784v3), Rev. Mod. Phys. **95**, 011003 (2023). The [reading guide](docs/README.md) identifies the relevant sections. Familiarity with qubit states, Pauli matrices and tensor products is assumed.
 
-The review supplies the language of noisy measurements, joint parents, incompatibility quantification and Bell locality. It does not contain the later arbitrary-planar perimeter theorem or the GHZ construction below. We state the geometric input with its attribution, then explain the connection. The authoritative statement and complete proof remain in [THEOREM](research/THEOREM.md); the experiment and nonclaims remain in [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md).
+The review supplies the language of noisy measurements, joint parents, incompatibility quantification and Bell locality. It does not contain the later arbitrary-planar perimeter theorem or the GHZ construction below. We state the geometric input with its attribution, then explain the connection. The authoritative statement and complete proof remain in [THEOREM](docs/THEOREM.md); the experiment and nonclaims remain in [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md).
 
 | Stage | Question |
 |---|---|
@@ -53,7 +53,7 @@ One can measure the parent first and subsequently simulate any requested setting
 
 Section IV.A explains why a jointly measurable family on one side of a bipartite experiment cannot violate a Bell inequality: the parent outcome supplies a hidden variable, and the other party's conditional response supplies its local response function.
 
-The multipartite version used here leaves one party arbitrary. If the first N−1 parties each have parents, their joint parent outcomes have a probability distribution and leave a conditional quantum state at the last party. Given those outcomes, the first parties respond through classical postprocessing and the last party responds through the Born rule. That is a local model. The all-but-one-sites statement is an inherited ingredient; [THEOREM, Section 5](research/THEOREM.md#5-the-all-state-upper-bound-with-one-site-left-arbitrary) identifies its source.
+The multipartite version used here leaves one party arbitrary. If the first N−1 parties each have parents, their joint parent outcomes have a probability distribution and leave a conditional quantum state at the last party. Given those outcomes, the first parties respond through classical postprocessing and the last party responds through the Born rule. That is a local model. The all-but-one-sites statement is an inherited ingredient; [THEOREM, Section 5](docs/THEOREM.md#5-the-all-state-upper-bound-with-one-site-left-arbitrary) identifies its source.
 
 ## 3. The full-correlation objective and its local bound
 
@@ -93,8 +93,8 @@ A ratio above one violates locality. A ratio below one is meaningful: the object
 Take the symmetric hull of the fixed detector vectors and define
 
 ```math
-K=\operatorname{conv}\{\pm\mathbf a_x\},\qquad
-\nu=\frac{\operatorname{perimeter}(K)}4,\qquad
+K=\mathrm{conv}\{\pm\mathbf a_x\},\qquad
+\nu=\frac{\mathrm{perimeter}(K)}4,\qquad
 r=\max_x\|\mathbf a_x\|.
 ```
 
@@ -107,7 +107,7 @@ For a nondegenerate hull, its certificate gives real vectors h_x such that
 \qquad \sum_x h_x\cdot\mathbf a_x=\nu.
 ```
 
-The first condition limits every classical sign sum. The second pairs the certificate with the detectors and reaches the geometric value. This is the role of a dual certificate: a feasible bound that is attained. Sections III.B.1–2 of the tutorial explain the general optimization and noise-robustness language; the explicit polygon formula belongs to the later planar source. Redundant settings receive zero certificate coefficients, so they do not obstruct the construction. [THEOREM, Section 3](research/THEOREM.md#3-inherited-geometric-input) states the complete edge formula and source passages.
+The first condition limits every classical sign sum. The second pairs the certificate with the detectors and reaches the geometric value. This is the role of a dual certificate: a feasible bound that is attained. Sections III.B.1–2 of the tutorial explain the general optimization and noise-robustness language; the explicit polygon formula belongs to the later planar source. Redundant settings receive zero certificate coefficients, so they do not obstruct the construction. [THEOREM, Section 3](docs/THEOREM.md#3-inherited-geometric-input) states the complete edge formula and source passages.
 
 Encode each certificate vector as a complex number:
 
@@ -132,13 +132,13 @@ Choose real Bell coefficients by taking the real part of a product:
 
 ```math
 \beta_{x_1\ldots x_N}
-=\operatorname{Re}\left[e^{i\gamma}\prod_{j=1}^N c_{x_j}\right].
+=\mathrm{Re}\left[e^{i\gamma}\prod_{j=1}^N c_{x_j}\right].
 ```
 
 The complex numbers are a design tool; the Bell expression and its measured value remain real. Its value on any deterministic local strategy factorizes:
 
 ```math
-\left|\operatorname{Re}\left[
+\left|\mathrm{Re}\left[
 e^{i\gamma}\prod_{j=1}^N\sum_x c_xs_x^{(j)}\right]\right|\le1.
 ```
 
@@ -192,7 +192,7 @@ To see the second inequality, set t equal to the ratio of the modulus of v to nu
 (1-t^k)(1-t^{N-k})\ge0.
 ```
 
-Dividing Q_N by the exact local bound, which is positive and at most one, proves a normalized value at least nu to the Nth power divided by two. This GHZ maximality is about the tensor just constructed. For an arbitrary fixed planar tensor, a different complementary-bitstring block can maximize the operator; [THEOREM, Section 7](research/THEOREM.md#7-what-ghz-optimality-means-here) gives a counterexample to a broader claim.
+Dividing Q_N by the exact local bound, which is positive and at most one, proves a normalized value at least nu to the Nth power divided by two. This GHZ maximality is about the tensor just constructed. For an arbitrary fixed planar tensor, a different complementary-bitstring block can maximize the operator; [THEOREM, Section 7](docs/THEOREM.md#7-what-ghz-optimality-means-here) gives a counterexample to a broader claim.
 
 ## 7. Joint parents bound every competing state
 
@@ -304,4 +304,4 @@ The experiment uses one qubit per party, supplied entanglement, a known detector
 
 Global white-state noise and independent detector noise are different operations. The [operational consequences](research/OPERATIONAL_CONSEQUENCES.md) explain their distinct effects, finite logarithmic-rate estimates and fixed-margin party bounds. These consequences support the same claim. Finite checks and examples illustrate the proof; the arbitrary-party statement rests on the analytical argument.
 
-Continue with [THEOREM](research/THEOREM.md) for the formal proof, or use the [reading guide](docs/README.md) to move between the tutorial and this bridge.
+Continue with [THEOREM](docs/THEOREM.md) for the formal proof, or use the [reading guide](docs/README.md) to move between the tutorial and this bridge.

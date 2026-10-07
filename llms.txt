@@ -44,7 +44,8 @@ and independent detector noise must not be conflated.
 - [Reading guide](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/docs/README.md): selected sections of the one external tutorial and repository map.
 - [Tutorial-to-theorem bridge](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/REVIEW.md): definitions, local calculations, noisy orthogonal example and proof connections.
 - [Model and claims](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/MODEL_AND_CLAIMS.md): authoritative resources, normalization and nonclaims.
-- [Theorem and proof](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/THEOREM.md): authoritative construction, converse, degeneracies and party bounds.
+- [Theorem and proof](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/docs/THEOREM.md): display-safe reading view of the authoritative construction, converse, degeneracies and party bounds.
+- [Preserved theorem source](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/THEOREM.md): protected scientific record, also checked against the reading view.
 - [Operational consequences](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/OPERATIONAL_CONSEQUENCES.md): finite rate, party costs, noise and conservative certificate interpretation.
 - [Source audit](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/SOURCE_AUDIT.md) and [attribution](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/ATTRIBUTION.md): inherited inputs and bounded predecessor comparison.
 - [Contribution review](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/CONTRIBUTION_REVIEW.md): internal proof scrutiny; read with the later source audit.

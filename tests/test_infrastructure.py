@@ -21,6 +21,24 @@ class InfrastructureTests(unittest.TestCase):
     def test_active_links(self):
         self.assertGreater(verify.check_links(), 20)
 
+    def test_nested_reading_guide_links_are_checked(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root/'archive').mkdir()
+            (root/'archive/README.md').write_text('Historical evidence.\n')
+            (root/'llms.txt').write_text('Automated reading guide.\n')
+            (root/'docs/lessons').mkdir(parents=True)
+            guide = root/'docs/lessons/README.md'
+            guide.write_text('[Missing proof](../../research/missing.md)\n')
+            with self.assertRaisesRegex(ValueError, 'Broken local link'):
+                verify.check_links(root)
+            (root/'research').mkdir()
+            (root/'research/missing.md').write_text('Proof.\n')
+            self.assertEqual(verify.check_links(root), 1)
+            (root/'llms.txt').write_text('[Missing guide](docs/missing.md)\n')
+            with self.assertRaisesRegex(ValueError, 'Broken local link'):
+                verify.check_links(root)
+
     def test_exact_discrete_and_float_difference_record(self):
         a = {'n': 3, 'status': 'PASS', 'value': 1.0, 'q': ['1/3', True]}
         b = {**a, 'value': 1.0+1e-14}

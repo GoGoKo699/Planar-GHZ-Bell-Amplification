@@ -21,6 +21,8 @@ A passing finite checker does not prove the asymptotic theorem or novelty. Do no
 
 ## Reader-facing material
 
+The single teaching anchor is Gühne et al., *Incompatible measurements in quantum information science*, arXiv:2112.06784v3 (2023). `docs/README.md` maps its PDF section labels to `REVIEW.md`, which teaches the remaining steps locally. The bridge is subordinate to the frozen theorem, not a new scientific claim. Keep Yoshino's 2026 planar geometry and all research-paper attributions distinct from the tutorial background. Keep `llms.txt` aligned with the relevance, scope and authoritative reading order.
+
 Use GitHub-supported displayed math with readable spacing. Distinguish mathematical comparison measurements from supplied experimental resources. Preserve authorship and the owner's MIT license. Use the established Purpose and contact wording; do not add target-journal or publication-plan notices. Do not redistribute third-party articles, fonts, unrelated attachments or protected-project code.
 
 The owner permits repository changes and merging after checks. This does not authorize external contact, release, submission, sharing with collaborators, or changes to visibility/permissions. Stop scope expansion while the contribution is under review.

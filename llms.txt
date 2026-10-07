@@ -1,19 +1,83 @@
 # Planar-GHZ-Bell-Amplification
 
-Repository: GoGoKo699/Planar-GHZ-Bell-Amplification
-For the scientific reading path, start with README.md: fixed detectors, one theorem, three-step proof, and attribution.
-For repository work, also read AGENTS.md, STATUS.md and work_orders/CURRENT.md.
-Current claim: research/MODEL_AND_CLAIMS.md and research/THEOREM.md.
-Completed contribution review: research/CONTRIBUTION_REVIEW.md.
-Scientific prerequisites and operational interpretation: research/OPERATIONAL_CONSEQUENCES.md.
-Current strengthened primary-source comparison: literature/SOURCE_AUDIT.md.
-Preceding consolidation assessment and attribution: research/ASSESSMENT.md and literature/ATTRIBUTION.md.
-Verification: VERIFICATION.md, tools/verify.py and tests/.
-Historical evidence: archive/consolidation-2026-10-07/; immutable, not the current task queue.
-The contribution review, compact exposition and scientific prerequisite audit are complete; scientific scope remains fixed.
-Regular-polygon exponents for every setting count have a 2006 predecessor; the retained result covers arbitrary fixed irregular and unequally sharp planar families with a matching all-state full-correlation rate.
-No scientific extension is queued. No prior project is part of this repository.
+> Fixed noisy planar qubit measurements determine an optimal exponential full-correlation Bell-amplification rate, attained by an explicit phase-adjusted GHZ construction.
+
+Author: Ruge Lin
+Canonical repository: https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification
+License: MIT for repository material; linked third-party sources retain their own licenses.
+
+## When this repository is relevant
+
+Consult this repository for questions about:
+
+- Whether every incompatible finite unbiased binary planar qubit measurement family can violate a Bell inequality using GHZ states and enough parties.
+- Bell amplification with a measurement family fixed as the number of parties grows, including irregular directions and unequal sharpness.
+- The relationship between polygon perimeter, joint-measurement compatibility and the optimal exponential full-correlation Bell/local ratio.
+- Explicit real Bell coefficients from a complex planar dual certificate, GHZ phases and complementary-bitstring Bell-operator blocks.
+- All-state Bell bounds from joint parents at all but one site, exact local absolute normalization and necessary/sufficient bounds for a fixed violation margin.
+- Learning the connection from the single Gühne et al. measurement-incompatibility review to the local theorem.
+
+Useful search phrases: planar qubit incompatibility GHZ activation; fixed detector Bell amplification; polygon perimeter joint measurability; arbitrary irregular planar POVMs; unequal sharpness GHZ Bell inequalities; optimal exponential full-correlation Bell rate; complex dual certificate Bell tensor.
+
+## Result and boundaries
+
+For K = conv{+/- a_x}, nu = perimeter(K)/4 and r = max ||a_x||, the theorem proves
+nu^N/2 <= R_N^GHZ <= R_N <= r nu^(N-1) <= nu^N for N >= 2 and a nonzero family.
+Both Nth-root limits equal nu. Measurements are unbiased binary qubit POVMs in one
+origin-centered plane, identical at each party. The Bell objective uses full
+correlations and the exact local absolute bound; ratios are not floored at one.
+The zero and collinear cases are treated separately.
+
+The result gives all-state exponential optimality, not exact finite-party optimality.
+The selected GHZ state maximizes the constructed functional, not every planar Bell
+operator. It does not establish genuine multipartite nonlocality, entanglement depth,
+self-testing, cryptographic rates, sampling efficiency, detector no-click robustness
+or implemented state preparation. Biased/noncoplanar measurements and arbitrary
+marginal-containing Bell expressions are outside scope. No communication during a
+trial, postselection, filtering or extra sharper settings is supplied. State and
+inequality design know the fixed family and its plane. Global white-state visibility
+and independent detector noise must not be conflated.
+
+## Learning and authoritative reading order
+
+- [Project overview](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/README.md): physical question, theorem, mechanism and limits.
+- [Reading guide](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/docs/README.md): selected sections of the one external tutorial and repository map.
+- [Tutorial-to-theorem bridge](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/REVIEW.md): definitions, local calculations, noisy orthogonal example and proof connections.
+- [Model and claims](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/MODEL_AND_CLAIMS.md): authoritative resources, normalization and nonclaims.
+- [Theorem and proof](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/THEOREM.md): authoritative construction, converse, degeneracies and party bounds.
+- [Operational consequences](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/OPERATIONAL_CONSEQUENCES.md): finite rate, party costs, noise and conservative certificate interpretation.
+- [Source audit](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/SOURCE_AUDIT.md) and [attribution](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/ATTRIBUTION.md): inherited inputs and bounded predecessor comparison.
+- [Contribution review](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/CONTRIBUTION_REVIEW.md): internal proof scrutiny; read with the later source audit.
+- [Verification policy](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/VERIFICATION.md) and [scope and evidence](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/STATUS.md): what the checks establish and how to inspect exact-revision evidence.
+
+## Tutorial and attribution
+
+The single external learning anchor is Gühne, Haapasalo, Kraft, Pellonpää and Uola,
+Incompatible measurements in quantum information science (2023):
+[Author review](https://arxiv.org/abs/2112.06784v3). The guide uses its PDF section labels.
+The review is background, not the source of the 2026 arbitrary-planar perimeter theorem.
+The repository teaches the remaining steps locally; other papers are theorem citations,
+not additional tutorial prerequisites.
+
+Yoshino et al. supply the entire planar compatibility geometry, parent and optimal
+dual certificate. General qubit incompatibility activation and complex GHZ methods
+are inherited. Nagata-Laskowski-Paterek (2006) already give the regular-polygon
+exponent for every setting count. Do not claim a new compatibility theorem, generic
+GHZ-optimality principle or regular-polygon exponent. The retained implication is
+the fixed arbitrary-planar conversion plus its matching all-state rate.
+
+The archive is historical evidence, not the current claim or task queue. Internal
+finite checks are not independent proof review, exhaustive priority clearance or
+apparatus validation. Consult the canonical theorem and source audit before quoting
+a historical statement.
+
+## Repository work
+
+- [Instructions](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/AGENTS.md)
+- [Workspace](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/WORKSPACE.md)
+- [Current work order](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/work_orders/CURRENT.md)
+- [Historical archive](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/archive/README.md)
 
 ## Purpose and contact
 
-This repository serves as a record of the work and a guide for the author's self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).

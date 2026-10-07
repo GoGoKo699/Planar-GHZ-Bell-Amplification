@@ -1,8 +1,6 @@
-# Status
+# Scope and evidence
 
-**Scientific prerequisite audit completed within the fixed theorem's scope.**
-
-The repository is `GoGoKo699/Planar-GHZ-Bell-Amplification`. [THEOREM](research/THEOREM.md) and [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md) specify the current result. The [README](README.md) supplies its compact reading path.
+The repository is `GoGoKo699/Planar-GHZ-Bell-Amplification`. [THEOREM](research/THEOREM.md) and [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md) specify the current result. The [README](README.md) supplies its compact overview. The [reading guide](docs/README.md) and [local bridge](REVIEW.md) lead from Gühne et al.'s measurement-incompatibility review to the theorem, with a worked noisy two-setting example. The review is the one external tutorial; the precise perimeter theorem retains its Yoshino attribution.
 
 [Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) resolve the logarithmic finite-size estimate, inclusive and strict fixed-margin party bounds, noise conventions, and interpretation of the archived conservative local-bound certificates. The dependency, normalization, phase, degeneracy and all-state-bound audit found no blocking proof gap or missing assumption in the declared model.
 

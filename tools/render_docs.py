@@ -15,6 +15,16 @@ READER_PATHS = (
     'research/CONTRIBUTION_REVIEW.md', 'literature/SOURCE_AUDIT.md',
     'literature/ATTRIBUTION.md',
 )
+# Inline text labels avoid the renderer's unsupported numbered-equation table.
+PORTABLE_TAGS = {
+    r'\tag{1}': r'\qquad\text{(1)}',
+    r'\tag{2}': r'\qquad\text{(2)}',
+    r'\tag{3}': r'\qquad\text{(3)}',
+    r'\tag{4}': r'\qquad\text{(4)}',
+    r'\tag{5}': r'\qquad\text{(5)}',
+    r'\tag{6}': r'\qquad\text{(6)}',
+    r'\tag{7}': r'\qquad\text{(7)}',
+}
 
 THEOREM_TITLE = '# Optimal exponential Bell amplification from planar qubit measurements'
 # These exact editorial changes apply only to the protected theorem's reading
@@ -162,6 +172,8 @@ def theorem_view(root: Path = ROOT) -> str:
     if root.resolve() == ROOT.resolve() or text.startswith(THEOREM_TITLE+'\n'):
         text = theorem_reader_prose(text)
     text = text.replace(r'\operatorname{', r'\mathrm{')
+    for old, new in PORTABLE_TAGS.items():
+        text = text.replace(old, new)
     opened = False
     references = False
     lines = []
@@ -194,7 +206,7 @@ def check(root: Path = ROOT) -> dict:
             continue
         for match in MATH.finditer(path.read_text()):
             blocks += 1
-            if r'\operatorname' in match.group():
+            if any(macro in match.group() for macro in (r'\operatorname', r'\tag')):
                 raise ValueError(f'Unsupported math macro in {path.relative_to(root)}')
     for relative in READER_PATHS:
         path = root/relative
@@ -203,7 +215,7 @@ def check(root: Path = ROOT) -> dict:
         prose = CODE_FENCE.sub('', MATH.sub('', path.read_text()))
         for match in INLINE_MATH.finditer(prose):
             inline += 1
-            if r'\operatorname' in match.group():
+            if any(macro in match.group() for macro in (r'\operatorname', r'\tag')):
                 raise ValueError(f'Unsupported math macro in {relative}')
         prose = INLINE_MATH.sub('', prose)
         if '$`' in prose or '`$' in prose:

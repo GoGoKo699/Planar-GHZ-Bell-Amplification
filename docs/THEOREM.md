@@ -50,7 +50,7 @@ Set
 K=\mathrm{conv}\{\pm\mathbf a_x\},\qquad
 \nu=\frac{\mathrm{perimeter}(K)}4,\qquad
 r=\max_x\|\mathbf a_x\|.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The perimeter of a segment is twice its length; all-zero measurements give $`\nu=r=0`$. The inherited geometry implies $`r\le\nu\le\pi r/2`$ and compatibility iff $`\nu\le1`$. The operators $`A_x/\nu`$ have a parent whenever $`\nu>0`$. These rescaled operators are a mathematical comparison in the proof, not extra settings supplied in the experiment.
@@ -65,7 +65,7 @@ For every $`N\ge2`$ and nonzero family,
 \le \mathcal R_N
 \le r\nu^{N-1}
 \le\nu^N.}
-\tag{2}
+\qquad\text{(2)}
 ```
 
 There is an explicit $`\beta`$ and phase-adjusted GHZ state giving the lower bound; the state in fact maximizes that constructed Bell operator. Therefore
@@ -74,7 +74,7 @@ There is an explicit $`\beta`$ and phase-adjusted GHZ state giving the lower bou
 \boxed{
 \lim_{N\to\infty}(\mathcal R_N^{\rm GHZ})^{1/N}
 =\lim_{N\to\infty}\mathcal R_N^{1/N}=\nu.}
-\tag{3}
+\qquad\text{(3)}
 ```
 
 For the zero family both sequences vanish. For a nonzero collinear family one has $`\nu=r`$ and exactly $`\mathcal R_N=\mathcal R_N^{\mathrm{GHZ}}=r^N`$, so no incompatible case is lost in the nondegenerate construction below.
@@ -103,7 +103,7 @@ These are the columns of the source's matrix $`Y=\tfrac12\widehat K C^T`$ [Y26, 
 \max_{s_x=\pm1}\left\|\sum_xs_xh_x\right\|\le1,
 \qquad
 \sum_xh_x\cdot\mathbf a_x=\nu.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 Write $`z_x=a_{x1}+i a_{x2}`$, $`c_x=h_{x1}+i h_{x2}`$, and identify $`k_i`$ with its complex coordinate. Substitution and telescoping give
@@ -113,7 +113,7 @@ u=\sum_xc_x\bar z_x=\frac12\sum_i\|k_i\|=\nu,
 \qquad
 v=\sum_xc_xz_x=\frac12\sum_i\frac{k_i^2}{\|k_i\|},
 \qquad |v|\le\nu.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 Equation (4), including its explicit construction, is inherited. Equation (5) is the elementary dictionary used in the additional Bell argument. The geometry need not be rederived as an allegedly new result.
@@ -127,7 +127,7 @@ Choose
 ```math
 \beta_{x_1\ldots x_N}
 =\mathrm{Re}\left[e^{i\gamma}\prod_{j=1}^Nc_{x_j}\right].
-\tag{6}
+\qquad\text{(6)}
 ```
 
 For any local deterministic strategy its value factors:
@@ -191,7 +191,7 @@ For $`\nu>1`$ and a desired ratio $`R>1`$, any full-correlation experiment reach
 
 ```math
 N\ge\left\lceil1+\frac{\ln(R/r)}{\ln\nu}\right\rceil.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 The construction is sufficient to exceed $`R`$ whenever $`\nu^N>2R`$. Thus the required party number has inverse-$`(\nu-1)`$ order for a fixed $`R`$ near incompatibility. The constants depend on the target and, in the lower bound, on $`r`$. No exact minimum for an infinitesimal violation is asserted.

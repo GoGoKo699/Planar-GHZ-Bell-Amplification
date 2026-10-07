@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import importlib.util
 import json
+import re
 import tempfile
 import unittest
 
@@ -96,16 +97,26 @@ class InfrastructureTests(unittest.TestCase):
             root = Path(tmp)
             (root/'research').mkdir()
             (root/'docs').mkdir()
-            source = '# Theorem\n\n$$\nK=\\operatorname{conv}\\{a\\}\n$$\n'
+            source = '# Theorem\n\n$$\nK=\\operatorname{conv}\\{a\\}\n\\tag{1}\n$$\n'
             (root/'research/THEOREM.md').write_text(source)
             view = root/'docs/THEOREM.md'
             view.write_text(renderer.theorem_view(root))
+            self.assertIn(r'\qquad\text{(1)}', view.read_text())
+            self.assertNotIn(r'\tag', view.read_text())
             renderer.check(root)
             readme = root/'README.md'
             readme.write_text('```math\nK=\\operatorname{conv}\\{a\\}\n```\n')
             with self.assertRaisesRegex(ValueError, 'Unsupported math macro'):
                 renderer.check(root)
             readme.write_text('```math\nK=\\mathrm{conv}\\{a\\}\n```\n')
+            renderer.check(root)
+            readme.write_text('```math\nK=\\mathrm{conv}\\{a\\}\n\\tag{1}\n```\n')
+            with self.assertRaisesRegex(ValueError, 'Unsupported math macro'):
+                renderer.check(root)
+            readme.write_text('$`K=\\mathrm{conv}\\{a\\}\\tag{1}`$\n')
+            with self.assertRaisesRegex(ValueError, 'Unsupported math macro'):
+                renderer.check(root)
+            readme.write_text('```math\nK=\\mathrm{conv}\\{a\\}\\qquad\\text{(1)}\n```\n')
             renderer.check(root)
             view.write_text(view.read_text().replace('K=', 'Q='))
             with self.assertRaisesRegex(ValueError, 'reading view is stale'):
@@ -164,10 +175,22 @@ class InfrastructureTests(unittest.TestCase):
         source_math = [match[2] for match in renderer.MATH.finditer(source)]
         view_math = [match[1] for match in renderer.MATH.finditer(view)]
         self.assertEqual(len(source_math), 24)
+        normalized = []
+        for formula in source_math:
+            formula = formula.replace(r'\operatorname{', r'\mathrm{')
+            for number in range(1, 8):
+                formula = formula.replace(
+                    r'\tag{'+str(number)+'}', r'\qquad\text{('+str(number)+')}',
+                )
+            normalized.append(formula)
+        self.assertEqual(normalized, view_math)
         self.assertEqual(
-            [formula.replace(r'\operatorname{', r'\mathrm{') for formula in source_math],
-            view_math,
+            [tag for formula in source_math for tag in re.findall(r'\\tag\{(\d+)\}', formula)],
+            [str(number) for number in range(1, 8)],
         )
+        self.assertNotIn(r'\tag', view)
+        for number in range(1, 8):
+            self.assertEqual(view.count(r'\qquad\text{('+str(number)+')}'), 1)
         bibliography = source.split('## Primary references\n', 1)[1].strip()
         view_bibliography = view.split('## Primary references\n', 1)[1].split(
             '\nThe preserved [scientific source]', 1,

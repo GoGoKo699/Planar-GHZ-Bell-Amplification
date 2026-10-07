@@ -114,15 +114,4 @@ $$
 
 Their $`N`$-site local bound is therefore strictly below one. Dividing by its exact value can only improve the archived sufficient violations. The rational coefficients, the geometric coefficients used for the all-$`N`$ identity, and their corresponding values remain distinct. No archived script, report, or certificate is corrected or replaced by this explanation.
 
-## Proof obligations resolved within the declared model
-
-| Obligation | Analytical resolution |
-|---|---|
-| Geometric certificate and complex normalization | The source columns telescope to $`\sum_x c_x\overline{z_x}=\nu`$, with an exactly real result, and $`\lvert\sum_x c_xz_x\rvert\le\nu`$. The centered symmetric hull is essential. |
-| Real Bell coefficients, phases and the maximizing block | Realification gives the Hermitian operator in the theorem. The chosen phases align both terms in every complementary-bitstring block; $`(1-t^k)(1-t^{N-k})\ge0`$ makes the canonical block maximal. |
-| All-state ceiling, including $`\nu<1`$ | The rescaled observables are valid; the first $`N-1`$ compatible parents supply a hidden variable with setting-independent probability, and the last site's conditional Born response supplies a local response. |
-| Zero, collinear and redundant settings | Zero and collinear families are handled before polygon divisions. Signed reordering is undone, and unused settings receive zero coefficients. No extra setting is required. |
-| Full behavior and full-correlation scope | The constructed GHZ's proper equatorial marginals vanish. Shared output signs with product one erase proper marginals of a local full tensor. This does not extend the all-state homogeneous bound to arbitrary marginal terms. |
-| Finite examples and all-$`N`$ reasoning | Rational enclosures prove the archived exclusions and sufficient witnesses. The arbitrary-$`N`$ theorem rests on the analytical construction and converse, not finite tests. |
-
-No unresolved scientific premise was identified for the stated claim in this internal audit. The remaining limitation is the bounded nature of the source comparison, not a queued experiment or stronger-model theorem. Regular-polygon amplification and complex product constructions are inherited; the retained additional implication is the arbitrary fixed-family certificate conversion with the matching all-state full-correlation rate. See [MODEL_AND_CLAIMS](MODEL_AND_CLAIMS.md) for all nonclaims. Reopen research for a concrete proof objection or a directly covering source.
+The [contribution review](CONTRIBUTION_REVIEW.md) records the analytical dependency checks. The [model specification](MODEL_AND_CLAIMS.md) lists the full assumptions and nonclaims.

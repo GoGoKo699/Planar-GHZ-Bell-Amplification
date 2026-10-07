@@ -8,8 +8,8 @@
 | [Theorem and proof](docs/THEOREM.md) · [Model and claims](research/MODEL_AND_CLAIMS.md) | Check the construction, converse, resources and normalization |
 | [Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) | Interpret finite-party costs, noise and exact certificates |
 | [Source audit](literature/SOURCE_AUDIT.md) · [Attribution](literature/ATTRIBUTION.md) | Separate inherited ingredients from the additional implication |
-| [Verification](#evidence-and-reproduction) · [Scope and evidence](STATUS.md) | Inspect executable evidence and the result's limits |
-| [LLM guide](llms.txt) · [Workspace](WORKSPACE.md) | Find relevant questions and authoritative files |
+| [Verification](#evidence-and-reproduction) | Inspect executable evidence and the comparison policy |
+| [LLM guide](llms.txt) | Find relevant questions and authoritative files |
 
 ## The fixed-detector question
 
@@ -95,17 +95,17 @@ The additional implication is the conversion of **every fixed planar family** in
 
 ## One finite-party illustration
 
-For the retained irregular three-setting family in [Section 6](docs/THEOREM.md#6-a-fixed-violation-margin-and-the-retained-exact-example), any full-correlation Bell/local ratio of at least two requires at least **20 parties**, while the existing **25-party GHZ witness** exceeds two. These are necessary and sufficient bounds, not an exact minimum. The example illustrates the theorem; the arbitrary-party result rests on its analytical proof.
+For the retained irregular three-setting family in [Section 6](docs/THEOREM.md#6-a-fixed-violation-margin-and-an-exact-example), any full-correlation Bell/local ratio of at least two requires at least **20 parties**, while the existing **25-party GHZ witness** exceeds two. These are necessary and sufficient bounds, not an exact minimum. The example illustrates the theorem; the arbitrary-party result rests on its analytical proof.
 
 ## Scope and reading map
 
 The state is supplied before the measurement choices. Every outcome is retained, with no communication during a trial, postselection, filtering, extra setting or sharper detector. State and inequality design use the known measurement family and plane.
 
-The theorem does not cover biased or noncoplanar families, Bell expressions with marginal terms, exact finite-party optimality, genuine multipartite nonlocality, entanglement depth, self-testing, cryptographic rates, detector no-click robustness, efficient statistical certification or implemented GHZ preparation. Global white-state noise and independent detector noise are distinct. This is an author-side theoretical account; internal checks do not establish external independent review or exhaustive priority clearance.
+The [model specification](research/MODEL_AND_CLAIMS.md) lists the full assumptions and nonclaims. The result does not establish exact finite-party optimality or genuine multipartite nonlocality. Global white-state noise and independent detector noise are distinct. Internal checks do not establish external independent proof review or exhaustive priority clearance.
 
 The [reading guide](docs/README.md#repository-map) locates the proof, operational consequences, source comparisons and verification policy. The [LLM guide](llms.txt) gives relevant research questions, search terms and the authoritative reading order.
 
-The [consolidation assessment](research/ASSESSMENT.md) records the preceding assessment. The [archive](archive/README.md) retains all 81 historical snapshot members, including failed attempts and original reports. For repository maintenance, start with [WORKSPACE](WORKSPACE.md) and [CURRENT](work_orders/CURRENT.md). No third-party PDF is redistributed.
+Historical derivations, original reports and failed attempts are preserved in the [archive](archive/README.md).
 
 ## Evidence and reproduction
 
@@ -117,7 +117,7 @@ python -m unittest discover -s tests -v
 python tools/verify.py --output .artifacts/local-01
 ```
 
-The output directory must be new. The runner executes all **18 original scientific groups** and compares the four reports with their unchanged references. Infrastructure tests are counted separately. Exact byte equality is distinguished from permitted floating-point drift, and every changed field is recorded. Read [VERIFICATION](VERIFICATION.md) before changing checks or references.
+The output directory must be new. The runner executes all **18 original scientific groups** and compares the four reports with their unchanged references. Infrastructure tests are counted separately. Exact byte equality is distinguished from permitted floating-point drift, and every changed field is recorded. The [verification policy](VERIFICATION.md) explains these comparisons.
 
 ## Purpose and contact
 

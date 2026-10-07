@@ -1,6 +1,6 @@
 # Attribution and source-reading boundaries
 
-Read the [source audit](SOURCE_AUDIT.md) for the current predecessor comparison: the regular-polygon exponent was already known for every setting count in 2006. The [focused contribution review](../research/CONTRIBUTION_REVIEW.md) records the preceding proof scrutiny and four-setting comparison. The [consolidation assessment](../research/ASSESSMENT.md) and [uploaded-paper comparison](../archive/consolidation-2026-10-07/prior/SOURCE_COMPARISON.md) retain their original reading boundaries.
+The [source audit](SOURCE_AUDIT.md) derives the regular-polygon predecessor comparison; the [proof review](../research/CONTRIBUTION_REVIEW.md) checks the Bell construction and converse. Original reading records are preserved in the [historical assessment](../research/ASSESSMENT.md) and [uploaded-paper comparison](../archive/consolidation-2026-10-07/prior/SOURCE_COMPARISON.md).
 
 | Source | Inherited content and reading boundary |
 |---|---|
@@ -14,6 +14,6 @@ Read the [source audit](SOURCE_AUDIT.md) for the current predecessor comparison:
 
 Additional compatibility, complex-multilinear and bipartite-locality comparisons remain in the nested source records. Each record preserves its actual access level, including earlier abstract-only access that was later superseded for the uploaded paper. Failed searches and missing PDFs are not evidence of novelty.
 
-The candidate contribution starts after the geometric certificate: its explicit conversion into a GHZ Bell tensor, together with a matching all-state asymptotic full-correlation exponent for a fixed arbitrary planar family. No directly covering implication was found in the inspected passages. That is a targeted author-side assessment, not exhaustive priority clearance or independent review.
+The additional implication starts after the geometric certificate: its explicit conversion into a GHZ Bell tensor, together with a matching all-state asymptotic full-correlation exponent for a fixed arbitrary planar family. No directly covering implication was found in the inspected passages. This is a targeted internal comparison, not exhaustive priority clearance or independent review.
 
-The uploaded PDF's SHA-256 is recorded in [IMPORT.json](../provenance/IMPORT.json). No third-party article or font is included. The unrelated electronic-decoherence attachment and protected-project content are excluded.
+The uploaded PDF's SHA-256 is recorded in [IMPORT.json](../provenance/IMPORT.json). Third-party articles are linked rather than redistributed.

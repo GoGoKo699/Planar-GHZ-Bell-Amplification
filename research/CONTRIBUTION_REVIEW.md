@@ -1,10 +1,6 @@
-# Focused proof and contribution review
+# Proof and contribution boundaries
 
-The subsequent [source audit](../literature/SOURCE_AUDIT.md) strengthens this dated review's symmetric comparison: Nagata-Laskowski-Paterek (2006) already give the perimeter exponent for every regular setting count. [Operational consequences](OPERATIONAL_CONSEQUENCES.md) record the completed prerequisite audit and clarify the exact normalization and fixed-margin interpretation. The theorem and the review below remain unchanged.
-
-**7 October 2026. Decision: retain the theorem at its existing scope.** No blocking proof error was found. The contribution is a constructive, quantitative consequence of established compatibility geometry and GHZ methods. This review strengthens the acknowledgment of a symmetric predecessor; it does not change the theorem, its bounds, or its numerical evidence.
-
-The reviewed baseline is main commit `54a805598ded79b5d8749f55e381cc690700a9fa`. This is an author-side review with parallel internal scrutiny, not external independent review or exhaustive priority clearance. [THEOREM](../docs/THEOREM.md) remains the mathematical specification; [ASSESSMENT](ASSESSMENT.md) preserves the preceding consolidation assessment.
+This note examines the proof obligations and predecessor boundaries of [THEOREM](../docs/THEOREM.md). The [source audit](../literature/SOURCE_AUDIT.md) derives the regular-polygon exponent already known for every setting count; [operational consequences](OPERATIONAL_CONSEQUENCES.md) explain normalization, fixed-margin party cost and noise.
 
 ## Proof obligations and findings
 
@@ -20,7 +16,7 @@ The reviewed baseline is main commit `54a805598ded79b5d8749f55e381cc690700a9fa`.
 
 The rounded rational witness used for the finite examples is a separate sufficient certificate. Its complex sum is not exactly the unrounded geometric norm. The exact geometric coefficients, rather than rounded numerical coefficients, establish the all-party identity and exponent. The original checkers already preserve this distinction.
 
-No missing hypothesis was identified within the declared finite, known, unbiased binary coplanar qubit family, fixed at every site as $`N`$ grows. The comparisons use mathematical rescalings, not additional experimental measurements. The review does not assess a detector apparatus or a sampling protocol.
+The proof uses the finite, known, unbiased binary coplanar qubit family specified in [MODEL_AND_CLAIMS](MODEL_AND_CLAIMS.md), fixed at every site as $`N`$ grows. Its rescalings are mathematical comparisons.
 
 ## What the strongest shortcuts do and do not establish
 
@@ -59,16 +55,14 @@ $$
 
 Here the symmetric hull is a regular unit circumradius octagon, with perimeter divided by four equal to $`\nu_4`$. Thus the compatibility-scale exponent is already present in this symmetric case. We claim no new exponent or improved finite-party inequality for that example. What the cited construction does not supply is the arbitrary irregular, unequally sharp fixed-family result with the matching all-state bound.
 
-## The remaining contribution and stopping decision
+## Contribution boundary
 
 The precise additional implication is the uniform conversion of **every** family's inherited optimal planar certificate into real Bell coefficients and a phase-adjusted canonical GHZ state, attaining at least half the norm to the Nth power, together with an all-state full-correlation ceiling at the same exponential scale. The measurement family remains fixed. This is more specific than eventual nonlocality and more general in its permitted measurement geometry than the symmetric construction above.
 
-The strongest objection remains substantial: the difficult geometry, the locality principle, and the complex GHZ algebra are established ingredients; the bridge between them is short. Its value rests on the uniform constructive conclusion and operational exponent, not a new geometric theory or a new mechanism of GHZ nonlocality. The inspected sources do not directly supply the complete statement. That supports retaining a compact theoretical result, without claiming comprehensive novelty clearance.
-
-The assigned contribution review is complete. No further scientific extension or large numerical study is needed to support the frozen claim on the evidence inspected. The next development pass should organize the exposition around the fixed-detector question, the one theorem, its short proof and this exact predecessor boundary. Reopen scientific work only for a concrete proof objection or a source containing the same implication. All nonclaims in [MODEL_AND_CLAIMS](MODEL_AND_CLAIMS.md) remain in force.
+The geometry, locality principle and complex GHZ algebra are established ingredients; the bridge between them is short. Its value rests on the uniform constructive conclusion and operational exponent. The inspected sources do not directly supply the complete statement. [ATTRIBUTION](../literature/ATTRIBUTION.md) records the limits of that source comparison; [MODEL_AND_CLAIMS](MODEL_AND_CLAIMS.md) specifies the scientific scope.
 
 ## Source and verification boundaries
 
 The Yoshino v1 source was checked against the uploaded PDF with the SHA-256 in [IMPORT.json](../provenance/IMPORT.json), focusing on Theorem 1.3, Proposition 3.1, Lemma 2.21 and the certificate construction in Section 3. No third-party PDF is redistributed. The PGQ, WW and LN passages above were reread. The DVP comparison uses the explicitly versioned v2 HTML; the unversioned PDF also returned a v3 dated 5 October 2026 with the same relevant formulas. Failed retrievals are not used as negative evidence. The wider archived literature audit remains bounded by its recorded access depth.
 
-The takeover baseline passed eight infrastructure tests and all 18 original scientific groups on local Python 3.12.14 with the pinned NumPy/SciPy versions; all four reports were byte-identical to their references. This is a cross-environment local result, not the pinned Python 3.13.5 hosted receipt. Exact PR-head and separate merged-main checks, including downloaded reports and source hashes, belong in the pull-request record under [VERIFICATION](../VERIFICATION.md). No archived source, canonical report, scientific tolerance, theorem or import hash is changed by this review.
+Reproduction and exact-revision evidence, including reports and source hashes, are described in [VERIFICATION](../VERIFICATION.md).

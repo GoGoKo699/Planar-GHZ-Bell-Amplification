@@ -16,6 +16,48 @@ READER_PATHS = (
     'literature/ATTRIBUTION.md',
 )
 
+THEOREM_TITLE = '# Optimal exponential Bell amplification from planar qubit measurements'
+# These exact editorial changes apply only to the protected theorem's reading
+# copy. Every anchor must occur once: source drift requires an explicit review.
+# Equations, scientific boundaries and the bibliography are not edited here.
+THEOREM_READER_EDITS = (
+    ('**7 October 2026. Consolidated author-side theorem.** ', ''),
+    (
+        'This account replaces the exploration sequence as the main reading path. '
+        'Earlier notes and checks remain unchanged in the '
+        '[protected import](../archive/consolidation-2026-10-07/README.md). '
+        'The only strengthened bound in this pass is the finite-party upper bound '
+        'in (2), using the standard fact that compatibility at all but one site '
+        'suffices for locality. The asymptotic exponent and all earlier examples '
+        'remain valid.',
+        'The finite-party upper bound in (2) uses the standard fact that '
+        'compatibility at all but one site suffices for locality.',
+    ),
+    (
+        '## 6. A fixed violation margin and the retained exact example',
+        '## 6. A fixed violation margin and an exact example',
+    ),
+    ('Keep the existing irregular rational family', 'Consider the irregular rational family'),
+    (
+        'The old 13-party and 25-party exact certificates remain unchanged.',
+        'The 13-party and 25-party values have exact certificates.',
+    ),
+    ('The strengthened upper bound now certifies', 'The upper bound certifies'),
+    (
+        '## 8. Attribution, significance, and stopping boundary',
+        '## 8. Attribution and scope',
+    ),
+    (
+        ' Its proof is concise; the remaining judgment is whether the connection '
+        'is sufficiently consequential, not whether its ingredients are unfamiliar.',
+        '',
+    ),
+    (' No exhaustive priority or independent scientific review has occurred.', ''),
+    ('Stop expanding the scientific scope for the current assessment. ', ''),
+    (' The theorem is recorded here for focused author review.', ''),
+    (' This initialization does not initiate a manuscript submission, release or external contact.', ''),
+)
+
 # Presentation substitutions in the protected theorem's prose only. Longest
 # matches take precedence, and one substitution pass cannot change its own TeX.
 THEOREM_NOTATION = {
@@ -103,8 +145,22 @@ def inline_prose(line: str) -> str:
     return ''.join(parts)
 
 
+def theorem_reader_prose(text: str) -> str:
+    """Remove exact author-workflow prose from the known protected theorem."""
+    if not text.startswith(THEOREM_TITLE+'\n'):
+        raise ValueError('Theorem reading-copy title anchor has changed')
+    for old, _ in THEOREM_READER_EDITS:
+        if text.count(old) != 1:
+            raise ValueError(f'Theorem reading-copy editorial anchor has changed: {old}')
+    for old, new in THEOREM_READER_EDITS:
+        text = text.replace(old, new, 1)
+    return text
+
+
 def theorem_view(root: Path = ROOT) -> str:
     text = (root/'research/THEOREM.md').read_text()
+    if root.resolve() == ROOT.resolve() or text.startswith(THEOREM_TITLE+'\n'):
+        text = theorem_reader_prose(text)
     text = text.replace(r'\operatorname{', r'\mathrm{')
     opened = False
     references = False

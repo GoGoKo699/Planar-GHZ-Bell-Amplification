@@ -1,11 +1,11 @@
 # Current bounded task
 
-**7 October 2026 — initialization and handoff of the consolidated planar GHZ result.**
+**7 October 2026 — contribution review completed; scientific scope remains frozen.**
 
-Read the live repository instructions first. The import is based on the owner-created main commit `d6f1a9535238bf00b439b89207e6949465121fa1` and the supplied consolidation ZIP with SHA-256 recorded in `provenance/IMPORT.json`. Do not duplicate initialization when its pull request is merged.
+Read live main and `AGENTS.md` before continuing. Initialization is already merged. [CONTRIBUTION_REVIEW](../research/CONTRIBUTION_REVIEW.md) completes the assigned proof/contribution review: retain the theorem unchanged, with no blocking proof error found and a stronger acknowledgment of the known four-setting symmetric exponent.
 
-The next scientific task is a focused review of `research/THEOREM.md` and `research/ASSESSMENT.md`: decide whether the explicit fixed-family GHZ construction and matched all-state exponential rate form a sufficiently distinct, consequential contribution relative to the exact predecessors. Retain the sharp upper bound `r nu^(N-1)`, the full-correlation qualification, and attribution of all compatibility geometry to Yoshino et al.
+The next development task is a compact exposition built around one claim: the inherited planar compatibility norm is the optimal asymptotic full-correlation Bell-amplification factor for fixed detectors, attained constructively by phase-adjusted canonical GHZ states. Start with the fixed-detector question, then the theorem and its proof, then the precise inherited-versus-added implication. The current theorem and focused review already contain the required mathematical account; do not duplicate them in another progress checkpoint.
 
-The result is already consolidated; no new model, theorem extension, additional decimal accuracy, large experiment or survey is required to begin that judgment. If review uncovers a real proof problem, document it precisely without rewriting historical evidence. If no issue is found, do not manufacture an extension to create activity.
+No new model, extra numerical precision, large simulation or theorem extension is queued. Reopen scientific investigation for a specific proof gap or directly covering predecessor, not merely to create activity. Preserve the sharp ceiling `r nu^(N-1)`, full-correlation scope, all nonclaims, and attribution of the compatibility geometry and certificates to Yoshino et al.
 
-No manuscript submission, release or external contact is initiated. Existing scientific scope remains frozen. The project workspace takes over from the initialization PR and its separate verified merged-main run.
+Use the established feature-branch, exact-head hosted review and separately verified merged-main workflow. No manuscript submission, release or external contact is initiated.

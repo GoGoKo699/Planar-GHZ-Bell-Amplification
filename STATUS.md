@@ -1,11 +1,13 @@
 # Status
 
-**7 October 2026.** The planar-GHZ result is consolidated for contribution review. Scientific scope is frozen; initialization adds repository organization and reproducibility infrastructure, not a new scientific claim.
+**7 October 2026. Focused contribution review completed; retain the theorem at its frozen scope.**
 
-The verified target is `GoGoKo699/Planar-GHZ-Bell-Amplification`, initially public with the owner's MIT license and only its initial commit `d6f1a9535238bf00b439b89207e6949465121fa1`. No earlier project content is imported. Exact remote publication/merge status is recorded in the initialization pull request and its verification comments; inspect live main rather than inferring deployment from this file.
+The verified repository is `GoGoKo699/Planar-GHZ-Bell-Amplification`. Takeover began from merged main `54a805598ded79b5d8749f55e381cc690700a9fa`, matching the initialization handoff, with no open pull requests.
 
-All 81 files in the supplied consolidation snapshot are retained unchanged. The active theorem and assessment only adjust repository links and initialization statements. The four canonical scientific suites contain 18 groups. A local preflight of the supplied snapshot passed and reproduced all four reference reports byte-for-byte before initialization. Later local/hosted runs require their own source-matched evidence.
+[CONTRIBUTION_REVIEW](research/CONTRIBUTION_REVIEW.md) records the proof obligations and source comparison. No blocking proof error was found. The important refinement is attribution: the four-setting symmetric construction of Designolle et al. already contains the same exponent for that special family. The retained contribution is the explicit construction for every fixed irregular/unequally sharp planar family and its matching all-state full-correlation rate.
 
-The current mathematical statement and limitations are in [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md) and [THEOREM](research/THEOREM.md). The literature claim is a bounded primary-source comparison, not global priority or independent review. No finite-N optimality, experimental implementation, genuine multipartite nonlocality or sample-complexity result is added.
+The theorem, preceding assessment, all 81 historical snapshot members, four original scientific suites, reference reports and protected hashes remain unchanged. The takeover baseline passed eight infrastructure tests and all 18 scientific groups, reproducing all four reports byte-for-byte in the local environment. Actual PR-head and merged-main evidence is recorded separately in the review pull request; local checks do not establish remote completion.
 
-The next task is [author-side contribution review](work_orders/CURRENT.md), not a broader scout or automatic extension. [WORKSPACE](WORKSPACE.md) specifies takeover and exact-revision checks.
+The mathematical claim and limitations remain in [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md) and [THEOREM](research/THEOREM.md). This is internal author-side scrutiny, not external independent review or exhaustive priority clearance. No finite-N optimality, experimental implementation, genuine multipartite nonlocality or sample-complexity claim is added.
+
+[CURRENT](work_orders/CURRENT.md) closes the bounded review and defines the next exposition task. There is no queued scope extension.

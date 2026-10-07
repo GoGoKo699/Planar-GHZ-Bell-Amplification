@@ -112,6 +112,47 @@ class InfrastructureTests(unittest.TestCase):
                 renderer.check(root)
             self.assertEqual((root/'research/THEOREM.md').read_text(), source)
 
+    def test_inline_math_rendering_and_prose_regression(self):
+        spec = importlib.util.spec_from_file_location('render_docs', ROOT/'tools/render_docs.py')
+        renderer = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(renderer)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root/'research').mkdir()
+            (root/'docs').mkdir()
+            source = (
+                '# Finite-N theorem\n\nFor N>=2, nu<=1 and R_N^GHZ.\n\n'
+                '[Source](../research/N.md)\n\n$$\nN=2\n$$\n\n'
+                '## Primary references\n\n- [R] R. Author.\n'
+            )
+            (root/'research/THEOREM.md').write_text(source)
+            view = renderer.theorem_view(root)
+            (root/'docs/THEOREM.md').write_text(view)
+            self.assertIn('# Finite-N theorem', view)
+            self.assertIn('$`N\\ge2`$', view)
+            self.assertIn('$`\\nu\\le1`$', view)
+            self.assertIn('$`\\mathcal R_N^{\\mathrm{GHZ}}`$', view)
+            self.assertIn('[Source](../research/N.md)', view)
+            self.assertIn('```math\nN=2\n```', view)
+            self.assertIn('- [R] R. Author.', view)
+            self.assertEqual(renderer.check(root)['inline_math_checked'], 3)
+            self.assertEqual((root/'research/THEOREM.md').read_text(), source)
+            readme = root/'README.md'
+            for bad, message in (
+                ('`nu <= 1`', 'left as code'),
+                ('`R_N`', 'left as code'),
+                ('nu <= 1', 'ASCII mathematical expression'),
+                ('R_N', 'ASCII mathematical expression'),
+                ('$`\\nu\\le1$', 'Unclosed inline math'),
+                ('$`\\operatorname{conv}\\{a\\}`$', 'Unsupported math macro'),
+            ):
+                with self.subTest(bad=bad):
+                    readme.write_text(bad+'\n')
+                    with self.assertRaisesRegex(ValueError, message):
+                        renderer.check(root)
+            readme.write_text('Use `python tools/verify.py` for the beta coefficients.\n')
+            renderer.check(root)
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

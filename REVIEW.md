@@ -28,9 +28,9 @@ A_x=\mathbf a_x\cdot\boldsymbol\sigma,\qquad
 s\in\{-1,1\},\quad \|\mathbf a_x\|\le1.
 ```
 
-The vector points along a measurement direction, and its length is the sharpness. A zero vector returns a fair random sign independently of the state. A unit vector gives a sharp spin measurement. The observable is the outcome-weighted sum of its effects: the expectation of the recorded sign is the expectation of the operator A_x.
+The vector points along a measurement direction, and its length is the sharpness. A zero vector returns a fair random sign independently of the state. A unit vector gives a sharp spin measurement. The observable is the outcome-weighted sum of its effects: the expectation of the recorded sign is the expectation of the operator $`A_x`$.
 
-All vectors in this project lie in a plane through the origin. Choose its normal as the computational z axis, so
+All vectors in this project lie in a plane through the origin. Choose its normal as the computational $`z`$ axis, so
 
 ```math
 A_x=a_{x1}\sigma_x+a_{x2}\sigma_y
@@ -53,7 +53,7 @@ One can measure the parent first and subsequently simulate any requested setting
 
 Section IV.A explains why a jointly measurable family on one side of a bipartite experiment cannot violate a Bell inequality: the parent outcome supplies a hidden variable, and the other party's conditional response supplies its local response function.
 
-The multipartite version used here leaves one party arbitrary. If the first N−1 parties each have parents, their joint parent outcomes have a probability distribution and leave a conditional quantum state at the last party. Given those outcomes, the first parties respond through classical postprocessing and the last party responds through the Born rule. That is a local model. The all-but-one-sites statement is an inherited ingredient; [THEOREM, Section 5](docs/THEOREM.md#5-the-all-state-upper-bound-with-one-site-left-arbitrary) identifies its source.
+The multipartite version used here leaves one party arbitrary. If the first $`N-1`$ parties each have parents, their joint parent outcomes have a probability distribution and leave a conditional quantum state at the last party. Given those outcomes, the first parties respond through classical postprocessing and the last party responds through the Born rule. That is a local model. The all-but-one-sites statement is an inherited ingredient; [THEOREM, Section 5](docs/THEOREM.md#5-the-all-state-upper-bound-with-one-site-left-arbitrary) identifies its source.
 
 ## 3. The full-correlation objective and its local bound
 
@@ -65,7 +65,7 @@ E_{x_1\ldots x_N}
 p(s_1,\ldots,s_N|x_1,\ldots,x_N).
 ```
 
-For real coefficients beta, the Bell operator and exact local absolute bound are
+For real coefficients $`\beta`$, the Bell operator and exact local absolute bound are
 
 ```math
 B_\beta=\sum_{x_1,\ldots,x_N}\beta_{x_1\ldots x_N}
@@ -98,9 +98,9 @@ K=\mathrm{conv}\{\pm\mathbf a_x\},\qquad
 r=\max_x\|\mathbf a_x\|.
 ```
 
-For a segment, perimeter is twice its length. For the all-zero family both quantities vanish. Yoshino et al., [*Joint measurability of coplanar POVMs*](https://arxiv.org/abs/2609.38836v1), provide the entire arbitrary-planar geometry: compatibility holds exactly when nu is at most one. For nu greater than zero, they also provide a parent after scaling the observables by 1/nu and an explicit optimal dual certificate. This later research paper supplies an inherited lemma; it is not a second tutorial anchor.
+For a segment, perimeter is twice its length. For the all-zero family both quantities vanish. Yoshino et al., [*Joint measurability of coplanar POVMs*](https://arxiv.org/abs/2609.38836v1), provide the entire arbitrary-planar geometry: compatibility holds exactly when $`\nu\le1`$. For $`\nu>0`$, they also provide a parent after scaling the observables by $`1/\nu`$ and an explicit optimal dual certificate. This later research paper supplies an inherited lemma; it is not a second tutorial anchor.
 
-For a nondegenerate hull, its certificate gives real vectors h_x such that
+For a nondegenerate hull, its certificate gives real vectors $`\mathbf h_x`$ such that
 
 ```math
 \max_{s_x=\pm1}\left\|\sum_x s_x h_x\right\|\le1,
@@ -124,7 +124,7 @@ T=\sum_x c_xA_x
 \qquad v=\sum_xc_xz_x,\quad |v|\le\nu.
 ```
 
-Here the upper-right entry is the real number nu because the edge formula makes the imaginary part of the sum vanish. The real pairing alone would not establish that fact. This matrix dictionary is the link from the inherited geometry to the Bell argument.
+Here the upper-right entry is the real number $`\nu`$ because the edge formula makes the imaginary part of the sum vanish. The real pairing alone would not establish that fact. This matrix dictionary is the link from the inherited geometry to the Bell argument.
 
 ## 5. Complex coefficients build the Bell expression
 
@@ -156,7 +156,7 @@ This is the connection we need: classical values are controlled by signed sums o
 
 ## 6. The GHZ block and its phase
 
-The off-diagonal matrix T flips every computational bit. The Bell operator therefore splits into two-dimensional blocks, each joining a bit string to its complement. The all-zero/all-one block is
+The off-diagonal matrix $`T`$ flips every computational bit. The Bell operator therefore splits into two-dimensional blocks, each joining a bit string to its complement. The all-zero/all-one block is
 
 ```math
 \begin{pmatrix}0&b_N\\\overline b_N&0\end{pmatrix},
@@ -164,7 +164,7 @@ The off-diagonal matrix T flips every computational bit. The Bell operator there
 b_N=\frac{e^{i\gamma}\nu^N+e^{-i\gamma}\overline v^{\,N}}2.
 ```
 
-If v is nonzero, choose the Bell phase to align the two contributions and the GHZ phase to select the positive eigenvector:
+If $`v\ne0`$, choose the Bell phase to align the two contributions and the GHZ phase to select the positive eigenvector:
 
 ```math
 \gamma=-\frac{N\arg v}{2},\qquad
@@ -173,26 +173,26 @@ If v is nonzero, choose the Bell phase to align the two contributions and the GH
 =\frac{|0\rangle^{\otimes N}+e^{i\varphi}|1\rangle^{\otimes N}}{\sqrt2}.
 ```
 
-If v is zero, both phases can be zero. The resulting value is
+If $`v=0`$, both phases can be zero. The resulting value is
 
 ```math
 Q_N=\frac{\nu^N+|v|^N}{2}\ge\frac{\nu^N}{2}.
 ```
 
-The selected GHZ state also maximizes this constructed operator. For a string with k ones, the corresponding off-diagonal magnitude is at most
+The selected GHZ state also maximizes this constructed operator. For a string with $`k`$ ones, the corresponding off-diagonal magnitude is at most
 
 ```math
 \frac{\nu^{N-k}|v|^k+\nu^k|v|^{N-k}}2
 \le\frac{\nu^N+|v|^N}2.
 ```
 
-To see the second inequality, set t equal to the ratio of the modulus of v to nu. Then t lies between zero and one, and the difference is proportional to the nonnegative product below:
+To see the second inequality, set $`t=|v|/\nu`$. Then $`t`$ lies between zero and one, and the difference is proportional to the nonnegative product below:
 
 ```math
 (1-t^k)(1-t^{N-k})\ge0.
 ```
 
-Dividing Q_N by the exact local bound, which is positive and at most one, proves a normalized value at least nu to the Nth power divided by two. This GHZ maximality is about the tensor just constructed. For an arbitrary fixed planar tensor, a different complementary-bitstring block can maximize the operator; [THEOREM, Section 7](docs/THEOREM.md#7-what-ghz-optimality-means-here) gives a counterexample to a broader claim.
+Dividing $`Q_N`$ by the exact local bound, which is positive and at most one, proves a normalized value at least $`\nu^N/2`$. This GHZ maximality is about the tensor just constructed. For an arbitrary fixed planar tensor, a different complementary-bitstring block can maximize the operator; [THEOREM, Section 7](docs/THEOREM.md#7-what-ghz-optimality-means-here) gives a counterexample to a broader claim.
 
 ## 7. Joint parents bound every competing state
 
@@ -203,9 +203,9 @@ The lower bound used a particular tensor and state. The converse must cover ever
 \qquad \widetilde A_x^{(N)}=A_x/r.
 ```
 
-The first N−1 families admit joint parents. At the last site the scaled observables are valid binary qubit observables because their norm is at most one. No parent is required there. These are mathematical comparison measurements in the proof; the actual experiment still uses its original detectors.
+The first $`N-1`$ families admit joint parents. At the last site the scaled observables are valid binary qubit observables because their norm is at most one. No parent is required there. These are mathematical comparison measurements in the proof; the actual experiment still uses its original detectors.
 
-The comparison correlations are local for every input state, so every full-correlation Bell expectation is bounded by L(beta). Restoring the scales multiplies each full correlator by the same factor:
+The comparison correlations are local for every input state, so every full-correlation Bell expectation is bounded by $`L(\beta)`$. Restoring the scales multiplies each full correlator by the same factor:
 
 ```math
 |\langle B_\beta\rangle|
@@ -217,7 +217,7 @@ This homogeneity is why the theorem fixes the full-correlation task. Marginal te
 
 ## 8. The common exponential factor
 
-Let the GHZ-restricted optimum allow the phase-adjusted canonical state above and arbitrary real full-correlation tensors. For every nonzero family and every N at least two,
+Let the GHZ-restricted optimum allow the phase-adjusted canonical state above and arbitrary real full-correlation tensors. For every nonzero family and every $`N\ge2`$,
 
 ```math
 \frac{\nu^N}{2}
@@ -226,27 +226,27 @@ Let the GHZ-restricted optimum allow the phase-adjusted canonical state above an
 \le r\nu^{N-1}\le\nu^N.
 ```
 
-Taking Nth roots squeezes both optima to the same limit:
+Taking $`N`$th roots squeezes both optima to the same limit:
 
 ```math
 \lim_{N\to\infty}(\mathcal R_N^{\mathrm{GHZ}})^{1/N}
 =\lim_{N\to\infty}\mathcal R_N^{1/N}=\nu.
 ```
 
-If nu exceeds one, the explicit lower bound eventually exceeds the local threshold. If nu is at most one, compatibility supplies a local model for every state. Thus every incompatible family in the declared class can be exposed by enough GHZ parties, and the compatibility norm is its optimal exponential Bell-amplification factor.
+If $`\nu>1`$, the explicit lower bound eventually exceeds the local threshold. If $`\nu\le1`$, compatibility supplies a local model for every state. Thus every incompatible family in the declared class can be exposed by enough GHZ parties, and the compatibility norm is its optimal exponential Bell-amplification factor.
 
-The geometric constant is not the exact optimum at a given party number. The construction is within a factor of two of the optimal normalized Bell value; this comparison does not concern the excess above one or the number of experimental samples. A nonzero collinear family instead has nu equal to r and both optima exactly equal to r to the Nth power. The all-zero family gives zero.
+The geometric constant is not the exact optimum at a given party number. The construction is within a factor of two of the optimal normalized Bell value; this comparison does not concern the excess above one or the number of experimental samples. A nonzero collinear family instead has $`\nu=r`$ and both optima exactly equal to $`r^N`$. The all-zero family gives zero.
 
 ## 9. A worked example: two noisy orthogonal settings
 
-Use the same two detectors at every site, with sharpness eta:
+Use the same two detectors at every site, with sharpness $`\eta`$:
 
 ```math
 A_1=\eta\sigma_x,\qquad A_2=\eta\sigma_y,
 \qquad 0<\eta\le1.
 ```
 
-Their symmetric hull is a square with side length equal to the square root of two times eta. The tutorial's two-observable criterion and the planar perimeter criterion agree:
+Their symmetric hull is a square with side length equal to $`\sqrt2\eta`$. The tutorial's two-observable criterion and the planar perimeter criterion agree:
 
 ```math
 r=\eta,\qquad \nu=\sqrt2\eta,
@@ -267,7 +267,7 @@ T=\frac{\eta}{\sqrt2}(\sigma_x+i\sigma_y)
 =\begin{pmatrix}0&\sqrt2\eta\\0&0\end{pmatrix}.
 ```
 
-Thus v is zero, and the construction yields the unnormalized quantum value
+Thus $`v=0`$, and the construction yields the unnormalized quantum value
 
 ```math
 Q_N=(\sqrt2\eta)^N/2.
@@ -288,13 +288,13 @@ Its exact local absolute bound is two. For deterministic outcomes, either the fi
 -s_2^{(1)}\big(s_1^{(2)}s_2^{(3)}+s_2^{(2)}s_1^{(3)}\big).
 ```
 
-On the zero-phase GHZ state, the four correlators give a Mermin value of four times eta cubed. The normalized witness value is therefore
+On the zero-phase GHZ state, the four correlators give a Mermin value of $`4\eta^3`$. The normalized witness value is therefore
 
 ```math
 \frac{|\langle\mathcal M_3\rangle|}{L(\mathcal M_3)}=2\eta^3.
 ```
 
-For example, eta equal to 0.8 gives 1.024. The scaled tensor's exact local bound is the reciprocal square root of two, illustrating why the general estimate of at most one need not be tight. A compatible family cannot violate; an incompatible family need not violate at this particular party number. The theorem supplies eventual violation as N grows. This is a familiar special case used to learn the dictionary, not a new symmetric-setting result.
+For example, $`\eta=0.8`$ gives $`1.024`$. The scaled tensor's exact local bound is $`1/\sqrt2`$, illustrating why the general estimate of at most one need not be tight. A compatible family cannot violate; an incompatible family need not violate at this particular party number. The theorem supplies eventual violation as $`N`$ grows. This is a familiar special case used to learn the dictionary, not a new symmetric-setting result.
 
 ## 10. What the bridge does and does not add
 

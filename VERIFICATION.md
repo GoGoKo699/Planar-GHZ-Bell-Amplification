@@ -34,7 +34,7 @@ The local preflight in the initialization environment reproduced all four report
 
 ## Reading-page presentation
 
-The protected scientific theorem retains its original bytes and hash. `python tools/render_docs.py` generates [its reading view](docs/THEOREM.md), changing only display delimiters, upright operator typography and a source link. `python tools/render_docs.py --check` checks synchronization without rewriting. The verification runner also checks synchronization and rejects the renderer-incompatible operator macro in current reading-page equations. These presentation checks are infrastructure, separate from the 18 scientific groups.
+The protected scientific theorem retains its original bytes and hash. `python tools/render_docs.py` generates [its reading view](docs/THEOREM.md), changing only math delimiters, upright operator typography, inline notation and a source link. Prose uses GitHub's dollar-backtick inline math syntax for Greek letters, subscripts, powers and inequalities. `python tools/render_docs.py --check` checks synchronization without rewriting. The verification runner also checks inline delimiters, detects common mathematical expressions left as code or ASCII text, and rejects the renderer-incompatible operator macro in current reading-page equations. These presentation checks are infrastructure, separate from the 18 scientific groups.
 
 ## Hosted workflow and review
 

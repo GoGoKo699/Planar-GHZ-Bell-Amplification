@@ -7,18 +7,117 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 MATH = re.compile(r'^```math\n(.*?)^```\s*$|^\$\$\s*\n(.*?)^\$\$\s*$', re.M | re.S)
+INLINE_MATH = re.compile(r'\$`([^`\n]+)`\$')
+CODE_FENCE = re.compile(r'^```[^\n]*\n.*?^```\s*$', re.M | re.S)
+READER_PATHS = (
+    'README.md', 'REVIEW.md', 'docs/THEOREM.md', 'docs/README.md',
+    'research/MODEL_AND_CLAIMS.md', 'research/OPERATIONAL_CONSEQUENCES.md',
+    'research/CONTRIBUTION_REVIEW.md', 'literature/SOURCE_AUDIT.md',
+    'literature/ATTRIBUTION.md',
+)
+
+# Presentation substitutions in the protected theorem's prose only. Longest
+# matches take precedence, and one substitution pass cannot change its own TeX.
+THEOREM_NOTATION = {
+    'R_N=R_N^GHZ=r^N': r'\mathcal R_N=\mathcal R_N^{\mathrm{GHZ}}=r^N',
+    'R_N^GHZ': r'\mathcal R_N^{\mathrm{GHZ}}',
+    'R_N': r'\mathcal R_N',
+    'L(beta)>0': r'L(\beta)>0',
+    'L(beta)<=1': r'L(\beta)\le1',
+    'nu=r=0': r'\nu=r=0',
+    'r<=nu<=pi r/2': r'r\le\nu\le\pi r/2',
+    'nu<=1': r'\nu\le1',
+    'nu>0': r'\nu>0',
+    'nu>1': r'\nu>1',
+    'nu=r': r'\nu=r',
+    'N>=2': r'N\ge2',
+    '2r/nu<=2': r'2r/\nu\le2',
+    'a_1,...,a_m': r'\mathbf a_1,\ldots,\mathbf a_m',
+    'a_{m+1}=-a_1': r'\mathbf a_{m+1}=-\mathbf a_1',
+    'Y=(1/2) Khat C^T': r'Y=\tfrac12\widehat K C^T',
+    'z_x=a_{x1}+i a_{x2}': r'z_x=a_{x1}+i a_{x2}',
+    'c_x=h_{x1}+i h_{x2}': r'c_x=h_{x1}+i h_{x2}',
+    'a_j=r d': r'\mathbf a_j=r\mathbf d',
+    'h_j=d': r'h_j=\mathbf d',
+    'u=r': r'u=r',
+    '|v|=r': r'|v|=r',
+    'gamma=-N arg(v)/2': r'\gamma=-N\arg(v)/2',
+    'phi=-arg(b_N)': r'\varphi=-\arg(b_N)',
+    '|b_N|': r'|b_N|',
+    'v=0': r'v=0',
+    'gamma=phi=0': r'\gamma=\varphi=0',
+    't=|v|/nu': r't=|v|/\nu',
+    '[0,1]': r'[0,1]',
+    '(1-t^k)(1-t^{N-k})>=0': r'(1-t^k)(1-t^{N-k})\ge0',
+    'N-1': r'N-1',
+    'A_x/nu': r'A_x/\nu',
+    'A_x/r': r'A_x/r',
+    'r nu^{N-1}': r'r\nu^{N-1}',
+    'nu^N>2R': r'\nu^N>2R',
+    'nu^N': r'\nu^N',
+    'r^N': r'r^N',
+    'R>1': r'R>1',
+    '(nu-1)': r'(\nu-1)',
+    '(|b>+e^{i phi}|bar b>)/sqrt(2)': r'\frac{|b\rangle+e^{i\varphi}|\bar b\rangle}{\sqrt2}',
+    'A_1=X,A_2=Y': r'A_1=X,\ A_2=Y',
+    '2 sqrt(2)': r'2\sqrt2',
+    'span{|01>,|10>}': r'\mathrm{span}\{|01\rangle,|10\rangle\}',
+    'k_i': r'k_i',
+    'k': r'k',
+    '+1': r'+1',
+    'h': r'h',
+    'v': r'v',
+    'beta': r'\beta',
+    'phi': r'\varphi',
+    'nu': r'\nu',
+    'lambda': r'\lambda',
+    'r': r'r',
+    'N': r'N',
+    'R': r'R',
+}
+THEOREM_TOKENS = re.compile(
+    r'(?<![\w\\])(?:' + '|'.join(
+        re.escape(key) for key in sorted(THEOREM_NOTATION, key=len, reverse=True)
+    ) + r')(?!\w)'
+)
+
+# Deliberately limited to mathematical spellings found in the reading route;
+# paths, commands, source identifiers and words such as "beta" are not TeX.
+ASCII_MATH = re.compile(
+    r'\b(?:R_N(?:\^GHZ)?|A_x|[czh]_x|k_i|b_N|Q_N|L\(beta\)|'
+    r'nu(?=\s*(?:[<>=^]|r\b))|eta(?=\s*(?:[<>=^]|nu\b))|'
+    r'N(?=\s*(?:[<>=]|[-−]\d\b))|r(?=\s*(?:[<>=^]|nu\b)))'
+)
+CODE_MATH = re.compile(
+    r'^(?:nu|eta|beta|phi|gamma|lambda|R_N(?:\^GHZ)?|A_x|h_x|k_i|'
+    r'z_x|c_x|Q_N|L\(beta\)|r|N|R|v|T|K)\b'
+)
+
+
+def inline_prose(line: str) -> str:
+    parts = re.split(r'(`[^`\n]+`|\[[^\]]+\]\([^)]+\))', line)
+    for index in range(0, len(parts), 2):
+        parts[index] = THEOREM_TOKENS.sub(
+            lambda match: '$`' + THEOREM_NOTATION[match.group()] + '`$', parts[index]
+        )
+    return ''.join(parts)
 
 
 def theorem_view(root: Path = ROOT) -> str:
     text = (root/'research/THEOREM.md').read_text()
     text = text.replace(r'\operatorname{', r'\mathrm{')
     opened = False
+    references = False
     lines = []
     for line in text.splitlines():
         if line == '$$':
             lines.append('```' if opened else '```math')
             opened = not opened
         else:
+            if line == '## Primary references':
+                references = True
+            if not opened and not references and not line.startswith('#'):
+                line = inline_prose(line)
             lines.append(line)
     if opened:
         raise ValueError('Unclosed display math in protected source')
@@ -33,6 +132,7 @@ def check(root: Path = ROOT) -> dict:
     paths += list((root/'literature').glob('*.md')) + list((root/'docs').rglob('*.md'))
     protected = {root/'research/THEOREM.md', root/'research/ASSESSMENT.md'}
     blocks = 0
+    inline = 0
     for path in paths:
         if path in protected:
             continue
@@ -40,7 +140,30 @@ def check(root: Path = ROOT) -> dict:
             blocks += 1
             if r'\operatorname' in match.group():
                 raise ValueError(f'Unsupported math macro in {path.relative_to(root)}')
-    return {'theorem_view_matches_source': True, 'math_blocks_checked': blocks}
+    for relative in READER_PATHS:
+        path = root/relative
+        if not path.is_file():
+            continue
+        prose = CODE_FENCE.sub('', MATH.sub('', path.read_text()))
+        for match in INLINE_MATH.finditer(prose):
+            inline += 1
+            if r'\operatorname' in match.group():
+                raise ValueError(f'Unsupported math macro in {relative}')
+        prose = INLINE_MATH.sub('', prose)
+        if '$`' in prose or '`$' in prose:
+            raise ValueError(f'Unclosed inline math in {relative}')
+        for match in re.finditer(r'`([^`\n]+)`', prose):
+            if CODE_MATH.search(match[1]) or ASCII_MATH.search(match[1]):
+                raise ValueError(f'Mathematical expression left as code in {relative}: {match[1]}')
+        prose = re.sub(r'`[^`\n]+`', '', prose)
+        prose = re.sub(r'\]\([^)]*\)', ']', prose)
+        if match := ASCII_MATH.search(prose):
+            raise ValueError(f'ASCII mathematical expression in {relative}: {match.group()}')
+    return {
+        'theorem_view_matches_source': True,
+        'math_blocks_checked': blocks,
+        'inline_math_checked': inline,
+    }
 
 
 def main() -> int:

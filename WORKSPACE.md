@@ -8,11 +8,13 @@ The owner authorized this initialization and subsequent modifications/merges. Pr
 
 Read `AGENTS.md`, `STATUS.md`, `work_orders/CURRENT.md`, `research/THEOREM.md`, `research/ASSESSMENT.md` and `VERIFICATION.md`. Inspect the live branch and open pull requests before editing. The owner-created starting revision was `d6f1a9535238bf00b439b89207e6949465121fa1`; initialization is performed through a separate branch and pull request, not a forced replacement of main. The initialization PR and its exact-revision verification comments are the operational receipt; do not reimport a local bundle when that PR is already merged.
 
-## Completed scientific review and next task
+## Scientific account and learning route
 
 The [focused contribution review](research/CONTRIBUTION_REVIEW.md) found no blocking proof error and retained the frozen theorem. It also made explicit that the four-setting regular construction in prior work already contains its special-case exponent. The exact retained implication is the explicit canonical-GHZ construction for arbitrary fixed planar families with the matching all-state full-correlation rate. Known ingredients alone are not a subsumption argument; unfamiliar notation is not evidence of novelty.
 
-The compact exposition is complete in the [README](README.md): fixed resources, theorem, proof mechanism, attribution and limits. The explicitly requested scientific prerequisite audit is complete in [operational consequences](research/OPERATIONAL_CONSEQUENCES.md) and the [source audit](literature/SOURCE_AUDIT.md). The latter adds the 2006 regular-polygon predecessor for every setting count. [CURRENT](work_orders/CURRENT.md) records the stopping point and reasons to reopen work. Do not repeat completed work without a concrete new task.
+The [README](README.md) supplies fixed resources, theorem, proof mechanism, attribution and limits. The [reading guide](docs/README.md) and [tutorial-to-theorem bridge](REVIEW.md) use Gühne et al.'s 2023 review as the single external teaching anchor. The local bridge supplies the planar certificate, GHZ construction and rate argument; research papers retain their scientific attribution. [llms.txt](llms.txt) identifies relevant questions, search terms and the authoritative files.
+
+The scientific prerequisite audit is recorded in [operational consequences](research/OPERATIONAL_CONSEQUENCES.md) and the [source audit](literature/SOURCE_AUDIT.md). The latter adds the 2006 regular-polygon predecessor for every setting count. [CURRENT](work_orders/CURRENT.md) records the stopping boundary and reasons to reopen work. Do not repeat completed work without a concrete new task.
 
 Do not begin another broad scout, add biased/noncoplanar measurements, general marginals, exact-party-number optimization, or device simulations by default. The current result can be assessed without solving those stronger questions. Do not represent internal checks as independent scientific review.
 

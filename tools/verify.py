@@ -82,7 +82,8 @@ def check_links(root: Path = ROOT) -> int:
     count = 0
     paths = list(root.glob('*.md')) + list((root / 'research').glob('*.md'))
     paths += list((root / 'literature').glob('*.md')) + list((root / 'work_orders').glob('*.md'))
-    paths += [root / 'archive/README.md']
+    paths += list((root / 'docs').rglob('*.md'))
+    paths += [root / 'archive/README.md', root / 'llms.txt']
     for path in paths:
         text = re.sub(r'```.*?```', '', path.read_text(), flags=re.S)
         for link in re.findall(r'\]\(([^)]+)\)', text):

@@ -2,6 +2,15 @@
 
 **Fixed noisy planar qubit measurements determine an optimal exponential Bell-amplification rate. An explicit GHZ construction attains it.**
 
+| Read next | Purpose |
+|---|---|
+| [Reading guide](docs/README.md) · [Tutorial-to-theorem bridge](REVIEW.md) | Learn from one external review and local worked calculations |
+| [Theorem and proof](research/THEOREM.md) · [Model and claims](research/MODEL_AND_CLAIMS.md) | Check the construction, converse, resources and normalization |
+| [Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) | Interpret finite-party costs, noise and exact certificates |
+| [Source audit](literature/SOURCE_AUDIT.md) · [Attribution](literature/ATTRIBUTION.md) | Separate inherited ingredients from the additional implication |
+| [Verification](#evidence-and-reproduction) · [Scope and evidence](STATUS.md) | Inspect executable evidence and the result's limits |
+| [LLM guide](llms.txt) · [Workspace](WORKSPACE.md) | Find relevant questions and authoritative files |
+
 ## The fixed-detector question
 
 Suppose every party receives one qubit and uses the same prescribed collection of noisy measurements. The measurement directions and sharpness are known and remain fixed as more parties are added. Can a familiar entangled state reveal every amount of measurement incompatibility? How quickly can the Bell value grow, even if we optimize over every possible state?
@@ -57,33 +66,26 @@ The root limit identifies the exponential rate, not the exact optimum at a fixed
 
 ## Why the bounds meet
 
-**1. Geometry supplies one set of coefficients.** Yoshino et al.'s optimal planar dual certificate gives real vectors `h_x`. Encode them as complex numbers `c_x = h_x1 + i h_x2`. Their signed sums are bounded, and the edge formula in [the theorem, Section 3](research/THEOREM.md#3-inherited-geometric-input) gives
+**Geometry supplies coefficients.** Yoshino et al.'s inherited optimal planar dual certificate has bounded signed sums. Encoding its vectors as complex numbers produces a two-by-two matrix whose useful entry is the perimeter factor.
 
-```math
-\max_{s_x=\pm1}\left|\sum_xc_xs_x\right|\le1,
-\qquad
-T=\sum_xc_xA_x=\begin{pmatrix}0&\nu\\v&0\end{pmatrix},
-\qquad |v|\le\nu.
-```
+**Tensor products produce a GHZ witness.** Real parts of products of those complex coefficients give a Bell expression. Every deterministic local value factors into the bounded one-site sums, so the local absolute bound is at most one. Aligning the Bell and GHZ phases gives the lower bound; dividing by the exact local bound can only improve it. The selected GHZ state maximizes this constructed operator. An arbitrary fixed planar functional can instead be maximized in another complementary-bitstring block.
 
-The compatibility geometry and its certificate are inherited. The complex matrix is the link to the Bell construction.
+**Joint parents bound every state.** In a mathematical comparison, rescale the first `N-1` sites by `1/nu` to compatible families and the last site by `1/r` to valid binary observables. Parent outcomes and the last site's conditional Born probabilities form a local model. Restoring the scales gives the ceiling `r nu^(N-1)`. These comparison measurements are proof devices, not extra experimental resources. Taking Nth roots yields the common limit.
 
-**2. Tensor products turn those coefficients into a GHZ witness.** Choose real Bell coefficients
+The [tutorial-to-theorem bridge](REVIEW.md) works through the algebra and a noisy two-setting example. [Theorem Sections 3–5](research/THEOREM.md#3-inherited-geometric-input) supply the authoritative construction and converse.
 
-```math
-\beta_{x_1\ldots x_N}
-=\operatorname{Re}\left[e^{i\gamma}\prod_{j=1}^N c_{x_j}\right].
-```
+## One tutorial, then this result
 
-Every deterministic local value factors into the bounded one-site sign sums, so the local absolute bound is at most one. Aligning the Bell phase and GHZ phase gives the quantum value
+The selected learning anchor is:
 
-```math
-Q_N=\frac{\nu^N+|v|^N}{2}\ge\frac{\nu^N}{2}.
-```
+> O. Gühne, E. Haapasalo, T. Kraft, J.-P. Pellonpää and R. Uola,
+> **Incompatible measurements in quantum information science**,
+> *Reviews of Modern Physics* **95**, 011003 (2023).
+>
+> [Author review, arXiv:2112.06784v3](https://arxiv.org/abs/2112.06784v3) ·
+> [Published article](https://doi.org/10.1103/RevModPhys.95.011003)
 
-Dividing by the exact local bound can only improve this lower bound. The selected GHZ state maximizes this constructed Bell operator; it need not maximize an arbitrary fixed planar Bell expression. [Section 4](research/THEOREM.md#4-the-bell-construction) specifies both phases and checks all complementary-bitstring blocks.
-
-**3. Joint parents bound every competing state.** In a mathematical comparison, rescale the first `N-1` sites by `1/nu` so each admits a joint parent, and the last site by `1/r` so its observables are valid. The parent outcomes and the last site's conditional quantum response form a local model. Restoring the scales multiplies every full correlator by `r nu^(N-1)`, proving the all-state upper bound. These rescaled measurements are proof devices, not extra resources supplied to the experiment. Taking Nth roots of the two bounds yields the common limit.
+The [reading guide](docs/README.md) maps its POVM, joint-measurement, duality and Bell-locality sections to this repository. The [bridge](REVIEW.md) supplies the exact planar certificate, Bell/GHZ calculation and rate argument locally. Its noisy orthogonal-measurement example leads into the arbitrary-family result. No second external tutorial is required. Research papers remain theorem references; the 2023 review does not contain the 2026 planar perimeter theorem.
 
 ## What this adds to existing results
 
@@ -101,19 +103,11 @@ The state is supplied before the measurement choices. Every outcome is retained,
 
 The theorem does not cover biased or noncoplanar families, Bell expressions with marginal terms, exact finite-party optimality, genuine multipartite nonlocality, entanglement depth, self-testing, cryptographic rates, detector no-click robustness, efficient statistical certification or implemented GHZ preparation. Global white-state noise and independent detector noise are distinct. This is an author-side theoretical account; internal checks do not establish external independent review or exhaustive priority clearance.
 
-| Read | Purpose |
-|---|---|
-| [Model and claims](research/MODEL_AND_CLAIMS.md) | Precise resources, normalization and nonclaims. |
-| [Theorem and proof](research/THEOREM.md) | Complete construction, converse, degeneracies and party bounds. |
-| [Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) | Finite rate estimate, fixed-margin cost, noise conventions and certificate interpretation. |
-| [Focused contribution review](research/CONTRIBUTION_REVIEW.md) | Proof scrutiny and the precise predecessor boundary. |
-| [Source audit](literature/SOURCE_AUDIT.md) | Stronger regular-polygon predecessor and current primary-source comparison. |
-| [Attribution](literature/ATTRIBUTION.md) | Inherited results and source-reading depth. |
-| [Verification](VERIFICATION.md) | Original checks, preserved evidence and numerical comparison policy. |
+The [reading guide](docs/README.md#repository-map) locates the proof, operational consequences, source comparisons and verification policy. The [LLM guide](llms.txt) gives relevant research questions, search terms and the authoritative reading order.
 
 The [consolidation assessment](research/ASSESSMENT.md) records the preceding assessment. The [archive](archive/README.md) retains all 81 historical snapshot members, including failed attempts and original reports. For repository maintenance, start with [WORKSPACE](WORKSPACE.md) and [CURRENT](work_orders/CURRENT.md). No third-party PDF is redistributed.
 
-## Reproduce
+## Evidence and reproduction
 
 Use Python 3.13.5 and the pinned scientific packages:
 
@@ -123,11 +117,11 @@ python -m unittest discover -s tests -v
 python tools/verify.py --output .artifacts/local-01
 ```
 
-The output directory must be new. The runner executes all **18 original scientific groups** and compares the four reports with their unchanged references. Eight infrastructure tests are counted separately. Exact byte equality is distinguished from permitted floating-point drift, and every changed field is recorded. Read [VERIFICATION](VERIFICATION.md) before changing checks or references.
+The output directory must be new. The runner executes all **18 original scientific groups** and compares the four reports with their unchanged references. Infrastructure tests are counted separately. Exact byte equality is distinguished from permitted floating-point drift, and every changed field is recorded. Read [VERIFICATION](VERIFICATION.md) before changing checks or references.
 
 ## Purpose and contact
 
-This repository serves as a record of the work and a guide for the author's self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 ## License
 

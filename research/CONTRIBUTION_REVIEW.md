@@ -1,5 +1,7 @@
 # Focused proof and contribution review
 
+The subsequent [source audit](../literature/SOURCE_AUDIT.md) strengthens this dated review's symmetric comparison: Nagata-Laskowski-Paterek (2006) already give the perimeter exponent for every regular setting count. [Operational consequences](OPERATIONAL_CONSEQUENCES.md) record the completed prerequisite audit and clarify the exact normalization and fixed-margin interpretation. The theorem and the review below remain unchanged.
+
 **7 October 2026. Decision: retain the theorem at its existing scope.** No blocking proof error was found. The contribution is a constructive, quantitative consequence of established compatibility geometry and GHZ methods. This review strengthens the acknowledgment of a symmetric predecessor; it does not change the theorem, its bounds, or its numerical evidence.
 
 The reviewed baseline is main commit `54a805598ded79b5d8749f55e381cc690700a9fa`. This is an author-side review with parallel internal scrutiny, not external independent review or exhaustive priority clearance. [THEOREM](THEOREM.md) remains the mathematical specification; [ASSESSMENT](ASSESSMENT.md) preserves the preceding consolidation assessment.

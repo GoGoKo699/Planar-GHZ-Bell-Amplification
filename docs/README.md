@@ -23,7 +23,7 @@ The review's remaining topics are optional for this result. The repository suppl
 | 1 | [README](../README.md) | The physical question, theorem and contribution in compact form. |
 | 2 | [REVIEW](../REVIEW.md) | The tutorial-to-theorem bridge, including a noisy two-setting example. |
 | 3 | [Model and claims](../research/MODEL_AND_CLAIMS.md) | Fixed resources, exact full-correlation objective and nonclaims. |
-| 4 | [Theorem](../research/THEOREM.md) | Complete coefficient construction, GHZ phases, converse and degeneracies. |
+| 4 | [Theorem](THEOREM.md) | Complete coefficient construction, GHZ phases, converse and degeneracies. |
 | 5 | [Operational consequences](../research/OPERATIONAL_CONSEQUENCES.md) | Finite-rate estimates, fixed-margin party cost and noise interpretation. |
 | 6 | [Attribution](../literature/ATTRIBUTION.md), [source audit](../literature/SOURCE_AUDIT.md) | Which ingredients are inherited and what the inspected predecessor passages cover. |
 | 7 | [Verification](../VERIFICATION.md) | What finite checks establish and how they relate to the analytical proof. |

@@ -87,6 +87,31 @@ class InfrastructureTests(unittest.TestCase):
         self.assertIn('Yoshino',readme)
         self.assertIn('conv',readme)
 
+    def test_portable_math_and_frozen_source_view(self):
+        self.assertTrue(verify.check_presentation()['theorem_view_matches_source'])
+        spec = importlib.util.spec_from_file_location('render_docs', ROOT/'tools/render_docs.py')
+        renderer = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(renderer)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root/'research').mkdir()
+            (root/'docs').mkdir()
+            source = '# Theorem\n\n$$\nK=\\operatorname{conv}\\{a\\}\n$$\n'
+            (root/'research/THEOREM.md').write_text(source)
+            view = root/'docs/THEOREM.md'
+            view.write_text(renderer.theorem_view(root))
+            renderer.check(root)
+            readme = root/'README.md'
+            readme.write_text('```math\nK=\\operatorname{conv}\\{a\\}\n```\n')
+            with self.assertRaisesRegex(ValueError, 'Unsupported math macro'):
+                renderer.check(root)
+            readme.write_text('```math\nK=\\mathrm{conv}\\{a\\}\n```\n')
+            renderer.check(root)
+            view.write_text(view.read_text().replace('K=', 'Q='))
+            with self.assertRaisesRegex(ValueError, 'reading view is stale'):
+                renderer.check(root)
+            self.assertEqual((root/'research/THEOREM.md').read_text(), source)
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

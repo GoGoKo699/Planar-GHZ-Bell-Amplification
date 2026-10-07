@@ -32,6 +32,10 @@ Original assertions execute unchanged. Independently, reports must have identica
 
 The local preflight in the initialization environment reproduced all four reports byte-for-byte. Hosted numerical equivalence must never be called byte equality unless its downloaded bytes actually agree. An unsupported platform or failed optimizer is a failed run, not permission to alter the source.
 
+## Reading-page presentation
+
+The protected scientific theorem retains its original bytes and hash. `python tools/render_docs.py` generates [its reading view](docs/THEOREM.md), changing only display delimiters, upright operator typography and a source link. `python tools/render_docs.py --check` checks synchronization without rewriting. The verification runner also checks synchronization and rejects the renderer-incompatible operator macro in current reading-page equations. These presentation checks are infrastructure, separate from the 18 scientific groups.
+
 ## Hosted workflow and review
 
 The workflow checks out the actual PR head SHA for pull-request runs and the actual pushed SHA for main runs. It pins Python, scientific dependencies and action commit IDs. It has read-only repository permissions, contains no secrets and does not write back to the repository.

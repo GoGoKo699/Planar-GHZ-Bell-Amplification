@@ -8,7 +8,7 @@ The Bell objective is the absolute full-correlation value divided by its exact l
 
 ## Main added implication
 
-For `nu = perimeter(conv{+/- a_x})/4` and `r = max ||a_x||`, the [theorem](THEOREM.md) constructs Bell coefficients and a phase-adjusted canonical GHZ state with value at least `nu^N/2`, while every state and full-correlation tensor obeys the ceiling `r nu^(N-1)`. Their Nth-root limits equal `nu`.
+For `nu = perimeter(conv{+/- a_x})/4` and `r = max ||a_x||`, the [theorem](../docs/THEOREM.md) constructs Bell coefficients and a phase-adjusted canonical GHZ state with value at least `nu^N/2`, while every state and full-correlation tensor obeys the ceiling `r nu^(N-1)`. Their Nth-root limits equal `nu`.
 
 This gives constructive GHZ activation whenever `nu > 1`, the exact asymptotic amplification factor, and necessary/sufficient finite-party bounds for a fixed violation margin. Those are consequences of one connection, not separate proposed discoveries. The zero and collinear cases are explicit in the theorem.
 

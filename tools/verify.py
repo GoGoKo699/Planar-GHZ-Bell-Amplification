@@ -3,6 +3,7 @@
 from __future__ import annotations
 import argparse
 import hashlib
+import importlib.util
 import json
 import math
 import os
@@ -104,6 +105,13 @@ def fresh_output(path: Path, root: Path = ROOT) -> Path:
     return path
 
 
+def check_presentation() -> dict:
+    spec = importlib.util.spec_from_file_location('render_docs', ROOT/'tools/render_docs.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.check()
+
+
 def tracked_sources(root: Path = ROOT) -> dict:
     p = subprocess.run(['git', 'ls-files', '-z'], cwd=root, capture_output=True)
     if p.returncode == 0 and p.stdout:
@@ -138,6 +146,7 @@ def main() -> int:
         write_json(out/'SOURCE_HASHES.json', tracked_sources())
         summary['preservation'] = inspect_archive()
         summary['active_local_links'] = check_links()
+        summary['presentation'] = check_presentation()
         archive = ROOT/'archive/consolidation-2026-10-07'
         env = {**os.environ, 'OPENBLAS_NUM_THREADS': '1', 'OMP_NUM_THREADS': '1',
                'PYTHONDONTWRITEBYTECODE': '1', 'TERM': 'dumb'}

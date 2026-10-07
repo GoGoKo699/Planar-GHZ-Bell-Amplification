@@ -5,7 +5,7 @@
 | Read next | Purpose |
 |---|---|
 | [Reading guide](docs/README.md) · [Tutorial-to-theorem bridge](REVIEW.md) | Learn from one external review and local worked calculations |
-| [Theorem and proof](research/THEOREM.md) · [Model and claims](research/MODEL_AND_CLAIMS.md) | Check the construction, converse, resources and normalization |
+| [Theorem and proof](docs/THEOREM.md) · [Model and claims](research/MODEL_AND_CLAIMS.md) | Check the construction, converse, resources and normalization |
 | [Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) | Interpret finite-party costs, noise and exact certificates |
 | [Source audit](literature/SOURCE_AUDIT.md) · [Attribution](literature/ATTRIBUTION.md) | Separate inherited ingredients from the additional implication |
 | [Verification](#evidence-and-reproduction) · [Scope and evidence](STATUS.md) | Inspect executable evidence and the result's limits |
@@ -32,8 +32,8 @@ A_x=a_{x1}\sigma_x+a_{x2}\sigma_y,\qquad \|\mathbf a_x\|\le1.
 Directions may be irregular and sharpness unequal. Let
 
 ```math
-K=\operatorname{conv}\{\pm\mathbf a_x\},\qquad
-\nu=\frac{\operatorname{perimeter}(K)}4,\qquad
+K=\mathrm{conv}\{\pm\mathbf a_x\},\qquad
+\nu=\frac{\mathrm{perimeter}(K)}4,\qquad
 r=\max_x\|\mathbf a_x\|.
 ```
 
@@ -72,7 +72,7 @@ The root limit identifies the exponential rate, not the exact optimum at a fixed
 
 **Joint parents bound every state.** In a mathematical comparison, rescale the first `N-1` sites by `1/nu` to compatible families and the last site by `1/r` to valid binary observables. Parent outcomes and the last site's conditional Born probabilities form a local model. Restoring the scales gives the ceiling `r nu^(N-1)`. These comparison measurements are proof devices, not extra experimental resources. Taking Nth roots yields the common limit.
 
-The [tutorial-to-theorem bridge](REVIEW.md) works through the algebra and a noisy two-setting example. [Theorem Sections 3–5](research/THEOREM.md#3-inherited-geometric-input) supply the authoritative construction and converse.
+The [tutorial-to-theorem bridge](REVIEW.md) works through the algebra and a noisy two-setting example. [Theorem Sections 3–5](docs/THEOREM.md#3-inherited-geometric-input) supply the authoritative construction and converse.
 
 ## One tutorial, then this result
 
@@ -95,7 +95,7 @@ The additional implication is the conversion of **every fixed planar family** in
 
 ## One finite-party illustration
 
-For the retained irregular three-setting family in [Section 6](research/THEOREM.md#6-a-fixed-violation-margin-and-the-retained-exact-example), any full-correlation Bell/local ratio of at least two requires at least **20 parties**, while the existing **25-party GHZ witness** exceeds two. These are necessary and sufficient bounds, not an exact minimum. The example illustrates the theorem; the arbitrary-party result rests on its analytical proof.
+For the retained irregular three-setting family in [Section 6](docs/THEOREM.md#6-a-fixed-violation-margin-and-the-retained-exact-example), any full-correlation Bell/local ratio of at least two requires at least **20 parties**, while the existing **25-party GHZ witness** exceeds two. These are necessary and sufficient bounds, not an exact minimum. The example illustrates the theorem; the arbitrary-party result rests on its analytical proof.
 
 ## Scope and reading map
 

@@ -26,4 +26,4 @@ The chosen GHZ state maximizes our constructed functional. It need not maximize 
 
 No exact smallest party count for an arbitrarily small violation; no theorem for biased/noncoplanar POVMs or arbitrary marginal terms; no genuine N-party nonlocality, entanglement-depth bound, self-testing, cryptographic rate, finite-sample efficiency, detector no-click robustness, or implemented GHZ preparation. Global white-state noise is not independent detector noise. The pure full-correlation behavior is normalized and involves no postselection.
 
-No independent proof review, exhaustive priority clearance or external acceptance has occurred. The task is contribution review with this scientific scope frozen, not adding a broader model to keep the project active.
+No external independent proof review, exhaustive priority clearance or external acceptance has occurred. The [internal contribution review](CONTRIBUTION_REVIEW.md) is complete, and the [README](../README.md) provides the compact exposition. The scientific scope remains frozen.

@@ -8,9 +8,11 @@ The owner authorized this initialization and subsequent modifications/merges. Pr
 
 Read `AGENTS.md`, `STATUS.md`, `work_orders/CURRENT.md`, `research/THEOREM.md`, `research/ASSESSMENT.md` and `VERIFICATION.md`. Inspect the live branch and open pull requests before editing. The owner-created starting revision was `d6f1a9535238bf00b439b89207e6949465121fa1`; initialization is performed through a separate branch and pull request, not a forced replacement of main. The initialization PR and its exact-revision verification comments are the operational receipt; do not reimport a local bundle when that PR is already merged.
 
-## One next scientific task
+## Completed scientific review and next task
 
-Review the compact contribution and its proof dependencies at the frozen scope. Judge the exact added implication: inherited planar compatibility geometry becomes an explicit canonical-GHZ Bell construction with the optimal all-state full-correlation exponential rate. Identify any genuine gap or directly covering predecessor before changing the account. Known ingredients alone are not a subsumption argument; unfamiliar notation is not evidence of novelty.
+The [focused contribution review](research/CONTRIBUTION_REVIEW.md) found no blocking proof error and retained the frozen theorem. It also made explicit that the four-setting regular construction in prior work already contains its special-case exponent. The exact retained implication is the explicit canonical-GHZ construction for arbitrary fixed planar families with the matching all-state full-correlation rate. Known ingredients alone are not a subsumption argument; unfamiliar notation is not evidence of novelty.
+
+Continue with the compact exposition task in [CURRENT](work_orders/CURRENT.md). Do not repeat the completed initialization or contribution-review loop without new evidence.
 
 Do not begin another broad scout, add biased/noncoplanar measurements, general marginals, exact-party-number optimization, or device simulations by default. The current result can be assessed without solving those stronger questions. Do not represent internal checks as independent scientific review.
 

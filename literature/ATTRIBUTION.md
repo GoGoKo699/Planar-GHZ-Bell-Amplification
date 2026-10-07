@@ -1,6 +1,6 @@
 # Attribution and source-reading boundaries
 
-This import adds no literature search or scientific claim. The source assessments were completed in the supplied 7 October 2026 records. Read the [active assessment](../research/ASSESSMENT.md) and the [complete uploaded-paper comparison](../archive/consolidation-2026-10-07/prior/SOURCE_COMPARISON.md).
+Read the [focused contribution review](../research/CONTRIBUTION_REVIEW.md) for the completed proof scrutiny and the strengthened symmetric-predecessor comparison. The preceding [consolidation assessment](../research/ASSESSMENT.md) and [uploaded-paper comparison](../archive/consolidation-2026-10-07/prior/SOURCE_COMPARISON.md) retain their original reading boundaries.
 
 | Source | Inherited content and reading boundary |
 |---|---|
@@ -8,7 +8,7 @@ This import adds no literature search or scientific claim. The source assessment
 | Plavala, Guhne and Quintino, [2403.10564v4](https://arxiv.org/abs/2403.10564v4), PRL 134, 200201 (2025) | General qubit incompatibility activation; Theorem 3, all-but-one-compatible-sites locality and the GHZ/Dicke/party-count discussion. The declared result answers only the unbiased binary planar subclass. The external positive-map theorem was not independently reproduced. |
 | Loulidi and Nechita, [2205.12668](https://arxiv.org/abs/2205.12668), PRX Quantum 3, 040325 (2022) | Compatibility/Bell tensor-norm framework; Theorems 8.1–8.2 in the fixed-Alice bipartite setting. The upper-bound method is inherited. |
 | Werner and Wolf, [quant-ph/0102024](https://arxiv.org/abs/quant-ph/0102024), PRA 64, 032112 (2001) | Two-setting full-correlation and GHZ extremality precedents, especially Sections V.D and VII. The elementary anti-diagonal block structure is not a new GHZ-optimality principle. |
-| Designolle, Vertesi and Pokutta, [2310.20677](https://arxiv.org/abs/2310.20677), PRA 109, 022205 (2024) | Regular-polygon GHZ constructions, Eqs. (6)–(8), with optimized finite-party inequalities. No superiority to their symmetric facets or sampling costs is claimed. |
+| Designolle, Vertesi and Pokutta, [2310.20677v2](https://arxiv.org/html/2310.20677v2), PRA 109, 022205 (2024) | Regular-polygon GHZ constructions, Eqs. (6)–(8). Section IX.A, Eqs. (34)–(35), already imply the compatibility-scale exponent for four sharp regular settings; the calculation and version boundary are in the focused review. No new symmetric exponent or superiority to their facets or sampling costs is claimed. |
 
 Additional compatibility, complex-multilinear and bipartite-locality comparisons remain in the nested source records. Each record preserves its actual access level, including earlier abstract-only access that was later superseded for the uploaded paper. Failed searches and missing PDFs are not evidence of novelty.
 

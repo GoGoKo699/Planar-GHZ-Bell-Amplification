@@ -3,10 +3,13 @@
 Repository: GoGoKo699/Planar-GHZ-Bell-Amplification
 Start with README.md, AGENTS.md, STATUS.md and work_orders/CURRENT.md.
 Current claim: research/MODEL_AND_CLAIMS.md and research/THEOREM.md.
-Contribution and attribution: research/ASSESSMENT.md and literature/ATTRIBUTION.md.
+Completed contribution review: research/CONTRIBUTION_REVIEW.md.
+Preceding consolidation assessment and attribution: research/ASSESSMENT.md and literature/ATTRIBUTION.md.
 Verification: VERIFICATION.md, tools/verify.py and tests/.
 Historical evidence: archive/consolidation-2026-10-07/; immutable, not the current task queue.
-Scientific scope is frozen for contribution review. No prior project is part of this repository.
+Scientific scope remains frozen after the completed review; next task is compact exposition.
+The symmetric four-setting exponent has a direct predecessor; the retained result covers arbitrary fixed planar families with a matching all-state rate.
+No prior project is part of this repository.
 
 ## Purpose and contact
 

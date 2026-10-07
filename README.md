@@ -46,12 +46,13 @@ Every Bell term uses one outcome from every party. There is no postselection, co
 |---|---|
 | [Model and claims](research/MODEL_AND_CLAIMS.md) | Fixed resources, the central implication and what is not established. |
 | [Theorem and proof](research/THEOREM.md) | Main mathematical account; start here for proof review. |
-| [Contribution assessment](research/ASSESSMENT.md) | Strongest predecessor comparisons and the scientific-scope boundary. |
+| [Focused contribution review](research/CONTRIBUTION_REVIEW.md) | Proof obligations, the symmetric exponent already in prior work, and the precise retained contribution. |
+| [Consolidation assessment](research/ASSESSMENT.md) | Preceding assessment and the scientific-scope boundary. |
 | [Attribution and source depths](literature/ATTRIBUTION.md) | Inherited geometry and the recorded primary-source audit. |
 | [Verification](VERIFICATION.md) | Four original suites, protected evidence and reproducible commands. |
 | [Workspace handoff](WORKSPACE.md) | Exact project identity and next bounded task. |
 
-The [archive](archive/README.md) preserves the complete 81-member consolidation snapshot, including earlier attempts, failed checks and original reports. Active prose only updates repository routing and operational status; equations, scripts, reference reports and scientific tolerances are not changed by this import. No third-party PDF is redistributed.
+The [archive](archive/README.md) preserves the complete 81-member consolidation snapshot, including earlier attempts, failed checks and original reports. The focused review adds proof scrutiny and a sharper predecessor comparison; the theorem, scripts, reference reports and scientific tolerances remain unchanged. No third-party PDF is redistributed.
 
 ## Reproduce
 

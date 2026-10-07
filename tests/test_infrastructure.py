@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import importlib.util
 import json
+import re
 import tempfile
 import unittest
 
@@ -96,16 +97,26 @@ class InfrastructureTests(unittest.TestCase):
             root = Path(tmp)
             (root/'research').mkdir()
             (root/'docs').mkdir()
-            source = '# Theorem\n\n$$\nK=\\operatorname{conv}\\{a\\}\n$$\n'
+            source = '# Theorem\n\n$$\nK=\\operatorname{conv}\\{a\\}\n\\tag{1}\n$$\n'
             (root/'research/THEOREM.md').write_text(source)
             view = root/'docs/THEOREM.md'
             view.write_text(renderer.theorem_view(root))
+            self.assertIn(r'\qquad\text{(1)}', view.read_text())
+            self.assertNotIn(r'\tag', view.read_text())
             renderer.check(root)
             readme = root/'README.md'
             readme.write_text('```math\nK=\\operatorname{conv}\\{a\\}\n```\n')
             with self.assertRaisesRegex(ValueError, 'Unsupported math macro'):
                 renderer.check(root)
             readme.write_text('```math\nK=\\mathrm{conv}\\{a\\}\n```\n')
+            renderer.check(root)
+            readme.write_text('```math\nK=\\mathrm{conv}\\{a\\}\n\\tag{1}\n```\n')
+            with self.assertRaisesRegex(ValueError, 'Unsupported math macro'):
+                renderer.check(root)
+            readme.write_text('$`K=\\mathrm{conv}\\{a\\}\\tag{1}`$\n')
+            with self.assertRaisesRegex(ValueError, 'Unsupported math macro'):
+                renderer.check(root)
+            readme.write_text('```math\nK=\\mathrm{conv}\\{a\\}\\qquad\\text{(1)}\n```\n')
             renderer.check(root)
             view.write_text(view.read_text().replace('K=', 'Q='))
             with self.assertRaisesRegex(ValueError, 'reading view is stale'):
@@ -152,6 +163,64 @@ class InfrastructureTests(unittest.TestCase):
                         renderer.check(root)
             readme.write_text('Use `python tools/verify.py` for the beta coefficients.\n')
             renderer.check(root)
+
+    def test_theorem_reader_editorial_changes_preserve_science(self):
+        spec = importlib.util.spec_from_file_location('render_docs', ROOT/'tools/render_docs.py')
+        renderer = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(renderer)
+        source_path = ROOT/'research/THEOREM.md'
+        source_bytes = source_path.read_bytes()
+        source = source_bytes.decode()
+        view = renderer.theorem_view()
+        source_math = [match[2] for match in renderer.MATH.finditer(source)]
+        view_math = [match[1] for match in renderer.MATH.finditer(view)]
+        self.assertEqual(len(source_math), 24)
+        normalized = []
+        for formula in source_math:
+            formula = formula.replace(r'\operatorname{', r'\mathrm{')
+            for number in range(1, 8):
+                formula = formula.replace(
+                    r'\tag{'+str(number)+'}', r'\qquad\text{('+str(number)+')}',
+                )
+            normalized.append(formula)
+        self.assertEqual(normalized, view_math)
+        self.assertEqual(
+            [tag for formula in source_math for tag in re.findall(r'\\tag\{(\d+)\}', formula)],
+            [str(number) for number in range(1, 8)],
+        )
+        self.assertNotIn(r'\tag', view)
+        for number in range(1, 8):
+            self.assertEqual(view.count(r'\qquad\text{('+str(number)+')}'), 1)
+        bibliography = source.split('## Primary references\n', 1)[1].strip()
+        view_bibliography = view.split('## Primary references\n', 1)[1].split(
+            '\nThe preserved [scientific source]', 1,
+        )[0].strip()
+        self.assertEqual(view_bibliography, bibliography)
+        for boundary in (
+            'No new compatibility theorem, experimental performance, or exhaustive priority certificate is claimed.',
+            'No communication during the trial, postselection, privileged sharper detector, filtering, or multiple sequential uses at a site is added.',
+            'State and Bell-functional design use the known family and its plane; the result is not an uncalibrated device-construction procedure.',
+            'This is a comparison of normalized Bell values, not their excess above one, not sample complexity, and not a statement of exact finite-N optimum.',
+            'Biased or noncoplanar measurements, detector no-click models, exact finite-N Bell optima, genuine multipartite nonlocality, self-testing, cryptographic rates and efficient statistical certification are not claimed and are not automatic prerequisites.',
+        ):
+            self.assertIn(renderer.inline_prose(boundary), view)
+        self.assertIn('The 13-party and 25-party values have exact certificates.', view)
+        self.assertIn('## 8. Attribution and scope', view)
+        self.assertNotIn('focused author review', view)
+        self.assertNotIn('manuscript submission', view)
+        for old, _ in renderer.THEOREM_READER_EDITS:
+            with self.subTest(anchor=old):
+                with self.assertRaisesRegex(ValueError, 'editorial anchor has changed'):
+                    renderer.theorem_reader_prose(source.replace(old, 'missing anchor', 1))
+                with self.assertRaisesRegex(ValueError, 'editorial anchor has changed'):
+                    renderer.theorem_reader_prose(source+'\n'+old)
+        with self.assertRaisesRegex(ValueError, 'title anchor has changed'):
+            renderer.theorem_reader_prose(source.replace(renderer.THEOREM_TITLE, '# Changed title', 1))
+        self.assertEqual(source_path.read_bytes(), source_bytes)
+        self.assertEqual(
+            hashlib.sha256(source_bytes).hexdigest(),
+            '201515a6e33e910d86087072a9a99acc052fdb2b3d6ba3722d4719418facbda1',
+        )
 
 
 if __name__ == '__main__':

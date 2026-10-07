@@ -1,6 +1,6 @@
 # Fixed-family source audit
 
-This targeted primary-source audit supplements the dated [contribution review](../research/CONTRIBUTION_REVIEW.md). It strengthens the symmetric predecessor attribution and records the comparison needed for the current [claim](../research/MODEL_AND_CLAIMS.md). It is internal scrutiny, not external independent review or exhaustive priority clearance. The baseline was main `37369af8347a8afde5d9865afc09df577397611b`; sources were checked on 7 October 2026.
+This primary-source comparison explains the regular-polygon predecessors and the boundary of the arbitrary fixed-family [claim](../research/MODEL_AND_CLAIMS.md). [ATTRIBUTION](ATTRIBUTION.md) records inherited inputs and source-reading limits; the [proof review](../research/CONTRIBUTION_REVIEW.md) examines the construction and converse.
 
 ## Regular-polygon amplification was already known for every setting count
 
@@ -55,6 +55,4 @@ No inspected passage supplies this complete arbitrary-family implication. The ge
 | Salles et al., [1002.1893](https://arxiv.org/abs/1002.1893), Section 6.2, Proposition 10 | Multilinear contractions recover linear correlation Bell inequalities. That generic framework is inherited; the inspected passage does not identify the optimal geometric certificate or perimeter rate for every prescribed irregular noisy planar family. |
 | Karczewski et al., [2202.06606](https://arxiv.org/abs/2202.06606), Sections 4.1-4.2, especially Eqs. (15)-(16) | Supplies complex tensor coefficient constructions and broader setting/outcome frameworks. The product-complex method receives no new-priority framing; the specific optimal certificate conversion is the comparison point. |
 
-The first four comparisons build on the recorded full or targeted reading in [ATTRIBUTION](ATTRIBUTION.md) and the protected historical source records. The new targeted reading concerns the regular-polygon predecessor, the v2/v3 symmetric-source boundary, and the identified complex/multilinear passages. Eleven bounded queries addressed these source families and possible directly covering rate/perimeter statements. Irrelevant results and failed retrievals were not used as evidence that a result is absent. References are linked; no third-party article is redistributed.
-
-The audit found no directly covering theorem at the declared scope. This is sufficient to describe a bounded added implication, not to certify priority against all literature. A directly covering source or a concrete proof objection would reopen the scientific assessment; unrelated stronger models are not prerequisites of the current claim.
+The comparisons use the listed primary passages and the reading boundaries in [ATTRIBUTION](ATTRIBUTION.md) and the [historical source records](../archive/README.md). No directly covering theorem was found in those passages. Failed retrievals and irrelevant search results are not evidence of absence; the comparison does not certify priority against all literature.

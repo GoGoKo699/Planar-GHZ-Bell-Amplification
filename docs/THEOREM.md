@@ -1,8 +1,8 @@
 # Optimal exponential Bell amplification from planar qubit measurements
 
-**7 October 2026. Consolidated author-side theorem.** This is one bounded contribution: converting the inherited planar joint-measurability certificate into an explicit GHZ Bell experiment whose normalized full-correlation value has the optimal exponential scale. The geometric norm, its perimeter formula, and its optimal certificates are due to Yoshino and collaborators [Y26]. General qubit incompatibility activation is already established [PGQ25]. No new compatibility theorem, experimental performance, or exhaustive priority certificate is claimed.
+This is one bounded contribution: converting the inherited planar joint-measurability certificate into an explicit GHZ Bell experiment whose normalized full-correlation value has the optimal exponential scale. The geometric norm, its perimeter formula, and its optimal certificates are due to Yoshino and collaborators [Y26]. General qubit incompatibility activation is already established [PGQ25]. No new compatibility theorem, experimental performance, or exhaustive priority certificate is claimed.
 
-This account replaces the exploration sequence as the main reading path. Earlier notes and checks remain unchanged in the [protected import](../archive/consolidation-2026-10-07/README.md). The only strengthened bound in this pass is the finite-party upper bound in (2), using the standard fact that compatibility at all but one site suffices for locality. The asymptotic exponent and all earlier examples remain valid.
+The finite-party upper bound in (2) uses the standard fact that compatibility at all but one site suffices for locality.
 
 ## 1. Physical question and fixed resources
 
@@ -50,7 +50,7 @@ Set
 K=\mathrm{conv}\{\pm\mathbf a_x\},\qquad
 \nu=\frac{\mathrm{perimeter}(K)}4,\qquad
 r=\max_x\|\mathbf a_x\|.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The perimeter of a segment is twice its length; all-zero measurements give $`\nu=r=0`$. The inherited geometry implies $`r\le\nu\le\pi r/2`$ and compatibility iff $`\nu\le1`$. The operators $`A_x/\nu`$ have a parent whenever $`\nu>0`$. These rescaled operators are a mathematical comparison in the proof, not extra settings supplied in the experiment.
@@ -65,7 +65,7 @@ For every $`N\ge2`$ and nonzero family,
 \le \mathcal R_N
 \le r\nu^{N-1}
 \le\nu^N.}
-\tag{2}
+\qquad\text{(2)}
 ```
 
 There is an explicit $`\beta`$ and phase-adjusted GHZ state giving the lower bound; the state in fact maximizes that constructed Bell operator. Therefore
@@ -74,7 +74,7 @@ There is an explicit $`\beta`$ and phase-adjusted GHZ state giving the lower bou
 \boxed{
 \lim_{N\to\infty}(\mathcal R_N^{\rm GHZ})^{1/N}
 =\lim_{N\to\infty}\mathcal R_N^{1/N}=\nu.}
-\tag{3}
+\qquad\text{(3)}
 ```
 
 For the zero family both sequences vanish. For a nonzero collinear family one has $`\nu=r`$ and exactly $`\mathcal R_N=\mathcal R_N^{\mathrm{GHZ}}=r^N`$, so no incompatible case is lost in the nondegenerate construction below.
@@ -103,7 +103,7 @@ These are the columns of the source's matrix $`Y=\tfrac12\widehat K C^T`$ [Y26, 
 \max_{s_x=\pm1}\left\|\sum_xs_xh_x\right\|\le1,
 \qquad
 \sum_xh_x\cdot\mathbf a_x=\nu.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 Write $`z_x=a_{x1}+i a_{x2}`$, $`c_x=h_{x1}+i h_{x2}`$, and identify $`k_i`$ with its complex coordinate. Substitution and telescoping give
@@ -113,7 +113,7 @@ u=\sum_xc_x\bar z_x=\frac12\sum_i\|k_i\|=\nu,
 \qquad
 v=\sum_xc_xz_x=\frac12\sum_i\frac{k_i^2}{\|k_i\|},
 \qquad |v|\le\nu.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 Equation (4), including its explicit construction, is inherited. Equation (5) is the elementary dictionary used in the additional Bell argument. The geometry need not be rederived as an allegedly new result.
@@ -127,7 +127,7 @@ Choose
 ```math
 \beta_{x_1\ldots x_N}
 =\mathrm{Re}\left[e^{i\gamma}\prod_{j=1}^Nc_{x_j}\right].
-\tag{6}
+\qquad\text{(6)}
 ```
 
 For any local deterministic strategy its value factors:
@@ -185,18 +185,18 @@ Taking the state and $`\beta`$ suprema proves the sharpened bound. Scaling all $
 
 The nonnegative-root squeeze proves (3). No finite-state numerical search is needed for the arbitrary-$`N`$ statement.
 
-## 6. A fixed violation margin and the retained exact example
+## 6. A fixed violation margin and an exact example
 
 For $`\nu>1`$ and a desired ratio $`R>1`$, any full-correlation experiment reaching at least $`R`$ must have
 
 ```math
 N\ge\left\lceil1+\frac{\ln(R/r)}{\ln\nu}\right\rceil.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 The construction is sufficient to exceed $`R`$ whenever $`\nu^N>2R`$. Thus the required party number has inverse-$`(\nu-1)`$ order for a fixed $`R`$ near incompatibility. The constants depend on the target and, in the lower bound, on $`r`$. No exact minimum for an infinitesimal violation is asserted.
 
-Keep the existing irregular rational family
+Consider the irregular rational family
 
 ```math
 \mathbf a_1=(.70,0),\qquad
@@ -204,7 +204,7 @@ Keep the existing irregular rational family
 \mathbf a_3=(-.28,-.66).
 ```
 
-Here $`\nu`$ is about 1.05775505 and $`r`$ about .71693793. The old 13-party and 25-party exact certificates remain unchanged. The strengthened upper bound now certifies
+Here $`\nu`$ is about 1.05775505 and $`r`$ about .71693793. The 13-party and 25-party values have exact certificates. The upper bound certifies
 
 ```math
 r\nu^5<1,\qquad r\nu^{18}<2,
@@ -239,13 +239,13 @@ p(s_1,\ldots,s_N|x_1,\ldots,x_N)
 
 There is no conditioning on a special subset of outcomes. A local model for its full tensor can be converted into a local model for this behavior by shared random output signs with product $`+1`$, which erase proper marginals while preserving the full product. This explains the full-correlation task for the constructed state; it does not extend the all-state homogeneous upper bound to arbitrary marginal-containing Bell expressions.
 
-## 8. Attribution, significance, and stopping boundary
+## 8. Attribution and scope
 
 [Y26] supplies the entire geometric compatibility problem and both optimal certificates. [PGQ25] supplies general eventual qubit activation and identifies the state-family/party-count questions. [LN22] supplies compatibility-norm upper-bound methods. [WW01] supplies important GHZ optimality precedents in the two-setting scenario. [DVP24] supplies optimized regular-polygon GHZ Bell constructions. None of these ingredients is assigned new priority here.
 
-The proposed additional implication is: for every fixed irregular planar family in the declared class, an explicit $`\beta`$ and phase-adjusted GHZ attain the compatibility norm's exponential scale, with a matching all-state bound. The inspected source passages do not directly supply that complete statement. Its proof is concise; the remaining judgment is whether the connection is sufficiently consequential, not whether its ingredients are unfamiliar. No exhaustive priority or independent scientific review has occurred.
+The proposed additional implication is: for every fixed irregular planar family in the declared class, an explicit $`\beta`$ and phase-adjusted GHZ attain the compatibility norm's exponential scale, with a matching all-state bound. The inspected source passages do not directly supply that complete statement.
 
-Stop expanding the scientific scope for the current assessment. Biased or noncoplanar measurements, detector no-click models, exact finite-$`N`$ Bell optima, genuine multipartite nonlocality, self-testing, cryptographic rates and efficient statistical certification are not claimed and are not automatic prerequisites. The theorem is recorded here for focused author review. This initialization does not initiate a manuscript submission, release or external contact.
+Biased or noncoplanar measurements, detector no-click models, exact finite-$`N`$ Bell optima, genuine multipartite nonlocality, self-testing, cryptographic rates and efficient statistical certification are not claimed and are not automatic prerequisites.
 
 ## Primary references
 

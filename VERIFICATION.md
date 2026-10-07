@@ -30,11 +30,13 @@ The uploaded compatibility PDF is recorded by SHA-256 but intentionally absent f
 
 Original assertions execute unchanged. Independently, reports must have identical structure, strings, integer counts, Boolean values and exact rational certificates. Finite floating-point fields are compared with `abs(actual-reference) <= 1e-13 + 1e-12*abs(reference)`. NaNs and infinities fail. This narrow report-drift policy is not a relaxation of any scientific assertion. Every changed field, both values and absolute difference are saved; exact report-byte equality is recorded separately. A reviewer must inspect those differences before merging.
 
-The local preflight in the initialization environment reproduced all four reports byte-for-byte. Hosted numerical equivalence must never be called byte equality unless its downloaded bytes actually agree. An unsupported platform or failed optimizer is a failed run, not permission to alter the source.
+Numerical equivalence must never be called byte equality unless the downloaded report bytes actually agree. An unsupported platform or failed optimizer is a failed run, not permission to alter the source.
 
 ## Reading-page presentation
 
-The protected scientific theorem retains its original bytes and hash. `python tools/render_docs.py` generates [its reading view](docs/THEOREM.md), changing only math delimiters, upright operator typography, inline notation and a source link. Prose uses GitHub's dollar-backtick inline math syntax for Greek letters, subscripts, powers and inequalities. `python tools/render_docs.py --check` checks synchronization without rewriting. The verification runner also checks inline delimiters, detects common mathematical expressions left as code or ASCII text, and rejects the renderer-incompatible operator macro in current reading-page equations. These presentation checks are infrastructure, separate from the 18 scientific groups.
+The protected scientific theorem retains its original bytes and hash. `python tools/render_docs.py` generates [its reading view](docs/THEOREM.md), using portable math formatting and exact editorial substitutions that remove historical workflow notices and make their surrounding prose self-contained. Each editorial anchor must occur exactly once; unexpected source drift fails the transformation. The seven equation numbers use ordinary math text instead of the renderer-incompatible numbered-table macro. Infrastructure tests compare all 24 theorem equations after these declared typography changes and its unchanged bibliography with the preserved source, retain the scientific scope statements, and check its pinned hash.
+
+Prose uses GitHub's dollar-backtick inline math syntax for Greek letters, subscripts, powers and inequalities. `python tools/render_docs.py --check` checks synchronization without rewriting. The verification runner also checks inline delimiters, detects common mathematical expressions left as code or ASCII text, and rejects the renderer-incompatible operator and equation-tag macros in current reading-page equations. These presentation checks are infrastructure, separate from the 18 scientific groups.
 
 ## Hosted workflow and review
 
@@ -42,4 +44,4 @@ The workflow checks out the actual PR head SHA for pull-request runs and the act
 
 Each run uploads raw execution logs, fresh reports, environment information, the comparison results and SHA-256 values of all tracked source files. The workflow job summary gives a compact receipt. Review the exact PR diff and source-matched artifact before merge; inspect the separate actual merged-main workflow after merge. Use the expected PR-head SHA when merging.
 
-Passing finite tests is not independent proof review, exhaustive priority clearance, or verification of a detector apparatus. The all-party result rests on the analytical theorem. The workspace must review the bounded contribution with these distinctions intact.
+The finite suites check witnesses, examples and source preservation. The all-party result rests on the analytical theorem; [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md) specifies the limits of the evidence.

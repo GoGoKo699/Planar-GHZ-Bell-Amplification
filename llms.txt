@@ -48,8 +48,8 @@ and independent detector noise must not be conflated.
 - [Preserved theorem source](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/THEOREM.md): protected scientific record, also checked against the reading view.
 - [Operational consequences](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/OPERATIONAL_CONSEQUENCES.md): finite rate, party costs, noise and conservative certificate interpretation.
 - [Source audit](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/SOURCE_AUDIT.md) and [attribution](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/ATTRIBUTION.md): inherited inputs and bounded predecessor comparison.
-- [Contribution review](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/CONTRIBUTION_REVIEW.md): internal proof scrutiny; read with the later source audit.
-- [Verification policy](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/VERIFICATION.md) and [scope and evidence](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/STATUS.md): what the checks establish and how to inspect exact-revision evidence.
+- [Proof review](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/CONTRIBUTION_REVIEW.md): proof obligations and predecessor boundaries.
+- [Verification policy](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/VERIFICATION.md): what the checks establish and how to inspect exact-revision evidence.
 
 ## Tutorial and attribution
 
@@ -76,7 +76,6 @@ a historical statement.
 
 - [Instructions](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/AGENTS.md)
 - [Workspace](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/WORKSPACE.md)
-- [Current work order](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/work_orders/CURRENT.md)
 - [Historical archive](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/archive/README.md)
 
 ## Purpose and contact

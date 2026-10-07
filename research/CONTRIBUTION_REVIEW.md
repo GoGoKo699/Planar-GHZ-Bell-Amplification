@@ -1,6 +1,6 @@
 # Proof and contribution boundaries
 
-This note examines the proof obligations and predecessor boundaries of [THEOREM](../docs/THEOREM.md). The [source audit](../literature/SOURCE_AUDIT.md) derives the regular-polygon exponent already known for every setting count; [operational consequences](OPERATIONAL_CONSEQUENCES.md) explain normalization, fixed-margin party cost and noise.
+This note examines the proof obligations and predecessor boundaries of [THEOREM](../docs/THEOREM.md). The [source audit](../literature/SOURCE_AUDIT.md) derives the regular-polygon exponent already known for every setting count; [operational consequences](OPERATIONAL_CONSEQUENCES.md) explain fixed-margin party cost and noise.
 
 ## Proof obligations and findings
 

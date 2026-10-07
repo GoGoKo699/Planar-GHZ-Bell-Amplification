@@ -46,10 +46,10 @@ and independent detector noise must not be conflated.
 - [Model and claims](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/MODEL_AND_CLAIMS.md): authoritative resources, normalization and nonclaims.
 - [Theorem and proof](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/docs/THEOREM.md): display-safe reading view of the authoritative construction, converse, degeneracies and party bounds.
 - [Preserved theorem source](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/THEOREM.md): protected scientific record, also checked against the reading view.
-- [Operational consequences](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/OPERATIONAL_CONSEQUENCES.md): finite rate, party costs, noise and conservative certificate interpretation.
+- [Operational consequences](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/OPERATIONAL_CONSEQUENCES.md): finite rate, party costs and noise.
 - [Source audit](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/SOURCE_AUDIT.md) and [attribution](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/ATTRIBUTION.md): inherited inputs and bounded predecessor comparison.
 - [Proof review](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/CONTRIBUTION_REVIEW.md): proof obligations and predecessor boundaries.
-- [Verification policy](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/VERIFICATION.md): what the checks establish and how to inspect exact-revision evidence.
+- [Verification policy](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/VERIFICATION.md): what the checks establish, archived-certificate interpretation and exact-revision evidence.
 
 ## Tutorial and attribution
 

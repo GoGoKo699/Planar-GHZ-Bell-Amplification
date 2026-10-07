@@ -6,9 +6,9 @@
 |---|---|
 | [Reading guide](docs/README.md) · [Tutorial-to-theorem bridge](REVIEW.md) | Learn from one external review and local worked calculations |
 | [Theorem and proof](docs/THEOREM.md) · [Model and claims](research/MODEL_AND_CLAIMS.md) | Check the construction, converse, resources and normalization |
-| [Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) | Interpret finite-party costs, noise and exact certificates |
+| [Operational consequences](research/OPERATIONAL_CONSEQUENCES.md) | Interpret finite-party costs and noise |
 | [Source audit](literature/SOURCE_AUDIT.md) · [Attribution](literature/ATTRIBUTION.md) | Separate inherited ingredients from the additional implication |
-| [Verification](#evidence-and-reproduction) | Inspect executable evidence and the comparison policy |
+| [Verification](#evidence-and-reproduction) | Inspect executable evidence, certificate interpretation and the comparison policy |
 | [LLM guide](llms.txt) | Find relevant questions and authoritative files |
 
 ## The fixed-detector question

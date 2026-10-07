@@ -32,6 +32,22 @@ Original assertions execute unchanged. Independently, reports must have identica
 
 Numerical equivalence must never be called byte equality unless the downloaded report bytes actually agree. An unsupported platform or failed optimizer is a failed run, not permission to alter the source.
 
+## Interpreting the archived rational witness
+
+This interpretation applies to the [initial-scout checker](archive/consolidation-2026-10-07/prior/prior/prior/check_planar_bell.py) and [its canonical report](archive/consolidation-2026-10-07/prior/prior/prior/evidence/repeat.json).
+
+The definition of $`\mathcal R_N`$ uses the exact local absolute bound $`L(\beta)`$. The constructive proof only needs $`L(\beta)\le1`$; it never requires equality. Its positive quantum value ensures the Bell tensor is nonzero, and local sign strategies span the tensor space, so $`L(\beta)>0`$.
+
+The original rational witness report's field `local_absolute_bound = 1` denotes the certified conservative bound used by that checker. It is not an assertion that the exact local maximum equals one. Indeed its rounded one-site coefficients satisfy
+
+```math
+\max_s\left|\sum_xc_xs_x\right|^2
+=\frac{499999562849}{500000000000}<1.
+```
+
+Their $`N`$-site local bound is therefore strictly below one. Dividing by its exact value can only improve the archived sufficient violations. The rational coefficients, the geometric coefficients used for the all-$`N`$ identity, and their corresponding values remain distinct. No archived script, report, or certificate is corrected or replaced by this explanation.
+
+
 ## Reading-page presentation
 
 The protected scientific theorem retains its original bytes and hash. `python tools/render_docs.py` generates [its reading view](docs/THEOREM.md), using portable math formatting and exact editorial substitutions that remove historical workflow notices and make their surrounding prose self-contained. Each editorial anchor must occur exactly once; unexpected source drift fails the transformation. The seven equation numbers use ordinary math text instead of the renderer-incompatible numbered-table macro. Infrastructure tests compare all 24 theorem equations after these declared typography changes and its unchanged bibliography with the preserved source, retain the scientific scope statements, and check its pinned hash.

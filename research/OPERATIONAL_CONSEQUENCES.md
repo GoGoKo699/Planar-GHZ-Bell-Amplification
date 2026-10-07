@@ -101,17 +101,6 @@ w(\eta\nu)^N\ge2R.
 
 A constant global white-state visibility leaves the witness's exponential factor unchanged, while fixed local attenuation changes it to $`\eta\nu`$. A visibility that itself decays with $`N`$ need not preserve the rate. These are algebraic consequences for the stated noise models, not preparation-fidelity guarantees, calibration-error bounds, or sampling-cost results.
 
-## Exact normalization and the archived certificates
-
-The definition of $`\mathcal R_N`$ uses the exact local absolute bound $`L(\beta)`$. The constructive proof only needs $`L(\beta)\le1`$; it never requires equality. Its positive quantum value ensures the Bell tensor is nonzero, and local sign strategies span the tensor space, so $`L(\beta)>0`$.
-
-The original rational witness report's field `local_absolute_bound = 1` denotes the certified conservative bound used by that checker. It is not an assertion that the exact local maximum equals one. Indeed its rounded one-site coefficients satisfy
-
-```math
-\max_s\left|\sum_xc_xs_x\right|^2
-=\frac{499999562849}{500000000000}<1.
-```
-
-Their $`N`$-site local bound is therefore strictly below one. Dividing by its exact value can only improve the archived sufficient violations. The rational coefficients, the geometric coefficients used for the all-$`N`$ identity, and their corresponding values remain distinct. No archived script, report, or certificate is corrected or replaced by this explanation.
+The [verification policy](../VERIFICATION.md#interpreting-the-archived-rational-witness) explains the archived rational witness reports.
 
 The [contribution review](CONTRIBUTION_REVIEW.md) records the analytical dependency checks. The [model specification](MODEL_AND_CLAIMS.md) lists the full assumptions and nonclaims.

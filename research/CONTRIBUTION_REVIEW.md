@@ -30,28 +30,28 @@ The following is a logical comparison, not a further claim attributed to that pa
 
 [Designolle–Vertesi–Pokutta, v2](https://arxiv.org/html/2310.20677v2), Section IX.A (IX.1 in HTML), Eqs. (34)–(35), gives all-party quantum and local values for four regular planar projective settings. Write
 
-$$
+```math
 \alpha=1+\frac1{\sqrt2},\qquad
 \delta=1-\frac1{\sqrt2},\qquad
 \ell_n=\alpha^n-\delta^n.
-$$
+```
 
 Their formulas give
 
-$$
+```math
 Q_{2n-1}=4^{2n-2},\qquad Q_{2n}=\sqrt2\,4^{2n-1},
 \qquad
 L_{2n-1}=\frac{4^{n-1}\ell_n}{\sqrt2},\qquad
 L_{2n}=\frac{4^n\ell_n}{\sqrt2}.
-$$
+```
 
 Our direct inference from these formulas is
 
-$$
+```math
 \lim_{N\to\infty}\left(\frac{Q_N}{L_N}\right)^{1/N}
 =\frac{2}{\sqrt{1+1/\sqrt2}}
 =4\sin\frac{\pi}{8}=\nu_4.
-$$
+```
 
 Here the symmetric hull is a regular unit circumradius octagon, with perimeter divided by four equal to $`\nu_4`$. Thus the compatibility-scale exponent is already present in this symmetric case. We claim no new exponent or improved finite-party inequality for that example. What the cited construction does not supply is the arbitrary irregular, unequally sharp fixed-family result with the matching all-state bound.
 

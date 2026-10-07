@@ -1,0 +1,2 @@
+usage: check_source_dictionary.py [-h] --output OUTPUT
+check_source_dictionary.py: error: Refusing to overwrite an existing evidence report.

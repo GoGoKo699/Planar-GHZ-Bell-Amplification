@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://arxiv.org/pdf/2609.38836v1",
+    "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2609.38836v1 (Caused by NameResolutionError(\"HTTPSConnection(host='arxiv.org', port=443): Failed to resolve 'arxiv.org' ([Errno -3] Temporary failure in name resolution)\"))"
+  },
+  {
+    "url": "https://arxiv.org/src/2609.38836v1",
+    "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /src/2609.38836v1 (Caused by NameResolutionError(\"HTTPSConnection(host='arxiv.org', port=443): Failed to resolve 'arxiv.org' ([Errno -3] Temporary failure in name resolution)\"))"
+  }
+]

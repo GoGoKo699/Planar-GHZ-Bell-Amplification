@@ -1,0 +1,8 @@
+test_01_source_sign_matrix_identities (__main__.SourceChecks.test_01_source_sign_matrix_identities) ... ok
+test_02_source_primal_dual_equals_previous_geometry (__main__.SourceChecks.test_02_source_primal_dual_equals_previous_geometry) ... ok
+test_03_bell_bridge_from_source_columns (__main__.SourceChecks.test_03_bell_bridge_from_source_columns) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.021s
+
+OK

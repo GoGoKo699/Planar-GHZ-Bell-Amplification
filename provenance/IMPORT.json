@@ -1,0 +1,45 @@
+{
+  "repository": "GoGoKo699/Planar-GHZ-Bell-Amplification",
+  "owner": "Ruge Lin",
+  "source_archive": "planar_ghz_consolidation_2026-10-07.zip",
+  "source_archive_sha256": "c3b3ed1ff2efef32918d3f91e2cc9b0133183d42533d0849e73314efcf17f7f6",
+  "snapshot_directory": "archive/consolidation-2026-10-07",
+  "snapshot_members": 81,
+  "manifest_sha256": "105099b2ac1042cbbe9f022245bcdce68d8f6b24575573e5d454fc372ce2ddb4",
+  "initial_remote_commit": "d6f1a9535238bf00b439b89207e6949465121fa1",
+  "initial_remote_tree": "170e627df5d29a7de42b1d2f31f855f2d0d417ee",
+  "license_sha256": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
+  "source_pdf": {
+    "name": "2609.38836v1.pdf",
+    "sha256": "1181693ddd202f90eff59ebfc13f556e00bf472037e401ae9de2fd5f1c67eb88",
+    "url": "https://arxiv.org/abs/2609.38836v1",
+    "redistributed": false
+  },
+  "excluded": [
+    "Unrelated electronic-decoherence attachment",
+    "Other research projects and code",
+    "Third-party PDFs and fonts"
+  ],
+  "science": {
+    "formulas_changed": false,
+    "canonical_scripts_changed": false,
+    "reports_changed": false,
+    "tolerances_changed": false
+  },
+  "active_derivations": {
+    "research/THEOREM.md": {
+      "from": "THEOREM.md",
+      "sha256": "201515a6e33e910d86087072a9a99acc052fdb2b3d6ba3722d4719418facbda1"
+    },
+    "research/ASSESSMENT.md": {
+      "from": "ASSESSMENT.md",
+      "sha256": "d9a91e0cdfdf2d8878487c4f2bf8fc770c2e5ab3653e9694c9303c700288067f"
+    }
+  },
+  "operational_note": "Local clone initially failed DNS; supported GitHub object/branch/PR actions are used for publication. A local preflight of the original archive passed all 18 groups with all four reports byte-identical. Hosted status requires exact-revision review, not this record.",
+  "action_refs_checked": {
+    "actions/checkout@v4": "11d5960a326750d5838078e36cf38b85af677262",
+    "actions/setup-python@v5": "a26af69be951a213d495a4c3e4e4022e16d87065",
+    "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02"
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "all_state_upper_checks": [
+    {
+      "operator_norm": 0.2981253272430936,
+      "parties": 2,
+      "settings": 3,
+      "trial": 0,
+      "upper": 1.118845749514076
+    },
+    {
+      "operator_norm": 0.2573534170163668,
+      "parties": 2,
+      "settings": 3,
+      "trial": 1,
+      "upper": 1.118845749514076
+    },
+    {
+      "operator_norm": 0.3491459067460635,
+      "parties": 2,
+      "settings": 3,
+      "trial": 2,
+      "upper": 1.118845749514076
+    },
+    {
+      "operator_norm": 0.3985028202883611,
+      "parties": 2,
+      "settings": 3,
+      "trial": 3,
+      "upper": 1.118845749514076
+    },
+    {
+      "operator_norm": 0.15114861522620707,
+      "parties": 3,
+      "settings": 3,
+      "trial": 0,
+      "upper": 1.1834647436835743
+    },
+    {
+      "operator_norm": 0.181207185222693,
+      "parties": 3,
+      "settings": 3,
+      "trial": 1,
+      "upper": 1.1834647436835743
+    },
+    {
+      "operator_norm": 0.2165485078452401,
+      "parties": 3,
+      "settings": 3,
+      "trial": 2,
+      "upper": 1.1834647436835743
+    },
+    {
+      "operator_norm": 0.23592867576745036,
+      "parties": 3,
+      "settings": 3,
+      "trial": 3,
+      "upper": 1.1834647436835743
+    },
+    {
+      "operator_norm": 0.49289349762397966,
+      "parties": 2,
+      "settings": 2,
+      "trial": 0,
+      "upper": 1.0
+    },
+    {
+      "operator_norm": 0.36974465663632133,
+      "parties": 2,
+      "settings": 2,
+      "trial": 1,
+      "upper": 1.0
+    },
+    {
+      "operator_norm": 0.49678969393496886,
+      "parties": 2,
+      "settings": 2,
+      "trial": 2,
+      "upper": 1.0
+    },
+    {
+      "operator_norm": 0.3697446566363213,
+      "parties": 2,
+      "settings": 2,
+      "trial": 3,
+      "upper": 1.0
+    },
+    {
+      "operator_norm": 0.3007191380674001,
+      "parties": 3,
+      "settings": 2,
+      "trial": 0,
+      "upper": 1.0
+    },
+    {
+      "operator_norm": 0.26318054639353566,
+      "parties": 3,
+      "settings": 2,
+      "trial": 1,
+      "upper": 1.0
+    },
+    {
+      "operator_norm": 0.25961702563583916,
+      "parties": 3,
+      "settings": 2,
+      "trial": 2,
+      "upper": 1.0
+    },
+    {
+      "operator_norm": 0.271455664479078,
+      "parties": 3,
+      "settings": 2,
+      "trial": 3,
+      "upper": 1.0
+    },
+    {
+      "operator_norm": 0.28879999999999995,
+      "parties": 2,
+      "settings": 3,
+      "trial": 0,
+      "upper": 1.2995999999999999
+    },
+    {
+      "operator_norm": 0.32039483333969226,
+      "parties": 2,
+      "settings": 3,
+      "trial": 1,
+      "upper": 1.2995999999999999
+    },
+    {
+      "operator_norm": 0.13892599611553705,
+      "parties": 2,
+      "settings": 3,
+      "trial": 2,
+      "upper": 1.2995999999999999
+    },
+    {
+      "operator_norm": 0.3939883134194606,
+      "parties": 2,
+      "settings": 3,
+      "trial": 3,
+      "upper": 1.2995999999999999
+    },
+    {
+      "operator_norm": 0.2812510109754559,
+      "parties": 3,
+      "settings": 3,
+      "trial": 0,
+      "upper": 1.4815439999999995
+    },
+    {
+      "operator_norm": 0.19022293333333334,
+      "parties": 3,
+      "settings": 3,
+      "trial": 1,
+      "upper": 1.4815439999999995
+    },
+    {
+      "operator_norm": 0.27678159844536077,
+      "parties": 3,
+      "settings": 3,
+      "trial": 2,
+      "upper": 1.4815439999999995
+    },
+    {
+      "operator_norm": 0.2345316259743773,
+      "parties": 3,
+      "settings": 3,
+      "trial": 3,
+      "upper": 1.4815439999999995
+    }
+  ],
+  "exact_new_controls": {
+    "asymptotic_rate": "lim R_N^(1/N)=nu; analytical squeeze, not numerical extrapolation.",
+    "factor_two_any_state_requires_at_least_parties": 13,
+    "factor_two_explicit_ghz_sufficient_parties": 25,
+    "factor_two_ghz_value": 2.0351275541470044,
+    "nu_display": 1.0577550517554033,
+    "nu_lower": "2115510103510806485145369576239/2000000000000000000000000000000",
+    "nu_upper": "1057755051755403242572684788121/1000000000000000000000000000000",
+    "one_percent_shrink_13_value": 0.9103969240714931,
+    "one_percent_shrink_16_exact": "623119102319632260008584307371767578282733552460970997290539463346056700645368192021538325144079732083102420451652953555996187386905253509433565022290033/596046447753906250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "one_percent_shrink_16_value": 1.0454203773342572,
+    "six_percent_shrink_compatible_upper": 0.994289748650079,
+    "unshrunk_13_exact": "98940326381588571389747482439737965330695026622310295974716802018836558052973905101913614481640347/95367431640625000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "optimal_state_for_constructed_inequality": [
+    {
+      "dimension": 4,
+      "full_operator_norm": 0.5595340596800081,
+      "ghz_value": 0.5595340596800082,
+      "nu": 1.0577550517554033,
+      "parties": 2,
+      "settings": 3
+    },
+    {
+      "dimension": 8,
+      "full_operator_norm": 0.5917340298391945,
+      "ghz_value": 0.5917340298391945,
+      "nu": 1.0577550517554033,
+      "parties": 3,
+      "settings": 3
+    },
+    {
+      "dimension": 16,
+      "full_operator_norm": 0.6259079303270313,
+      "ghz_value": 0.6259079303270313,
+      "nu": 1.0577550517554033,
+      "parties": 4,
+      "settings": 3
+    },
+    {
+      "dimension": 32,
+      "full_operator_norm": 0.6620572494537549,
+      "ghz_value": 0.6620572494537549,
+      "nu": 1.0577550517554033,
+      "parties": 5,
+      "settings": 3
+    },
+    {
+      "dimension": 4,
+      "full_operator_norm": 0.5392,
+      "ghz_value": 0.5392,
+      "nu": 1.0,
+      "parties": 2,
+      "settings": 2
+    },
+    {
+      "dimension": 8,
+      "full_operator_norm": 0.510976,
+      "ghz_value": 0.510976,
+      "nu": 1.0,
+      "parties": 3,
+      "settings": 2
+    },
+    {
+      "dimension": 16,
+      "full_operator_norm": 0.50307328,
+      "ghz_value": 0.50307328,
+      "nu": 1.0,
+      "parties": 4,
+      "settings": 2
+    },
+    {
+      "dimension": 32,
+      "full_operator_norm": 0.5008605184,
+      "ghz_value": 0.5008605184,
+      "nu": 1.0,
+      "parties": 5,
+      "settings": 2
+    },
+    {
+      "dimension": 4,
+      "full_operator_norm": 0.6497999999999999,
+      "ghz_value": 0.6497999999999999,
+      "nu": 1.14,
+      "parties": 2,
+      "settings": 3
+    },
+    {
+      "dimension": 8,
+      "full_operator_norm": 0.7407719999999999,
+      "ghz_value": 0.7407719999999998,
+      "nu": 1.14,
+      "parties": 3,
+      "settings": 3
+    },
+    {
+      "dimension": 16,
+      "full_operator_norm": 0.8444800799999997,
+      "ghz_value": 0.8444800799999997,
+      "nu": 1.14,
+      "parties": 4,
+      "settings": 3
+    },
+    {
+      "dimension": 32,
+      "full_operator_norm": 0.9627072911999996,
+      "ghz_value": 0.9627072911999995,
+      "nu": 1.14,
+      "parties": 5,
+      "settings": 3
+    },
+    {
+      "dimension": 4,
+      "full_operator_norm": 0.7021294800945141,
+      "ghz_value": 0.7021294800945141,
+      "nu": 1.1799056018641347,
+      "parties": 2,
+      "settings": 5
+    },
+    {
+      "dimension": 8,
+      "full_operator_norm": 0.8219828491920383,
+      "ghz_value": 0.8219828491920383,
+      "nu": 1.1799056018641347,
+      "parties": 3,
+      "settings": 5
+    },
+    {
+      "dimension": 16,
+      "full_operator_norm": 0.9691517030156552,
+      "ghz_value": 0.9691517030156552,
+      "nu": 1.1799056018641347,
+      "parties": 4,
+      "settings": 5
+    },
+    {
+      "dimension": 32,
+      "full_operator_norm": 1.1434294312726567,
+      "ghz_value": 1.143429431272657,
+      "nu": 1.1799056018641347,
+      "parties": 5,
+      "settings": 5
+    },
+    {
+      "dimension": 4,
+      "full_operator_norm": 0.48999999999999994,
+      "ghz_value": 0.48999999999999994,
+      "nu": 0.7,
+      "parties": 2,
+      "settings": 4
+    },
+    {
+      "dimension": 8,
+      "full_operator_norm": 0.3429999999999999,
+      "ghz_value": 0.3429999999999999,
+      "nu": 0.7,
+      "parties": 3,
+      "settings": 4
+    },
+    {
+      "dimension": 16,
+      "full_operator_norm": 0.24009999999999992,
+      "ghz_value": 0.24009999999999995,
+      "nu": 0.7,
+      "parties": 4,
+      "settings": 4
+    },
+    {
+      "dimension": 32,
+      "full_operator_norm": 0.16806999999999994,
+      "ghz_value": 0.16806999999999994,
+      "nu": 0.7,
+      "parties": 5,
+      "settings": 4
+    }
+  ],
+  "scope": "Author-side finite algebraic and numerical checks; theorem rests on analytical proofs and no priority is inferred.",
+  "scope_controls": {
+    "all_full_correlation_scope": true,
+    "marginal_counterexample": {
+      "N": 3,
+      "marginal_quantum_value": ".5",
+      "nu": ".5",
+      "nu_power_N": ".125"
+    },
+    "near_boundary_counts": [
+      {
+        "necessary_parties_for_factor_two": 8,
+        "nu_minus_one": "1/10",
+        "sufficient_from_strict_bound": 15
+      },
+      {
+        "necessary_parties_for_factor_two": 70,
+        "nu_minus_one": "1/100",
+        "sufficient_from_strict_bound": 140
+      },
+      {
+        "necessary_parties_for_factor_two": 694,
+        "nu_minus_one": "1/1000",
+        "sufficient_from_strict_bound": 1387
+      }
+    ],
+    "not_claimed": [
+      "optimal finite-N party count",
+      "arbitrary marginal-containing Bell functionals",
+      "efficient sampling",
+      "genuine multipartite nonlocality",
+      "biased or noncoplanar extension"
+    ]
+  },
+  "status": "FAIL",
+  "tests_run": 5
+}

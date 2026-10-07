@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-07",
+  "task": "Planar GHZ proof/prior-art audit with exact asymptotic full-correlation amplification law",
+  "decision": "Retain the unified bounded result; resolve the missing latest source comparison before repository or manuscript promotion.",
+  "prior_archive_sha256": "d475669e842683b811187053a06be68cb93f0a5845f9c0a711b85943e6451abc",
+  "prior_archive_members_preserved": 12,
+  "prior_manifest_entries_verified": 11,
+  "prior_standalone_note_matches": true,
+  "new_groups": 5,
+  "new_complete_final_runs": 2,
+  "new_reports_byte_identical": true,
+  "new_final_report_sha256": "62a176d9e8b2d04433361d626cb3995bb4a4ab2694ed0e351841c9aa6abb7bd1",
+  "old_groups_rerun": 5,
+  "old_report_byte_identical": true,
+  "prior_rerun_sha256": "e7df234b7fd38cd56e8431cb630f7c1c75e52b23c2e93dbbcb390d488b1e4967",
+  "first_run": "Four groups passed, one failed on SLSQP success status under squared-norm constraints.",
+  "repair": "Equivalent norm constraints and analytic Jacobian; remove exactly duplicate opposite signs; unchanged acceptance thresholds and full original squared-feasibility audit.",
+  "optimizer_ftol": 1e-12,
+  "optimizer_maxiter": 500,
+  "objective_threshold": 2e-08,
+  "full_squared_feasibility_threshold": -2e-08,
+  "optimizer_success_required": true,
+  "tolerance_relaxed": false,
+  "original_checker_changed": false,
+  "prior_reports_refreshed": false,
+  "output_refusal": {
+    "returncode": 2,
+    "bytes_preserved": true
+  },
+  "largest_dense_quantum_dimension": 32,
+  "high_party_certification": "Exact rational scalar powers for N13,N16,N25; not a many-qubit numerical statevector.",
+  "new_analytical_results": [
+    "All-state full-correlation upper bound nu^N with the prescribed planar family at every site.",
+    "GHZ lower bound nu^N/2 matches the exact Nth-root rate nu.",
+    "The constructed phase-adjusted GHZ is an exact maximal eigenstate of its own Bell operator.",
+    "Necessary and sufficient party-count bounds have the same inverse-incompatibility-gap scaling for a fixed violation factor.",
+    "Exact fixed-family margin and local-shrinkage controls."
+  ],
+  "not_claimed": [
+    "Smallest party count for any violation",
+    "All Bell expressions including marginals",
+    "New compatibility perimeter criterion",
+    "Efficient experimental sampling",
+    "General biased/noncoplanar extension",
+    "Genuine N-party nonlocality",
+    "Exhaustive priority",
+    "Independent scientific review"
+  ],
+  "source_access_gap": "Full text of Yoshino et al. arXiv2609.38836 remains unavailable; primary indexed abstract read.",
+  "repositories_accessed_or_modified": false,
+  "protected_project_material_used": false,
+  "new_manuscript_or_contact": false
+}

@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-07",
+  "scope": "Fresh constructive planar-Bell scout. Primary passages only; broad search results and old project bibliographies do not establish priority.",
+  "sources": [
+    {
+      "id": "PGQ25",
+      "title": "All Incompatible Measurements on Qubits Lead to Multiparticle Bell Nonlocality",
+      "authors": "Martin Plavala; Otfried Guhne; Marco Tulio Quintino",
+      "publication": "Physical Review Letters134,200201 (21May2025)",
+      "url": "https://arxiv.org/html/2403.10564v3",
+      "publisher": "https://doi.org/10.1103/PhysRevLett.134.200201",
+      "depth": "Author HTML main theorem, proof framework, trine example, final open questions explicitly naming GHZ/Dicke families and party count. Publisher metadata and abstract checked.",
+      "boundary": "Broad existence theorem inherited. We only construct the unbiased binary coplanar subclass. No independent proof of the paper’s general positive-map result."
+    },
+    {
+      "id": "Y26",
+      "title": "Joint measurability of coplanar POVMs",
+      "authors": "Taro Yoshino; Koichi Tojo; Kei Hagihara; Akinori Tanaka; Takuki Tomita",
+      "publication": "arXiv2609.38836, submitted30September2026",
+      "url": "https://arxiv.org/abs/2609.38836",
+      "depth": "Primary indexed abstract only; exact planar perimeter criterion announced. Direct full-text routes inaccessible.",
+      "boundary": "No claim of new compatibility geometry. Its complete discussion may cover the proposed Bell consequence. No novelty clearance from inaccessible text. We supply our own centrally symmetric convention and proof."
+    },
+    {
+      "id": "LN22",
+      "title": "Measurement Incompatibility versus Bell Nonlocality: An Approach via Tensor Norms",
+      "authors": "Faedi Loulidi; Ion Nechita",
+      "publication": "PRX Quantum3,040325(2022)",
+      "url": "https://arxiv.org/pdf/2205.12668",
+      "depth": "Author v2 parsed introduction and Section2 main definitions and bounds; bipartite fixed-Alice setting and compatibility tensor-norm normalization.",
+      "boundary": "Tensor-norm view is inherited. No complete audit of all cited generalizations or proof that no tensor-norm corollary covers the new construction."
+    },
+    {
+      "id": "DVP24",
+      "title": "Symmetric multipartite Bell inequalities via Frank-Wolfe algorithms",
+      "authors": "Sebastien Designolle; Tamas Vertesi; Sebastian Pokutta",
+      "publication": "Physical Review A109,022205(2024)",
+      "url": "https://arxiv.org/pdf/2310.20677",
+      "depth": "Primary PDF model, Eqs.(6)-(8), regular-polygon GHZ setting, overview and conclusion; author abstract and publication metadata.",
+      "boundary": "Regular-polygon GHZ witnesses are established and used as controls, not claimed original. No figure/table numeric values imported or claim of better finite-N noise thresholds."
+    },
+    {
+      "id": "AK20",
+      "title": "Joint measurability structures realizable with qubit measurements: Incompatibility via marginal surgery",
+      "authors": "Nikola Andrejic; Ravi Kunjwal",
+      "publication": "Physical Review Research2,043147(2020)",
+      "url": "https://arxiv.org/pdf/2003.00785",
+      "depth": "Definitions and SectionII compatibility overview, two- and three-observable conditions, equal-purity/coplanar qualifications.",
+      "boundary": "No new claim for pairwise-compatible globally-incompatible measurements. No whole-paper proof recreation."
+    },
+    {
+      "id": "BV18",
+      "title": "Measurement incompatibility does not give rise to Bell violation in general",
+      "authors": "Erika Bene; Tamas Vertesi",
+      "publication": "New Journal of Physics20,013021(2018); author PDF rendered date14June2021",
+      "url": "https://arxiv.org/pdf/1705.10069",
+      "depth": "Primary PDF introduction, setup and conclusion.",
+      "boundary": "Used to distinguish pairwise joint measurability from full-family bipartite locality. No all-state bipartite-local claim for our irregular example."
+    }
+  ],
+  "failed_access": [
+    "Y26 direct arXiv abstract/PDF/HTML failed; only the indexed primary abstract is used.",
+    "Alternative author HTML routes for DVP24 and LN22 failed; their primary parsed PDFs supplied the declared passages."
+  ],
+  "visual_boundary": "No table, chart or figure numerical claim was used; primary mathematical prose/equations were parsed. No unviewed plot is described as checked.",
+  "ignored": "Generated source summaries, unrelated microwave/quantum-dot pages and broad unselected quantized-control/pumping leads were not used as technical support.",
+  "exhaustive_priority": false,
+  "independent_review": false,
+  "hardware_premise_audit": "Not attempted; ideal qubit/POVM construction, not an implementation claim.",
+  "third_party_pdfs_redistributed": false
+}

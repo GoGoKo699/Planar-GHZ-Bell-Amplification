@@ -1,0 +1,6 @@
+0 True Optimization terminated successfully 1.0577550517554035 1.0577550517554033 -1.1102230246251565e-15 12
+1 True Optimization terminated successfully 1.0000000000000002 1.0 -4.440892098500626e-16 7
+2 False Positive directional derivative for linesearch 1.1400000001479103 1.14 -2.5949242754563784e-10 11
+3 True Optimization terminated successfully 1.1799056018641991 1.1799056018641347 -2.62456723021387e-13 14
+4 True Optimization terminated successfully 0.7000000000000005 0.7 -1.7763568394002505e-15 8
+6 False Positive directional derivative for linesearch 1.000000000495763 1.0 -9.915266385718269e-10 14

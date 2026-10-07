@@ -1,0 +1,27 @@
+--- initial/check_audit_and_rate.py
++++ final/check_audit_and_rate.py
+@@ -115,14 +115,21 @@
+             if not nu:
+                 rows.append({'settings':len(a),'nu':0.,'zero_case':True});continue
+             # Maximize the dual directly from a strictly feasible point; no hull constraint.
+-            def cons(x):return 1-np.sum((signs@x.reshape(a.shape))**2,axis=1)
+-            def jac(x):return -2*np.einsum('sm,sd->smd',signs,signs@x.reshape(a.shape)).reshape(len(signs),-1)
++            # Use the equivalent unsquared norm constraints and remove the
++            # exact duplication between s and -s. Keep the old full squared
++            # residual check below as an independent acceptance criterion.
++            reduced=np.array([(1,)+s for s in product((-1,1),repeat=len(a)-1)],float)
++            def cons(x):return 1-np.linalg.norm(reduced@x.reshape(a.shape),axis=1)
++            def jac(x):
++                v=reduced@x.reshape(a.shape)
++                v=v/np.maximum(np.linalg.norm(v,axis=1),1e-30)[:,None]
++                return -np.einsum('sm,sd->smd',reduced,v).reshape(len(reduced),-1)
+             x0=(.3*a/np.sum(np.linalg.norm(a,axis=1))).ravel()
+             sol=minimize(lambda x:-float(np.dot(x,a.ravel())),x0,jac=lambda x:-a.ravel(),method='SLSQP',
+                 constraints=[{'type':'ineq','fun':cons,'jac':jac}],options={'ftol':1e-12,'maxiter':500})
+             self.assertTrue(sol.success,sol.message)
+             self.assertLess(abs(-sol.fun-nu),2e-8)
+-            self.assertGreaterEqual(min(cons(sol.x)),-2e-8)
++            self.assertGreaterEqual(min(1-np.sum((signs@sol.x.reshape(a.shape))**2,axis=1)),-2e-8)
+             # Parent reconstruction by independent bounded-coefficient feasibility.
+             gs=np.array(gens);parent=[]
+             for g in gs:

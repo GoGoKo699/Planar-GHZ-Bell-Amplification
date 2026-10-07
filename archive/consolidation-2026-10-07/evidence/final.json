@@ -1,0 +1,174 @@
+{
+  "compact_theorem_checks": [
+    {
+      "constructed_value": 0.5595340596800079,
+      "exact_local_bound_numeric": 0.9986869633286203,
+      "nu": 1.0577550517554033,
+      "parties": 2,
+      "radius": 0.7169379331573968,
+      "settings": 3,
+      "sharpened_ratio_ceiling": 0.7583447205923142
+    },
+    {
+      "constructed_value": 0.5917340298391944,
+      "exact_local_bound_numeric": 0.9860473884637051,
+      "nu": 1.0577550517554033,
+      "parties": 3,
+      "radius": 0.7169379331573968,
+      "settings": 3,
+      "sharpened_ratio_ceiling": 0.8021429591785602
+    },
+    {
+      "constructed_value": 0.625907930327031,
+      "exact_local_bound_numeric": 0.9947513014450821,
+      "nu": 1.0577550517554033,
+      "parties": 4,
+      "radius": 0.7169379331573968,
+      "settings": 3,
+      "sharpened_ratio_ceiling": 0.8484707673011502
+    },
+    {
+      "constructed_value": 0.5392,
+      "exact_local_bound_numeric": 1.0,
+      "nu": 1.0,
+      "parties": 2,
+      "radius": 0.8,
+      "settings": 2,
+      "sharpened_ratio_ceiling": 0.8
+    },
+    {
+      "constructed_value": 0.510976,
+      "exact_local_bound_numeric": 0.8,
+      "nu": 1.0,
+      "parties": 3,
+      "radius": 0.8,
+      "settings": 2,
+      "sharpened_ratio_ceiling": 0.8
+    },
+    {
+      "constructed_value": 0.50307328,
+      "exact_local_bound_numeric": 1.0,
+      "nu": 1.0,
+      "parties": 4,
+      "radius": 0.8,
+      "settings": 2,
+      "sharpened_ratio_ceiling": 0.8
+    },
+    {
+      "constructed_value": 0.6497999999999999,
+      "exact_local_bound_numeric": 1.0000000000000002,
+      "nu": 1.14,
+      "parties": 2,
+      "radius": 0.76,
+      "settings": 3,
+      "sharpened_ratio_ceiling": 0.8664
+    },
+    {
+      "constructed_value": 0.7407720000000002,
+      "exact_local_bound_numeric": 1.0000000000000004,
+      "nu": 1.14,
+      "parties": 3,
+      "radius": 0.76,
+      "settings": 3,
+      "sharpened_ratio_ceiling": 0.9876959999999999
+    },
+    {
+      "constructed_value": 0.8444800799999994,
+      "exact_local_bound_numeric": 1.0000000000000004,
+      "nu": 1.14,
+      "parties": 4,
+      "radius": 0.76,
+      "settings": 3,
+      "sharpened_ratio_ceiling": 1.1259734399999997
+    },
+    {
+      "constructed_value": 0.702129480094514,
+      "exact_local_bound_numeric": 0.9987521981413746,
+      "nu": 1.1799056018641347,
+      "parties": 2,
+      "radius": 0.841486779456457,
+      "settings": 5,
+      "sharpened_ratio_ceiling": 0.9928749649752833
+    },
+    {
+      "constructed_value": 0.8219828491920385,
+      "exact_local_bound_numeric": 0.992470246244356,
+      "nu": 1.1799056018641347,
+      "parties": 3,
+      "radius": 0.841486779456457,
+      "settings": 5,
+      "sharpened_ratio_ceiling": 1.1714987331249933
+    },
+    {
+      "constructed_value": 0.9691517030156565,
+      "exact_local_bound_numeric": 0.9999938778776521,
+      "nu": 1.1799056018641347,
+      "parties": 4,
+      "radius": 0.841486779456457,
+      "settings": 5,
+      "sharpened_ratio_ceiling": 1.3822579177909167
+    }
+  ],
+  "exact_margin": {
+    "all_threshold_comparisons_exact_rational": true,
+    "claim": "20 is a necessary count for ratio >=2, not the exact minimum; 25 remains a sufficient count.",
+    "existing_B13_decimal": 1.0374645167590062,
+    "existing_B25_decimal": 2.0351275541470044,
+    "existing_witness_sufficient_parties_for_ratio_two": 25,
+    "necessary_parties_for_ratio_two": 20,
+    "nineteen_party_ceiling_upper_decimal": 1.9697608730798082,
+    "nu_interval": [
+      "211551010351080648514536957624110849/200000000000000000000000000000000000",
+      "52887752587770162128634239406027713/50000000000000000000000000000000000"
+    ],
+    "radius_interval": [
+      "71693793315739682655013473739012411/100000000000000000000000000000000000",
+      "17923448328934920663753368434753103/25000000000000000000000000000000000"
+    ],
+    "six_party_ceiling_upper_decimal": 0.9493079115818382
+  },
+  "explicit_local_model": [
+    {
+      "hidden_values": 6,
+      "largest_correlation_difference": 5.551115123125783e-17,
+      "parties": 2
+    },
+    {
+      "hidden_values": 36,
+      "largest_correlation_difference": 3.469446951953614e-17,
+      "parties": 3
+    }
+  ],
+  "full_behavior_not_postselected": [
+    {
+      "even_parity_patterns": 2,
+      "parties": 2,
+      "probability_formula_error": 5.551115123125783e-17,
+      "twirl_integer_check": true
+    },
+    {
+      "even_parity_patterns": 4,
+      "parties": 3,
+      "probability_formula_error": 2.7755575615628914e-17,
+      "twirl_integer_check": true
+    },
+    {
+      "even_parity_patterns": 8,
+      "parties": 4,
+      "probability_formula_error": 1.3877787807814457e-17,
+      "twirl_integer_check": true
+    }
+  ],
+  "scope": "Finite identity and scope checks; arbitrary-N conclusions are analytical, not inferred from these tests.",
+  "scope_controls": {
+    "canonical_even_GHZ_value_every_phase": 0,
+    "incorrect_N_fold_ceiling": 0.25,
+    "interpretation": "GHZ-type block diagonalization alone does not build a violating inequality for an arbitrary incompatible family.",
+    "maximizer": "(|01> + exp(i phase)|10>)/sqrt(2)",
+    "one_site_marginal_value": 0.5,
+    "operator_norm": 2.8284271247461894,
+    "planar_CHSH_local_bound": 2
+  },
+  "status": "PASS",
+  "tests_run": 5
+}

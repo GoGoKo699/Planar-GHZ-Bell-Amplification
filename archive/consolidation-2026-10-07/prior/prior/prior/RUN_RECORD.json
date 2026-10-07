@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-07",
+  "candidate": "Constructive GHZ activation of arbitrary unbiased binary coplanar qubit measurements",
+  "decision": "One bounded GO for construction-level novelty/proof assessment; no repository or PRL commitment.",
+  "context_inputs": {
+    "FRESH_EXPLORATION_CHARTER.md": {
+      "sha256": "9ea68cf50b783a0cfa5e8abe36c4d7545fb6fb5b6b823d28581207b329aa13d4",
+      "bytes": 9568,
+      "role": "read-only process/separation context, not scientific seed"
+    },
+    "REVISION_AND_DEPARTURE.md": {
+      "sha256": "6743a77377d42300dbc7eee7ac9a624f43ea30d5f0eb90acb102efc611f804ed",
+      "bytes": 12054,
+      "role": "read-only process/separation context, not scientific seed"
+    }
+  },
+  "scientific_sources_imported_from_old_projects": false,
+  "repositories_accessed": false,
+  "repositories_modified": false,
+  "new_groups": 5,
+  "complete_runs": 2,
+  "first_run_status": "PASS",
+  "repeat_status": "PASS",
+  "reports_byte_identical": true,
+  "new_failed_scientific_assertions": 0,
+  "exact_rational_certificate": "Three irregular Bloch vectors, eight deterministic sign bounds, three pair-compatibility margins and the 13-party GHZ Bell expectation >1; 2% global white-state noise also remains above1.",
+  "general_proof": "Analytical geometry and Bell tensor construction in SCOUT.md. Tests are only finite checks.",
+  "largest_explicit_quantum_matrix_dimension": 16,
+  "thirteen_party_density_matrix_constructed": false,
+  "old_scientific_checks_rerun": false,
+  "report_sha256": "e7df234b7fd38cd56e8431cb630f7c1c75e52b23c2e93dbbcb390d488b1e4967",
+  "script_sha256": "dc07950e8e9a10f12b42efefe64597fe4c397b03609f629ab8d4709b1517e9f1",
+  "not_claimed": [
+    "Full biased or noncoplanar-qubit theorem.",
+    "Optimal party count or statistical sample cost.",
+    "New planar compatibility criterion or new symmetric GHZ inequalities.",
+    "Genuine N-party nonlocality, a self-test, or an experimental implementation.",
+    "Global priority or independent proof review."
+  ],
+  "next_task": "Check whether the explicit general irregular planar GHZ construction is already implied by the nearest primary results, especially the inaccessible September2026 geometry paper, and independently scrutinize the central analytical implication."
+}

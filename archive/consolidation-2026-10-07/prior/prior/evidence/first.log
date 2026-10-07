@@ -1,0 +1,19 @@
+test_01_geometry_duality_independent_optimization_and_degeneracies (__main__.Checks.test_01_geometry_duality_independent_optimization_and_degeneracies) ... FAIL
+test_02_full_operator_upper_bound_and_parent_hidden_variables (__main__.Checks.test_02_full_operator_upper_bound_and_parent_hidden_variables) ... ok
+test_03_ghz_is_exact_top_state_of_constructed_witness (__main__.Checks.test_03_ghz_is_exact_top_state_of_constructed_witness) ... ok
+test_04_exact_margin_and_local_noise_controls (__main__.Checks.test_04_exact_margin_and_local_noise_controls) ... ok
+test_05_restriction_checks_and_near_compatibility_scaling (__main__.Checks.test_05_restriction_checks_and_near_compatibility_scaling) ... ok
+
+======================================================================
+FAIL: test_01_geometry_duality_independent_optimization_and_degeneracies (__main__.Checks.test_01_geometry_duality_independent_optimization_and_degeneracies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/planar_bell_followup_2026-10-07/check_audit_and_rate.py", line 123, in test_01_geometry_duality_independent_optimization_and_degeneracies
+    self.assertTrue(sol.success,sol.message)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Positive directional derivative for linesearch
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.421s
+
+FAILED (failures=1)

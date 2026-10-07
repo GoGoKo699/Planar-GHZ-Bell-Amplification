@@ -1,0 +1,183 @@
+{
+  "direct_operator": [
+    {
+      "GHZ_expectation": 0.5595334359226839,
+      "closed_form": 0.559533435922684,
+      "dimension": 4,
+      "local_deterministic_strategies": 64,
+      "local_maximum_abs": 0.9986857492800909,
+      "parties": 2
+    },
+    {
+      "GHZ_expectation": 0.5917330367638693,
+      "closed_form": 0.5917330367638696,
+      "dimension": 8,
+      "local_deterministic_strategies": 512,
+      "local_maximum_abs": 0.9860461294235568,
+      "parties": 3
+    },
+    {
+      "GHZ_expectation": 0.6259065296858608,
+      "closed_form": 0.6259065296858609,
+      "dimension": 16,
+      "local_deterministic_strategies": 4096,
+      "local_maximum_abs": 0.9947486079451109,
+      "parties": 4
+    }
+  ],
+  "exact_irregular_example": {
+    "all_eight_sign_bounds_squared": [
+      "4126340173/500000000000",
+      "499999562849/500000000000",
+      "499999324273/500000000000",
+      "499999460921/500000000000",
+      "499999460921/500000000000",
+      "499999324273/500000000000",
+      "499999562849/500000000000",
+      "4126340173/500000000000"
+    ],
+    "bell_phase": 0,
+    "bloch_vectors": [
+      [
+        "7/10",
+        "0"
+      ],
+      [
+        "-21/50",
+        "14/25"
+      ],
+      [
+        "-7/25",
+        "-33/50"
+      ]
+    ],
+    "local_absolute_bound": 1,
+    "number_of_parties": 13,
+    "pairwise_joint_measurability": [
+      {
+        "compatibility_margin": "26609/250000",
+        "pair": [
+          1,
+          2
+        ]
+      },
+      {
+        "compatibility_margin": "2151/62500",
+        "pair": [
+          1,
+          3
+        ]
+      },
+      {
+        "compatibility_margin": "3719/62500",
+        "pair": [
+          2,
+          3
+        ]
+      }
+    ],
+    "quantum_value_decimal": 1.0374645167590062,
+    "quantum_value_exact": "98940326381588571389747482439737965330695026622310295974716802018836558052973905101913614481640347/95367431640625000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "scope": "Exact rational certificate, not minimum party count, sample complexity, device calibration or experimental verification.",
+    "state": "(|0>^13+|1>^13)/sqrt(2)",
+    "two_percent_white_noise_value": 1.016715226423826,
+    "u": [
+      "52887723/50000000",
+      "-1/50000000"
+    ],
+    "v": [
+      "-704151/50000000",
+      "-245167/50000000"
+    ],
+    "witness_vectors": [
+      [
+        "123011/250000",
+        "25383/1000000"
+      ],
+      [
+        "-33921/125000",
+        "376503/1000000"
+      ],
+      [
+        "-226537/1000000",
+        "-492541/1000000"
+      ]
+    ]
+  },
+  "known_trine_control": {
+    "examples": [
+      {
+        "parties_sufficient_for_this_inequality": 111,
+        "violation_ratio": 1.0043202689611361,
+        "visibility": "67/100"
+      },
+      {
+        "parties_sufficient_for_this_inequality": 12,
+        "violation_ratio": 1.0368381332547691,
+        "visibility": "7/10"
+      },
+      {
+        "parties_sufficient_for_this_inequality": 4,
+        "violation_ratio": 1.197193518191608,
+        "visibility": "4/5"
+      }
+    ],
+    "general_norm_bound": [
+      {
+        "nu_minus_one": "1/10",
+        "sufficient_N": 8
+      },
+      {
+        "nu_minus_one": "1/100",
+        "sufficient_N": 70
+      },
+      {
+        "nu_minus_one": "1/1000",
+        "sufficient_N": 694
+      }
+    ],
+    "scope": "Sufficient counts for the explicit chosen Bell witnesses only, not globally optimal Bell inequalities or minimum quantum resources."
+  },
+  "parent_and_dual": {
+    "cases": [
+      {
+        "dual_pairing": 1.0577550517554033,
+        "largest_sign_sum_norm": 1.0,
+        "parent_outcomes": 6,
+        "perimeter_over_four": 1.0577550517554033,
+        "settings": 3
+      },
+      {
+        "dual_pairing": 1.0499999999999998,
+        "largest_sign_sum_norm": 1.0,
+        "parent_outcomes": 6,
+        "perimeter_over_four": 1.05,
+        "settings": 3
+      },
+      {
+        "dual_pairing": 1.112840037589557,
+        "largest_sign_sum_norm": 1.0,
+        "parent_outcomes": 8,
+        "perimeter_over_four": 1.1128400375895573,
+        "settings": 5
+      }
+    ],
+    "scope": "Finite numerical checks of the independently proved norm/perimeter identity and a joint parent after uniform rescaling. Linear programming is only used to find postprocessing coefficients."
+  },
+  "scope": "Author-side finite identities and an exact rational Bell certificate. No general-proof, priority or apparatus certificate is inferred from test counts.",
+  "scope_controls": {
+    "counterfactual_resources_excluded": [
+      "postselection",
+      "helper communication during a trial",
+      "additional measurement settings",
+      "noncoplanar/bias generalization",
+      "experiment or optimized sample bound"
+    ],
+    "one_percent_extra_independent_detector_shrinkage_not_certified_by_this_witness": true,
+    "two_percent_global_white_noise_still_violates": true,
+    "uniformly_rescaled_compatible_family_verified": true,
+    "white_state_noise_threshold_for_selected_bound": 0.03611161264198581
+  },
+  "status": "PASS",
+  "tests_run": 5
+}

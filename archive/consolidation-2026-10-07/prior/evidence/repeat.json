@@ -1,0 +1,214 @@
+{
+  "bell_bridge": [
+    {
+      "dimension": 4,
+      "parties": 2,
+      "settings": 3,
+      "source_dual_ghz_value": 0.5595340596800082
+    },
+    {
+      "dimension": 8,
+      "parties": 3,
+      "settings": 3,
+      "source_dual_ghz_value": 0.5917340298391945
+    },
+    {
+      "dimension": 16,
+      "parties": 4,
+      "settings": 3,
+      "source_dual_ghz_value": 0.6259079303270313
+    },
+    {
+      "dimension": 32,
+      "parties": 5,
+      "settings": 3,
+      "source_dual_ghz_value": 0.6620572494537549
+    },
+    {
+      "dimension": 4,
+      "parties": 2,
+      "settings": 2,
+      "source_dual_ghz_value": 0.5392
+    },
+    {
+      "dimension": 8,
+      "parties": 3,
+      "settings": 2,
+      "source_dual_ghz_value": 0.510976
+    },
+    {
+      "dimension": 16,
+      "parties": 4,
+      "settings": 2,
+      "source_dual_ghz_value": 0.50307328
+    },
+    {
+      "dimension": 32,
+      "parties": 5,
+      "settings": 2,
+      "source_dual_ghz_value": 0.5008605184
+    },
+    {
+      "dimension": 4,
+      "parties": 2,
+      "settings": 3,
+      "source_dual_ghz_value": 0.6497999999999999
+    },
+    {
+      "dimension": 8,
+      "parties": 3,
+      "settings": 3,
+      "source_dual_ghz_value": 0.7407719999999998
+    },
+    {
+      "dimension": 16,
+      "parties": 4,
+      "settings": 3,
+      "source_dual_ghz_value": 0.8444800799999997
+    },
+    {
+      "dimension": 32,
+      "parties": 5,
+      "settings": 3,
+      "source_dual_ghz_value": 0.9627072911999995
+    },
+    {
+      "dimension": 4,
+      "parties": 2,
+      "settings": 5,
+      "source_dual_ghz_value": 0.7021294800945144
+    },
+    {
+      "dimension": 8,
+      "parties": 3,
+      "settings": 5,
+      "source_dual_ghz_value": 0.8219828491920388
+    },
+    {
+      "dimension": 16,
+      "parties": 4,
+      "settings": 5,
+      "source_dual_ghz_value": 0.969151703015656
+    },
+    {
+      "dimension": 32,
+      "parties": 5,
+      "settings": 5,
+      "source_dual_ghz_value": 1.143429431272658
+    },
+    {
+      "dimension": 4,
+      "parties": 2,
+      "settings": 4,
+      "source_dual_ghz_value": 0.7092963353469899
+    },
+    {
+      "dimension": 8,
+      "parties": 3,
+      "settings": 4,
+      "source_dual_ghz_value": 0.6326520164284384
+    },
+    {
+      "dimension": 16,
+      "parties": 4,
+      "settings": 4,
+      "source_dual_ghz_value": 0.5815436211554951
+    },
+    {
+      "dimension": 32,
+      "parties": 5,
+      "settings": 4,
+      "source_dual_ghz_value": 0.5471698396499848
+    }
+  ],
+  "scope": "Dictionary/normalization checks; no new compatibility criterion, no new Bell theorem, no priority proof.",
+  "source_dictionary": [
+    {
+      "dual_dictionary_error": 0.0,
+      "half_hull_vertices": 3,
+      "input_settings": 3,
+      "previous_nu": 1.0577550517554033,
+      "source_nu": 1.0577550517554033,
+      "source_sign_bound": 1.0
+    },
+    {
+      "dual_dictionary_error": 0.0,
+      "half_hull_vertices": 2,
+      "input_settings": 2,
+      "previous_nu": 1.0,
+      "source_nu": 1.0,
+      "source_sign_bound": 1.0
+    },
+    {
+      "dual_dictionary_error": 0.0,
+      "half_hull_vertices": 3,
+      "input_settings": 3,
+      "previous_nu": 1.14,
+      "source_nu": 1.14,
+      "source_sign_bound": 1.0
+    },
+    {
+      "dual_dictionary_error": 0.0,
+      "half_hull_vertices": 4,
+      "input_settings": 5,
+      "previous_nu": 1.1799056018641347,
+      "source_nu": 1.1799056018641347,
+      "source_sign_bound": 1.0
+    },
+    {
+      "dual_dictionary_error": 0.0,
+      "half_hull_vertices": 3,
+      "input_settings": 4,
+      "previous_nu": 0.9946717619943336,
+      "source_nu": 0.9946717619943335,
+      "source_sign_bound": 1.0
+    },
+    {
+      "dual_dictionary_error": 0.0,
+      "half_hull_vertices": 3,
+      "input_settings": 6,
+      "previous_nu": 1.0577550517554033,
+      "source_nu": 1.0577550517554033,
+      "source_sign_bound": 1.0
+    }
+  ],
+  "source_sign_matrices": [
+    {
+      "half_hull_vertices": 2,
+      "identity_exact_integer": true,
+      "sign_rows": 2
+    },
+    {
+      "half_hull_vertices": 3,
+      "identity_exact_integer": true,
+      "sign_rows": 4
+    },
+    {
+      "half_hull_vertices": 4,
+      "identity_exact_integer": true,
+      "sign_rows": 8
+    },
+    {
+      "half_hull_vertices": 5,
+      "identity_exact_integer": true,
+      "sign_rows": 16
+    },
+    {
+      "half_hull_vertices": 6,
+      "identity_exact_integer": true,
+      "sign_rows": 32
+    },
+    {
+      "half_hull_vertices": 7,
+      "identity_exact_integer": true,
+      "sign_rows": 64
+    },
+    {
+      "half_hull_vertices": 8,
+      "identity_exact_integer": true,
+      "sign_rows": 128
+    }
+  ],
+  "status": "PASS",
+  "tests_run": 3
+}

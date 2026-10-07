@@ -13,14 +13,14 @@ The reviewed baseline is main commit `54a805598ded79b5d8749f55e381cc690700a9fa`.
 | Section 3: inherited certificate and complex dictionary | The signed half-boundary coefficients agree with Yoshino et al.'s matrix construction. Telescoping gives a real upper-right entry equal to the perimeter norm; the other entry has modulus at most that norm. Interior, repeated and zero settings do not obstruct the construction. |
 | Section 4: a real Bell tensor with a valid local bound | Each deterministic value factors into bounded complex sign sums, so the absolute local bound is at most one. It need not equal one. The positive constructed quantum value ensures that the tensor is nonzero. |
 | Section 4: phase and maximizing state | The stated phase convention gives a positive GHZ expectation. The complementary-bitstring blocks obey the displayed two-term bound, whose maximum occurs in the canonical all-zero/all-one block. This applies to the constructed tensor. |
-| Section 5: converse for every state | The parent outcomes at the first N-1 sites define the hidden variable; the conditional Born response at the last site is a local response. Restoring the homogeneous scales gives the stated ceiling, including when the norm is below one. |
+| Section 5: converse for every state | The parent outcomes at the first $`N-1`$ sites define the hidden variable; the conditional Born response at the last site is a local response. Restoring the homogeneous scales gives the stated ceiling, including when the norm is below one. |
 | Section 2: root limit and degeneracies | The two bounds squeeze both root limits. The zero family vanishes; the collinear case attains exactly the longest-setting length to the Nth power. Neither case requires the polygon parametrization. |
 | Section 6: finite-party statements | Exact rational enclosures retain the six-party and nineteen-party exclusions. The archived thirteen-party and twenty-five-party rational witnesses retain the respective sufficient violations. No exact minimum is inferred. |
 | Section 7: scope of correlations | The proper equatorial marginals of the constructed GHZ state vanish. The even-parity output twirl preserves its full tensor and erases proper marginals. This does not give an all-state bound for Bell expressions containing marginal terms. |
 
 The rounded rational witness used for the finite examples is a separate sufficient certificate. Its complex sum is not exactly the unrounded geometric norm. The exact geometric coefficients, rather than rounded numerical coefficients, establish the all-party identity and exponent. The original checkers already preserve this distinction.
 
-No missing hypothesis was identified within the declared finite, known, unbiased binary coplanar qubit family, fixed at every site as N grows. The comparisons use mathematical rescalings, not additional experimental measurements. The review does not assess a detector apparatus or a sampling protocol.
+No missing hypothesis was identified within the declared finite, known, unbiased binary coplanar qubit family, fixed at every site as $`N`$ grows. The comparisons use mathematical rescalings, not additional experimental measurements. The review does not assess a detector apparatus or a sampling protocol.
 
 ## What the strongest shortcuts do and do not establish
 
@@ -57,7 +57,7 @@ $$
 =4\sin\frac{\pi}{8}=\nu_4.
 $$
 
-Here the symmetric hull is a regular unit circumradius octagon, with perimeter divided by four equal to `nu_4`. Thus the compatibility-scale exponent is already present in this symmetric case. We claim no new exponent or improved finite-party inequality for that example. What the cited construction does not supply is the arbitrary irregular, unequally sharp fixed-family result with the matching all-state bound.
+Here the symmetric hull is a regular unit circumradius octagon, with perimeter divided by four equal to $`\nu_4`$. Thus the compatibility-scale exponent is already present in this symmetric case. We claim no new exponent or improved finite-party inequality for that example. What the cited construction does not supply is the arbitrary irregular, unequally sharp fixed-family result with the matching all-state bound.
 
 ## The remaining contribution and stopping decision
 

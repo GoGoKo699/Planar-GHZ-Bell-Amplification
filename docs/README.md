@@ -36,6 +36,6 @@ The theorem and model define the claim. REVIEW and this guide explain it without
 |---|---|
 | Does a parent have to reproduce one chosen state's statistics or every state's statistics? | Every state's statistics. Its effects and postprocessing reproduce the original POVMs. |
 | If a witness has a local bound at most one, must its exact local bound equal one? | No. Normalize by the exact positive bound; the three-party orthogonal example has a scaled local bound of the reciprocal square root of two. |
-| Does the common Nth-root limit identify the exact best Bell value for each N? | No. It identifies the optimal exponential factor. The finite bounds retain a constant-factor gap in general. |
+| Does the common Nth-root limit identify the exact best Bell value for each $`N`$? | No. It identifies the optimal exponential factor. The finite bounds retain a constant-factor gap in general. |
 
 For repository maintenance, use [WORKSPACE](../WORKSPACE.md) and [CURRENT](../work_orders/CURRENT.md). They are operational records rather than the scientific reading route.

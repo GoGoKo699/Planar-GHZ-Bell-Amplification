@@ -37,16 +37,16 @@ K=\mathrm{conv}\{\pm\mathbf a_x\},\qquad
 r=\max_x\|\mathbf a_x\|.
 ```
 
-For a segment, perimeter means twice its length. The inherited planar compatibility theorem says that these measurements admit a joint parent exactly when `nu <= 1`. Such a parent is one measurement whose outcomes can be classically processed to reproduce any setting in the family.
+For a segment, perimeter means twice its length. The inherited planar compatibility theorem says that these measurements admit a joint parent exactly when $`\nu\le1`$. Such a parent is one measurement whose outcomes can be classically processed to reproduce any setting in the family.
 
-A full-correlation Bell expression combines products of one outcome from **every** party. Normalize its absolute expectation by its exact local absolute bound: the largest value obtainable with shared randomness and local responses. Let `R_N` optimize this ratio over all states and all nonzero such expressions, and let `R_N^GHZ` restrict the state to
+A full-correlation Bell expression combines products of one outcome from **every** party. Normalize its absolute expectation by its exact local absolute bound: the largest value obtainable with shared randomness and local responses. Let $`\mathcal R_N`$ optimize this ratio over all states and all nonzero such expressions, and let $`\mathcal R_N^{\mathrm{GHZ}}`$ restrict the state to
 
 ```math
 |\mathrm{GHZ}_{N,\varphi}\rangle
 =\frac{|0\rangle^{\otimes N}+e^{i\varphi}|1\rangle^{\otimes N}}{\sqrt2}
 ```
 
-in the common plane-normal basis, optimizing the relative phase and Bell expression. For every `N >= 2` and nonzero family,
+in the common plane-normal basis, optimizing the relative phase and Bell expression. For every $`N\ge2`$ and nonzero family,
 
 ```math
 \boxed{\frac{\nu^N}{2}\le\mathcal R_N^{\mathrm{GHZ}}
@@ -60,9 +60,9 @@ Consequently,
 =\lim_{N\to\infty}(\mathcal R_N)^{1/N}=\nu.}
 ```
 
-If `nu > 1`, the explicit lower bound eventually exceeds the local threshold of one. If `nu <= 1`, joint measurability rules out Bell violation for every state. Thus, within this class, incompatibility is exactly what can be amplified by sufficiently many GHZ parties.
+If $`\nu>1`$, the explicit lower bound eventually exceeds the local threshold of one. If $`\nu\le1`$, joint measurability rules out Bell violation for every state. Thus, within this class, incompatibility is exactly what can be amplified by sufficiently many GHZ parties.
 
-The root limit identifies the exponential rate, not the exact optimum at a fixed party number. Our explicit construction is within a factor of two of the optimal normalized full-correlation value. That comparison concerns Bell values, not the excess above one or sampling cost. Ratios are not floored at one. The all-zero family gives zero; a nonzero collinear family gives exactly `R_N = R_N^GHZ = r^N` with `nu = r`.
+The root limit identifies the exponential rate, not the exact optimum at a fixed party number. Our explicit construction is within a factor of two of the optimal normalized full-correlation value. That comparison concerns Bell values, not the excess above one or sampling cost. Ratios are not floored at one. The all-zero family gives zero; a nonzero collinear family gives exactly $`\mathcal R_N=\mathcal R_N^{\mathrm{GHZ}}=r^N`$ with $`\nu=r`$.
 
 ## Why the bounds meet
 
@@ -70,7 +70,7 @@ The root limit identifies the exponential rate, not the exact optimum at a fixed
 
 **Tensor products produce a GHZ witness.** Real parts of products of those complex coefficients give a Bell expression. Every deterministic local value factors into the bounded one-site sums, so the local absolute bound is at most one. Aligning the Bell and GHZ phases gives the lower bound; dividing by the exact local bound can only improve it. The selected GHZ state maximizes this constructed operator. An arbitrary fixed planar functional can instead be maximized in another complementary-bitstring block.
 
-**Joint parents bound every state.** In a mathematical comparison, rescale the first `N-1` sites by `1/nu` to compatible families and the last site by `1/r` to valid binary observables. Parent outcomes and the last site's conditional Born probabilities form a local model. Restoring the scales gives the ceiling `r nu^(N-1)`. These comparison measurements are proof devices, not extra experimental resources. Taking Nth roots yields the common limit.
+**Joint parents bound every state.** In a mathematical comparison, rescale the first $`N-1`$ sites by $`1/\nu`$ to compatible families and the last site by $`1/r`$ to valid binary observables. Parent outcomes and the last site's conditional Born probabilities form a local model. Restoring the scales gives the ceiling $`r\nu^{N-1}`$. These comparison measurements are proof devices, not extra experimental resources. Taking Nth roots yields the common limit.
 
 The [tutorial-to-theorem bridge](REVIEW.md) works through the algebra and a noisy two-setting example. [Theorem Sections 3–5](docs/THEOREM.md#3-inherited-geometric-input) supply the authoritative construction and converse.
 

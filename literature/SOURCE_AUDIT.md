@@ -6,28 +6,28 @@ This primary-source comparison explains the regular-polygon predecessors and the
 
 Nagata, Laskowski and Paterek, [*Bell inequality with an arbitrary number of settings and its applications*](https://arxiv.org/abs/quant-ph/0601107v2), PRA 74, 062109 (2006), explicitly give in Eq. (38)
 
-$$
+```math
 V(N,M)=\frac{[M\sin(\pi/(2M))]^N}{2\cos(\pi/(2M))},\qquad M\ge2.
-$$
+```
 
 Equations (6)-(7), (17), (22) and (24) specify the regular settings, absolute local bound, GHZ value and Bell spectrum. The accessible [unversioned primary PDF](https://arxiv.org/pdf/quant-ph/0601107) identifies v2, 31 October 2006 in its arXiv header. Versioned PDF/HTML retrieval failures are not negative evidence.
 
 The following comparison to detectors fixed as $`N`$ varies is our derivation. Put $`\theta_m=\pi m/M`$ and rename the source's parity parameter as
 
-$$
+```math
 \xi_N=[M+1]_2[N]_2+1,\qquad
 \delta_N=\frac{\pi\xi_N}{2MN},\qquad\Gamma_N=N\delta_N.
-$$
+```
 
 Keep the fixed observables at $`\theta_m`$. Use coefficients $`\cos(\sum_{j=1}^N\theta_{m_j}+\Gamma_N)`$ and the permitted canonical-GHZ phase $`\varphi=-\Gamma_N`$. The GHZ correlations equal these coefficients, and their squared sum gives $`Q_N=M^N/2`$. The common $`N`$-dependent angular offset is absorbed in the state and Bell phases rather than supplied by changing the detectors.
 
 For an independent check of the absolute local bound, let $`\alpha=\pi/(2M)`$. The convex hull of sign sums $`\sum_m s_m e^{i\theta_m}`$ is a regular $`2M`$-gon zonotope of circumradius $`\csc\alpha`$. Its vertex arguments are $`(M-1)\alpha+2k\alpha`$. The real product expression is separately real-linear, so its maximum absolute value is attained at vertices. Adding $`\Gamma_N`$ makes the product argument an odd multiple of $`\alpha`$. Consequently
 
-$$
+```math
 L_N=\csc(\alpha)^N\cos\alpha,\qquad
 \lim_{N\to\infty}V(N,M)^{1/N}=M\sin\alpha
 =\frac{\mathrm{perimeter}(K_M)}4.
-$$
+```
 
 Common sharpness $`t`$ multiplies each full correlator by $`t^N`$, giving root rate $`tM\sin\alpha`$. The fixed-detector phase absorption and this noise translation are elementary inferences made here. No new priority is assigned to the regular-polygon exponent, its uniformly noisy version, or the complex product method. The paper's communication-complexity applications are not transferred to the present theorem.
 
@@ -35,10 +35,10 @@ Common sharpness $`t`$ multiplies each full correlator by $`t^N`$, giving root r
 
 The current theorem takes any prescribed finite unbiased binary coplanar qubit family, including irregular directions and unequal sharpness, converts its inherited optimal planar certificate into explicit real Bell coefficients and a phase-adjusted canonical GHZ state, and compares it with every state and full-correlation functional:
 
-$$
+```math
 \nu^N/2\le\mathcal R_N^{\rm GHZ}\le\mathcal R_N
 \le r\nu^{N-1}.
-$$
+```
 
 No inspected passage supplies this complete arbitrary-family implication. The geometric classification, general activation theorem, compatibility-bound principle and complex GHZ algebra are inherited. The bridge is short, so the result should be assessed as a uniform constructive and quantitative consequence, without treating known amplification as a newly discovered phenomenon.
 

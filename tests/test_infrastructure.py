@@ -164,6 +164,52 @@ class InfrastructureTests(unittest.TestCase):
             readme.write_text('Use `python tools/verify.py` for the beta coefficients.\n')
             renderer.check(root)
 
+    def test_fenced_math_preserves_delimiters_and_literal_examples(self):
+        spec = importlib.util.spec_from_file_location('render_docs', ROOT/'tools/render_docs.py')
+        renderer = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(renderer)
+        formula = (
+            r'\max\left\{2,\left\lceil\frac{\log(2R)}{\log\nu}'
+            r'\right\rceil\right\}.'+'\n'
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root/'research').mkdir()
+            (root/'docs').mkdir()
+            (root/'research/THEOREM.md').write_text('# Theorem\n\n$$\nx=1\n$$\n')
+            (root/'docs/THEOREM.md').write_text(renderer.theorem_view(root))
+            readme = root/'README.md'
+            valid = '```math\n'+formula+'```\n'
+            readme.write_text(valid)
+            self.assertEqual(renderer.fenced_math(valid, 'README.md'), [formula])
+            self.assertEqual(
+                renderer.fenced_math(valid, 'README.md')[0].encode(), formula.encode(),
+            )
+            renderer.check(root)
+            for bad, message in (
+                ('$$\n'+formula+'$$\n', 'must use a math fence'),
+                ('$$x=1$$\n', 'must use a math fence'),
+                ('A value $$x=1$$ in prose.\n', 'must use a math fence'),
+                ('```math\n'+formula, 'Unclosed math fence'),
+                ('```math\n$$\n'+formula+'$$\n```\n', 'Mixed display math delimiters'),
+                ('```math\n$$x=1$$\n```\n', 'Mixed display math delimiters'),
+                ('```math extra\n$$\nx=1\n$$\n```\n', 'Unsupported math fence info'),
+            ):
+                with self.subTest(bad=bad):
+                    readme.write_text(bad)
+                    with self.assertRaisesRegex(ValueError, message):
+                        renderer.check(root)
+            for example in (
+                '```text\n$$\n'+formula+'$$\n```\n',
+                '```text\n$$x=1$$\n```\n',
+                '````text\n```math\n$$\n'+formula+'$$\n```\n````\n',
+                '~~~text\n$$\n'+formula+'$$\n~~~\n',
+            ):
+                with self.subTest(example=example):
+                    readme.write_text(example)
+                    self.assertEqual(renderer.fenced_math(example, 'README.md'), [])
+                    renderer.check(root)
+
     def test_theorem_reader_editorial_changes_preserve_science(self):
         spec = importlib.util.spec_from_file_location('render_docs', ROOT/'tools/render_docs.py')
         renderer = importlib.util.module_from_spec(spec)

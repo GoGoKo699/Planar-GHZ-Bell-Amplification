@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MATH = re.compile(r'^```math\n(.*?)^```\s*$|^\$\$\s*\n(.*?)^\$\$\s*$', re.M | re.S)
 INLINE_MATH = re.compile(r'\$`([^`\n]+)`\$')
 CODE_FENCE = re.compile(r'^```[^\n]*\n.*?^```\s*$', re.M | re.S)
+FENCE_LINE = re.compile(r'^[ ]{0,3}(`{3,}|~{3,})(.*)$')
 READER_PATHS = (
     'README.md', 'REVIEW.md', 'docs/THEOREM.md', 'docs/README.md',
     'research/MODEL_AND_CLAIMS.md', 'research/OPERATIONAL_CONSEQUENCES.md',
@@ -193,6 +194,40 @@ def theorem_view(root: Path = ROOT) -> str:
         'The preserved [scientific source](../research/THEOREM.md) defines this theorem.\n')
 
 
+def fenced_math(text: str, relative: str) -> list[str]:
+    """Collect raw math bodies while allowing literal examples in other fences."""
+    blocks = []
+    fence = None
+    body = []
+    for line in text.splitlines(keepends=True):
+        match = FENCE_LINE.match(line.rstrip('\r\n'))
+        if fence is not None:
+            marker, is_math = fence
+            if (
+                match and match[1][0] == marker[0] and len(match[1]) >= len(marker)
+                and not match[2].strip()
+            ):
+                if is_math:
+                    blocks.append(''.join(body))
+                fence = None
+                body = []
+            elif is_math:
+                if '$$' in line or match:
+                    raise ValueError(f'Mixed display math delimiters in {relative}')
+                body.append(line)
+            continue
+        if match:
+            info = match[2].strip()
+            if info.split(maxsplit=1)[:1] == ['math'] and info != 'math':
+                raise ValueError(f'Unsupported math fence info in {relative}')
+            fence = (match[1], info == 'math')
+        elif '$$' in line:
+            raise ValueError(f'Display math must use a math fence in {relative}')
+    if fence is not None and fence[1]:
+        raise ValueError(f'Unclosed math fence in {relative}')
+    return blocks
+
+
 def check(root: Path = ROOT) -> dict:
     if (root/'docs/THEOREM.md').read_text() != theorem_view(root):
         raise ValueError('The theorem reading view is stale; run python tools/render_docs.py')
@@ -204,9 +239,9 @@ def check(root: Path = ROOT) -> dict:
     for path in paths:
         if path in protected:
             continue
-        for match in MATH.finditer(path.read_text()):
+        for formula in fenced_math(path.read_text(), str(path.relative_to(root))):
             blocks += 1
-            if any(macro in match.group() for macro in (r'\operatorname', r'\tag')):
+            if any(macro in formula for macro in (r'\operatorname', r'\tag')):
                 raise ValueError(f'Unsupported math macro in {path.relative_to(root)}')
     for relative in READER_PATHS:
         path = root/relative

@@ -1,0 +1,56 @@
+--- initial/check_consolidation.py
++++ final/check_consolidation.py
+@@ -51,9 +51,26 @@
+     return out
+ 
+ 
++def local_bound(beta):
++    """Same full deterministic maximum, with axiswise vectorized contraction.
++
++    Fixing the first setting's sign to +1 at each site loses only an
++    overall output sign, immaterial for an absolute full-correlation bound.
++    """
++    m=beta.shape[0]
++    signs=np.array([(1,)+s for s in product((-1,1),repeat=m-1)],float)
++    values=np.array(beta,dtype=float)
++    for axis in range(beta.ndim):
++        values=np.moveaxis(np.tensordot(signs,values,axes=(1,axis)),0,axis)
++    return float(np.max(np.abs(values)))
++
++
+ class ConsolidationChecks(unittest.TestCase):
+     def test_01_compact_bridge_and_sharpened_all_state_bound(self):
+         rng=np.random.default_rng(707)
++        for shape in ((2,2),(3,3),(2,2,2),(3,3,3)):
++            beta=rng.integers(-3,4,size=shape).astype(float)
++            self.assertEqual(local_bound(beta),old.local_bound(beta))
+         rows=[]
+         for a in source.examples()[:4]:
+             d=source.source_construct(a)
+@@ -69,7 +86,7 @@
+                 beta=np.array([np.real(np.exp(1j*gamma)*np.prod(c[list(ind)]))
+                                for ind in product(range(len(a)),repeat=n)]).reshape((len(a),)*n)
+                 op=old.bell_operator(a,beta)
+-                L=old.local_bound(beta)
++                L=local_bound(beta)
+                 state=ghz(n,-np.angle(op[0,-1]))
+                 val=float(np.vdot(state,op@state).real)
+                 target=(nu**n+abs(v)**n)/2
+@@ -80,7 +97,7 @@
+                 for _ in range(3):
+                     b=rng.integers(-3,4,size=(len(a),)*n).astype(float)
+                     if not np.any(b):b.flat[0]=1
+-                    bound=old.local_bound(b)
++                    bound=local_bound(b)
+                     norm=float(np.linalg.norm(old.bell_operator(a,b),2))
+                     self.assertLessEqual(norm,radius*nu**(n-1)*bound+2e-11)
+                 rows.append(dict(settings=len(a),parties=n,nu=nu,radius=radius,
+@@ -161,7 +178,7 @@
+         coeff=np.array([[1,1],[-1,1]],float)
+         a=np.array([[1,0],[0,1]],float)
+         B=old.bell_operator(a,coeff)
+-        self.assertAlmostEqual(old.local_bound(coeff),2)
++        self.assertAlmostEqual(local_bound(coeff),2)
+         self.assertLess(abs(B[0,-1]),1e-14)
+         best=ghz(2,-np.angle(B[1,2]),1)
+         val=float(np.vdot(best,B@best).real)

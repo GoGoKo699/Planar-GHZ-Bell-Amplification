@@ -1,0 +1,63 @@
+{
+  "stage": "Consolidate one planar-GHZ Bell theorem, sharpen finite-party upper bound, and freeze scope for author review.",
+  "main_theorem": "nu^N/2 <= R_N_GHZ <= R_N <= r*nu^(N-1) <= nu^N; Nth-root limits equal nu.",
+  "prior_exponent_changed": false,
+  "prior_geometric_attribution_preserved": true,
+  "new_final_groups": 5,
+  "new_complete_runs": 2,
+  "new_reports_byte_identical": true,
+  "new_report_sha256": "581847ddfba86c9ed71887bffbc235a7a747001608673459e7f80e0a61688380",
+  "largest_new_quantum_matrix_dimension": 16,
+  "previous_suites": [
+    {
+      "suite": "source_dictionary",
+      "groups": 3,
+      "report": "evidence/source_dictionary_rerun.json",
+      "reference": "prior/evidence/repeat.json",
+      "byte_identical_to_reference": true,
+      "elapsed_seconds": 0.9165940609999552,
+      "sha256": "d7b52eb7544873181c14e68f6917839f7e0c51cde8735df9d0c770657c2e536f"
+    },
+    {
+      "suite": "audit_rate",
+      "groups": 5,
+      "report": "evidence/audit_rate_rerun.json",
+      "reference": "prior/prior/evidence/repeat.json",
+      "byte_identical_to_reference": true,
+      "elapsed_seconds": 1.267506044999891,
+      "sha256": "62a176d9e8b2d04433361d626cb3995bb4a4ab2694ed0e351841c9aa6abb7bd1"
+    },
+    {
+      "suite": "initial_scout",
+      "groups": 5,
+      "report": "evidence/initial_scout_rerun.json",
+      "reference": "prior/prior/prior/evidence/repeat.json",
+      "byte_identical_to_reference": true,
+      "elapsed_seconds": 0.9670781959999886,
+      "sha256": "e7df234b7fd38cd56e8431cb630f7c1c75e52b23c2e93dbbcb390d488b1e4967"
+    }
+  ],
+  "previous_groups_rerun": 13,
+  "previous_archive_members_unchanged": 54,
+  "previous_manifest_entries_verified": 53,
+  "uploaded_pdf_unchanged": true,
+  "source_pdf_redistributed": false,
+  "initial_execution": "Timed out at45s during an expensive Python-loop deterministic local-bound calculation; no scientific assertion failure or complete report. Initial script and partial log preserved.",
+  "repair": "Identical absolute maximum evaluated by vectorized sign contractions; smaller full-enumeration controls verify equivalence. Measurement families, objective, assertions and tolerances retained.",
+  "overwritten_reports": false,
+  "refusal_exit_status": 2,
+  "decision": "Retain bounded theoretical project; recommend a separate versioned repository only after owner destination/authorization; no further model expansion required for current contribution review.",
+  "repository_created_or_accessed": false,
+  "external_contact": false,
+  "manuscript_submission": false,
+  "not_claimed": [
+    "Optimal finite N",
+    "Optimal beta at each N",
+    "Arbitrary marginal-containing Bell bounds",
+    "General biased or noncoplanar measurements",
+    "Genuine multipartite nonlocality",
+    "Efficient experimental statistics",
+    "Exhaustive priority",
+    "Independent review"
+  ]
+}

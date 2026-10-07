@@ -1,0 +1,13 @@
+# Planar-GHZ-Bell-Amplification
+
+Repository: GoGoKo699/Planar-GHZ-Bell-Amplification
+Start with README.md, AGENTS.md, STATUS.md and work_orders/CURRENT.md.
+Current claim: research/MODEL_AND_CLAIMS.md and research/THEOREM.md.
+Contribution and attribution: research/ASSESSMENT.md and literature/ATTRIBUTION.md.
+Verification: VERIFICATION.md, tools/verify.py and tests/.
+Historical evidence: archive/consolidation-2026-10-07/; immutable, not the current task queue.
+Scientific scope is frozen for contribution review. No prior project is part of this repository.
+
+## Purpose and contact
+
+This repository serves as a record of the work and a guide for the author's self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).

@@ -1,0 +1,2 @@
+usage: check_audit_and_rate.py [-h] --output OUTPUT
+check_audit_and_rate.py: error: Refusing to overwrite an existing report

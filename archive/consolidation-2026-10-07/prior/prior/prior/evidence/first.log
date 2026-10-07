@@ -1,0 +1,10 @@
+test_geometric_parent_and_dual_witness (__main__.PlanarBellChecks.test_geometric_parent_and_dual_witness) ... ok
+test_exact_irregular_thirteen_party_certificate (__main__.PlanarBellChecks.test_exact_irregular_thirteen_party_certificate) ... ok
+test_direct_bell_operator_and_local_strategies (__main__.PlanarBellChecks.test_direct_bell_operator_and_local_strategies) ... ok
+test_known_trine_family_and_constructive_party_bounds (__main__.PlanarBellChecks.test_known_trine_family_and_constructive_party_bounds) ... ok
+test_scaling_parent_locality_and_noise_boundaries (__main__.PlanarBellChecks.test_scaling_parent_locality_and_noise_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.064s
+
+OK

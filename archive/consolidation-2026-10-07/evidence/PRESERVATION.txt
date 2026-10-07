@@ -1,0 +1,1 @@
+PASS:54 prior archive members and53 manifest entries unchanged; supplied PDF hash unchanged;5 final groups repeated exactly; previous3+5+5 reports reproduced exactly; output refusal leaves evidence unchanged.

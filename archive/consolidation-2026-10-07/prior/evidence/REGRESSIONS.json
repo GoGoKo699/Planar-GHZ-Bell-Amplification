@@ -1,0 +1,20 @@
+[
+  {
+    "name": "audit",
+    "groups": 5,
+    "returncode": 0,
+    "report": "evidence/audit_rerun.json",
+    "reference": "prior/evidence/final.json",
+    "byte_identical": true,
+    "sha256": "62a176d9e8b2d04433361d626cb3995bb4a4ab2694ed0e351841c9aa6abb7bd1"
+  },
+  {
+    "name": "scout",
+    "groups": 5,
+    "returncode": 0,
+    "report": "evidence/scout_rerun.json",
+    "reference": "prior/prior/evidence/first.json",
+    "byte_identical": true,
+    "sha256": "e7df234b7fd38cd56e8431cb630f7c1c75e52b23c2e93dbbcb390d488b1e4967"
+  }
+]

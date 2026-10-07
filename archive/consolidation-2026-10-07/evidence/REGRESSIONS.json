@@ -1,0 +1,29 @@
+[
+  {
+    "suite": "source_dictionary",
+    "groups": 3,
+    "report": "evidence/source_dictionary_rerun.json",
+    "reference": "prior/evidence/repeat.json",
+    "byte_identical_to_reference": true,
+    "elapsed_seconds": 0.9165940609999552,
+    "sha256": "d7b52eb7544873181c14e68f6917839f7e0c51cde8735df9d0c770657c2e536f"
+  },
+  {
+    "suite": "audit_rate",
+    "groups": 5,
+    "report": "evidence/audit_rate_rerun.json",
+    "reference": "prior/prior/evidence/repeat.json",
+    "byte_identical_to_reference": true,
+    "elapsed_seconds": 1.267506044999891,
+    "sha256": "62a176d9e8b2d04433361d626cb3995bb4a4ab2694ed0e351841c9aa6abb7bd1"
+  },
+  {
+    "suite": "initial_scout",
+    "groups": 5,
+    "report": "evidence/initial_scout_rerun.json",
+    "reference": "prior/prior/prior/evidence/repeat.json",
+    "byte_identical_to_reference": true,
+    "elapsed_seconds": 0.9670781959999886,
+    "sha256": "e7df234b7fd38cd56e8431cb630f7c1c75e52b23c2e93dbbcb390d488b1e4967"
+  }
+]

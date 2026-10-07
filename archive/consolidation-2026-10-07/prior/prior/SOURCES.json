@@ -1,0 +1,79 @@
+{
+  "sources": [
+    {
+      "id": "PGQ25",
+      "url": "https://arxiv.org/pdf/2403.10564",
+      "title": "All incompatible measurements on qubits lead to multiparticle Bell nonlocality",
+      "publication": "Physical Review Letters 134, 200201 (2025)",
+      "reading": "Final author PDF and prior author HTML v3: theorem setting, positive-map proof structure, trine scope, Discussion on known state families and party counts; no reproof of the full positive-map theorem.",
+      "used_for": "General incompatible-qubit existence is inherited; the explicit GHZ/party-count question remains in the inspected final Discussion.",
+      "limit": "No claim that no extension anywhere in the literature supplies the planar result."
+    },
+    {
+      "id": "Y26",
+      "url": "https://arxiv.org/abs/2609.38836",
+      "title": "Joint measurability of coplanar POVMs",
+      "authors": "Taro Yoshino; Koichi Tojo; Kei Hagihara; Akinori Tanaka; Takuki Tomita",
+      "submitted": "2026-09-30",
+      "reading": "Primary indexed abstract only. Direct abstract/HTML/PDF/source did not yield full text.",
+      "used_for": "Attribution for announced perimeter compatibility criterion.",
+      "limit": "Bell implications in its full text remain unknown. Our exact symmetric-hull convention is proved independently, not inferred from abstract wording."
+    },
+    {
+      "id": "LN22",
+      "url": "https://arxiv.org/pdf/2205.12668",
+      "title": "Measurement Incompatibility versus Bell Nonlocality: An Approach via Tensor Norms",
+      "publication": "PRX Quantum 3,040325 (2022)",
+      "reading": "Sections6–8: fixed Alice/optimized Bob setting, compatibility norm, Theorems8.1–8.2, CHSH equality/Remark8.3; relevant definitions and proof passages.",
+      "used_for": "Credit established norm/parent-based Bell bounds; distinguish the repeated same-family N-party rate from the inspected bipartite framework.",
+      "limit": "Not an exhaustive reproduction of its 35 pages. No graph/table numerical values used."
+    },
+    {
+      "id": "DVP24",
+      "url": "https://arxiv.org/pdf/2310.20677",
+      "title": "Symmetric multipartite Bell inequalities via Frank-Wolfe algorithms",
+      "publication": "Physical Review A109,022205 (2024)",
+      "reading": "Equations6–8 for regular polygon settings and GHZ correlations, SectionsIX.A–B and final scope; targeted main construction comparison.",
+      "used_for": "Regular-polygon and optimized finite-party GHZ inequalities are inherited.",
+      "limit": "No superiority to optimized finite-N facets claimed; no numerical plot/table value imported."
+    },
+    {
+      "id": "WW01",
+      "url": "https://arxiv.org/pdf/quant-ph/0102024",
+      "title": "All multipartite Bell correlation inequalities for two dichotomic observables per site",
+      "publication": "Physical Review A64,032112 (2001)",
+      "reading": "Two-setting setup and SectionV.D GHZ realization of extremal quantum correlations, nearby equations34–38 and restrictions; SectionV.A inspected for fixed versus variable observable optimization.",
+      "used_for": "GHZ maximality and equatorial algebra have direct prior constructions; their two-setting optimized-observable setting is not the stated arbitrary fixed planar-family claim.",
+      "limit": "No independent audit of all inequalities or appendix enumeration."
+    },
+    {
+      "id": "SCPA10",
+      "url": "https://arxiv.org/pdf/1002.1893",
+      "title": "Bell inequalities from multilinear contractions",
+      "publication": "Quantum Information & Computation10,703–719 (2010)",
+      "reading": "Introduction and Sections2–3 framing/construction, explicit distinction of Euclidean moment inequalities and supremum-norm ordinary correlation extension.",
+      "used_for": "Attribution for multilinear/complex contraction methods.",
+      "limit": "No claim that its no-bipartite-violation result applies to our ordinary linear Bell expression; no full optimality classification inferred."
+    },
+    {
+      "id": "KSS22",
+      "url": "https://arxiv.org/pdf/2202.06606",
+      "title": "Avenues to generalising Bell inequalities",
+      "authors": "Marcin Karczewski; Giovanni Scala; Antonio Mandarino; Ana Belen Sainz; Marek Zukowski",
+      "publication": "Journal of Physics A55,384011 (2022)",
+      "reading": "Primary abstract/metadata and construction passages on two-setting origin, complex multioutcome correlations and multiple settings; author v3 dated20July2022.",
+      "used_for": "Product/complex Bell coefficient constructions are standard ingredients, not our novelty claim.",
+      "limit": "No exhaustive proof or numerical-example audit. Referenced GitHub code was not accessed."
+    }
+  ],
+  "date": "2026-10-07",
+  "reading_policy": "Primary technical sources only; new author-side derivations distinguished from inherited methods.",
+  "full_text_gap": "Y26 remains unread beyond primary indexed abstract.",
+  "failed_access": "Direct requests to Y26 abs/pdf/html/src and export path did not supply full text; container requests failed DNS (evidence/direct_access.json).",
+  "failed_screenshots": "Web screenshots of PGQ final PDF page4, LN PDF page23 and DVP PDF page1 failed with cache-miss/internal errors. No unviewed figures or tables are claimed read.",
+  "extraneous_search_results": "Searches returned mirrors, encyclopedic and unrelated results; none was used as a substitute for missing primary text.",
+  "repositories_accessed": false,
+  "protected_material_used": false,
+  "new_independent_review": false,
+  "global_priority_clearance": false
+}

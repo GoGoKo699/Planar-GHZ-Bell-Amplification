@@ -1,0 +1,51 @@
+{
+  "reading_date": "2026-10-07",
+  "uploaded_primary": {
+    "title": "Joint measurability of coplanar POVMs",
+    "version": "arXiv:2609.38836v1",
+    "sha256": "1181693ddd202f90eff59ebfc13f556e00bf472037e401ae9de2fd5f1c67eb88",
+    "used": "Fully supplied parsed content, main theorem and explicit X/Y certificate; earlier complete visual/dictionary audit retained, not recounted as a new visual audit."
+  },
+  "primary_reads": [
+    {
+      "id": "PGQ25",
+      "url": "https://arxiv.org/pdf/2403.10564v4",
+      "passages": "Theorem3; p2 all-but-one compatibility locality; Corollary6; Discussion pp4-5; AppendixB construction and AppendixD conclusion.",
+      "use": "General existence and noise-threshold convergence are inherited; the stated GHZ/party-count question and resource scope are checked. Standard all-but-one compatibility justifies the refined bound.",
+      "limits": "Not an independent reproduction of every cone-map theorem cited by the source."
+    },
+    {
+      "id": "WW01",
+      "url": "https://arxiv.org/pdf/quant-ph/0102024",
+      "passages": "SectionVD GHZ-extreme-correlation construction and SectionVII two-setting restriction.",
+      "use": "Distinguish standard GHZ/equatorial algebra from the arbitrary fixed-family constructive implication.",
+      "limits": "Not a claim that the source solves the many-setting theorem or that our finite-N beta is globally optimal."
+    },
+    {
+      "id": "LN22",
+      "url": "https://arxiv.org/pdf/2205.12668",
+      "passages": "Theorems8.1-8.2, pp24-25, and their fixed-Alice bipartite scope.",
+      "use": "Attribution for compatibility-norm upper-bound method.",
+      "limits": "No graph/table data used."
+    },
+    {
+      "id": "DVP24",
+      "url": "https://arxiv.org/pdf/2310.20677",
+      "passages": "Equations6-8, regular-polygon observables and GHZ full-correlation tensor; scope discussion.",
+      "use": "Strong symmetric-case predecessor; no claimed numerical superiority.",
+      "limits": "No unviewed numerical table/plot value used."
+    }
+  ],
+  "search_limits": "Several broad keyword/domain searches returned largely irrelevant results. No absence-of-hits priority argument is made; unrelated results and secondary generated summaries are not technical evidence.",
+  "failed_visual_requests": [
+    "PGQ25 page2 cache miss",
+    "PGQ25 page5 cache miss",
+    "WW01 page8 cache miss"
+  ],
+  "visual_claims": "No newly rendered primary-paper figure or table was successfully inspected in this pass; the current arguments use parsed mathematical text.",
+  "new_derivations": "N-1 parent converse refinement; exact finite-margin exclusion from the refined bound; explicit CHSH canonical-GHZ scope control and full-behavior parity-twirl check. These are applications/clarifications, not claimed independent discoveries.",
+  "independent_review": false,
+  "exhaustive_priority": false,
+  "protected_projects_accessed": false,
+  "unrelated_electronic_decoherence_pdf_used": false
+}

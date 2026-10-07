@@ -1,0 +1,64 @@
+{
+  "uploaded_source": {
+    "title": "Joint measurability of coplanar POVMs",
+    "authors": [
+      "Taro Yoshino",
+      "Koichi Tojo",
+      "Kei Hagihara",
+      "Akinori Tanaka",
+      "Takuki Tomita"
+    ],
+    "version": "arXiv2609.38836v1,30September2026",
+    "pages": 17,
+    "sha256": "1181693ddd202f90eff59ebfc13f556e00bf472037e401ae9de2fd5f1c67eb88",
+    "read_scope": "All17pages in extracted mathematical text and visually scanned rendered pages. Edge-vector diagram p11 and lens-region diagram p14 inspected.",
+    "main_passages": [
+      "Theorem1.3,p2",
+      "Definition2.4 and Lemma2.6,pp4-6",
+      "Lemma2.9 and Corollary2.10,pp6-7",
+      "Lemma2.21 and Proposition3.1,p10",
+      "Definitions3.3-3.7,pp11-12",
+      "Sections3.3-3.6,pp12-17"
+    ],
+    "boundary": "No Bell inequality/GHZ construction/party-count or Bell-amplification theorem in this uploaded version. It does contain our explicit optimal geometric certificate, up to notation and settings relabeling.",
+    "redistributed": false
+  },
+  "primary_comparisons": [
+    {
+      "title": "All incompatible measurements on qubits lead to multiparticle Bell nonlocality",
+      "url": "https://arxiv.org/pdf/2403.10564",
+      "version_read": "v4,15July2025",
+      "depth_this_pass": "Theorem3, multipartite repeated-family definition, discussion/open questions pp4-5. No new complete reconstruction of all appendices.",
+      "use": "General existence is inherited; stated GHZ-family and finite-party questions fix the narrower constructive target."
+    },
+    {
+      "title": "Measurement Incompatibility versus Bell Nonlocality: An Approach via Tensor Norms",
+      "url": "https://arxiv.org/pdf/2205.12668",
+      "depth_this_pass": "Targeted Theorems8.1-8.2 and bipartite-setting hypotheses; previous wider comparison retained separately.",
+      "use": "Compatibility-norm Bell upper bounds are inherited, not claimed new."
+    },
+    {
+      "title": "Symmetric multipartite Bell inequalities via Frank-Wolfe algorithms",
+      "url": "https://arxiv.org/pdf/2310.20677",
+      "depth_this_pass": "Equations6-8, regular-polygon setting and concluding scope. No new use of figure/table numerical values.",
+      "use": "Symmetric multisetting GHZ constructions are inherited; finite-N optimality is not claimed."
+    },
+    {
+      "title": "On compatibility of binary qubit measurements",
+      "url": "https://arxiv.org/pdf/2407.07711",
+      "version_read": "Retrieved author PDF is v1,10July2024",
+      "depth_this_pass": "Main-setting and theorem framing, steering consequence, counterexample and conclusions; final publisher abstract also read. Final published full text not audited.",
+      "journal_record": "https://journals.aps.org/prl/abstract/10.1103/vv1h-5mf9",
+      "use": "Uploaded paper cites this characterization. Steering and compatibility must not be substituted for the multipartite Bell construction."
+    }
+  ],
+  "not_claimed": [
+    "Exhaustive priority",
+    "Independent proof review",
+    "Full review of every later source version",
+    "A new compatibility norm or geometric dual",
+    "Source publication of the GHZ conclusion"
+  ],
+  "protected_sources_used": false,
+  "unrelated_electronic_decoherence_paper_used": false
+}

@@ -1,0 +1,2 @@
+usage: check_consolidation.py [-h] --output OUTPUT
+check_consolidation.py: error: Refusing to overwrite an existing report

@@ -1,0 +1,10 @@
+test_01_compact_bridge_and_sharpened_all_state_bound (__main__.ConsolidationChecks.test_01_compact_bridge_and_sharpened_all_state_bound) ... ok
+test_02_explicit_n_minus_one_parent_local_model (__main__.ConsolidationChecks.test_02_explicit_n_minus_one_parent_local_model) ... ok
+test_03_exact_margin_with_existing_irregular_witness (__main__.ConsolidationChecks.test_03_exact_margin_with_existing_irregular_witness) ... ok
+test_04_optimal_state_and_marginal_scope_controls (__main__.ConsolidationChecks.test_04_optimal_state_and_marginal_scope_controls) ... ok
+test_05_full_probability_distribution_and_even_parity_twirl (__main__.ConsolidationChecks.test_05_full_probability_distribution_and_even_parity_twirl) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.200s
+
+OK

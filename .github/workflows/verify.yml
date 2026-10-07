@@ -1,0 +1,44 @@
+name: Verify planar GHZ research
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      TERM: dumb
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Install pinned scientific dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Repository infrastructure tests
+        run: python -m unittest discover -s tests -v
+      - name: Original scientific suites and protected-source verification
+        run: python tools/verify.py --output .artifacts/hosted
+      - name: Publish verification summary
+        if: always()
+        run: |
+          if test -f .artifacts/hosted/SUMMARY.md; then
+            cat .artifacts/hosted/SUMMARY.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: verification-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .artifacts/hosted/
+          if-no-files-found: error
+          retention-days: 30

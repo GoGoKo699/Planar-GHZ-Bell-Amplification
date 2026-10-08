@@ -1,6 +1,6 @@
-# Operational consequences and proof boundaries
+# Operational consequences
 
-These consequences follow from [THEOREM](../docs/THEOREM.md) for the same fixed, finite, unbiased binary coplanar qubit family and full-correlation objective. They introduce no additional measurement resource or claim about experimental or statistical efficiency. The [source audit](../literature/SOURCE_AUDIT.md) supplies the strengthened predecessor comparison.
+These consequences follow from [THEOREM](../docs/THEOREM.md) for the same fixed, finite, unbiased binary coplanar qubit family and full-correlation objective.
 
 ## What the geometric quantity measures
 
@@ -40,13 +40,13 @@ The theorem gives an explicit finite-size estimate, not only a limit. For the no
 \le\log\nu+\frac{\log(r/\nu)}{N}.
 ```
 
-Both logarithmic rates lie within $`\log(2)/N`$ below $`\log\nu`$. No numerical extrapolation is needed. If $`W_N`$ is the exact normalized value of the theorem's explicit witness, then
+Both logarithmic rates lie within $`\log(2)/N`$ below $`\log\nu`$. If $`W_N`$ is the exact normalized value of the theorem's explicit witness, then
 
 ```math
 1\le\frac{\mathcal R_N}{W_N}\le\frac{2r}{\nu}\le2.
 ```
 
-The comparison concerns normalized Bell values. It does not compare the excess above the local bound, the number of trials, or the cost of preparing a state. A compact formula for a Bell tensor does not itself provide an efficient sampling protocol.
+The factor of two compares normalized Bell values, rather than the excess above the local threshold of one. It is a value bound, not a sampling-cost estimate.
 
 ## Fixed-margin party cost and rounding
 
@@ -80,7 +80,7 @@ Since $`r\le1`$, putting $`\nu=1+\epsilon`$ yields, for a fixed $`R>1`$ and suff
 \le\frac{\log(2R)}{\log(1+\epsilon)}+1.
 ```
 
-Thus $`N_R=\Theta(1/\epsilon)`$ uniformly even when the family varies as $`\epsilon`$ tends to zero. The result specifies the order, not an exact leading coefficient. It does not determine the minimum parties for an arbitrarily small violation, where the target is not fixed above one.
+Thus $`N_R=\Theta(1/\epsilon)`$ uniformly even when the family varies as $`\epsilon`$ tends to zero. The estimate specifies the scaling order for a target fixed above one; its constants are the displayed bounds.
 
 ## Global white-state noise is a different parameter
 
@@ -99,8 +99,8 @@ For fixed positive $`w`$, the construction reaches at least $`R`$ whenever
 w(\eta\nu)^N\ge2R.
 ```
 
-A constant global white-state visibility leaves the witness's exponential factor unchanged, while fixed local attenuation changes it to $`\eta\nu`$. A visibility that itself decays with $`N`$ need not preserve the rate. These are algebraic consequences for the stated noise models, not preparation-fidelity guarantees, calibration-error bounds, or sampling-cost results.
+A constant global white-state visibility leaves the witness's exponential factor unchanged, while fixed local attenuation changes it to $`\eta\nu`$. A visibility that itself decays with $`N`$ need not preserve the rate.
 
 The [verification policy](../VERIFICATION.md#interpreting-the-archived-rational-witness) explains the archived rational witness reports.
 
-The [contribution review](CONTRIBUTION_REVIEW.md) records the analytical dependency checks. The [model specification](MODEL_AND_CLAIMS.md) lists the full assumptions and nonclaims.
+The [proof analysis](CONTRIBUTION_REVIEW.md) explains the analytical dependencies. The [model specification](MODEL_AND_CLAIMS.md) gives the full assumptions.

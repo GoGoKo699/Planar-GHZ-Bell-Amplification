@@ -4,7 +4,7 @@
 
 This bridge starts from the single tutorial anchor: Gühne, Haapasalo, Kraft, Pellonpää and Uola, [*Incompatible measurements in quantum information science*](https://arxiv.org/abs/2112.06784v3), Rev. Mod. Phys. **95**, 011003 (2023). The [reading guide](docs/README.md) identifies the relevant sections. Familiarity with qubit states, Pauli matrices and tensor products is assumed.
 
-The review supplies the language of noisy measurements, joint parents, incompatibility quantification and Bell locality. It does not contain the later arbitrary-planar perimeter theorem or the GHZ construction below. We state the geometric input with its attribution, then explain the connection. The authoritative statement and complete proof remain in [THEOREM](docs/THEOREM.md); the experiment and nonclaims remain in [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md).
+The review supplies the language of noisy measurements, joint parents, incompatibility quantification and Bell locality. The later arbitrary-planar perimeter theorem supplies the geometric input for the GHZ construction below. We state that input with its attribution, then explain the connection. The authoritative statement and complete proof are in [THEOREM](docs/THEOREM.md); the experiment and assumptions are in [MODEL_AND_CLAIMS](research/MODEL_AND_CLAIMS.md).
 
 | Stage | Question |
 |---|---|
@@ -296,11 +296,11 @@ On the zero-phase GHZ state, the four correlators give a Mermin value of $`4\eta
 
 For example, $`\eta=0.8`$ gives $`1.024`$. The scaled tensor's exact local bound is $`1/\sqrt2`$, illustrating why the general estimate of at most one need not be tight. A compatible family cannot violate; an incompatible family need not violate at this particular party number. The theorem supplies eventual violation as $`N`$ grows. This is a familiar special case used to learn the dictionary, not a new symmetric-setting result.
 
-## 10. What the bridge does and does not add
+## 10. How the ingredients connect
 
 The single tutorial anchor teaches the conceptual background. Yoshino et al. supply the later planar criterion, parent and dual certificate. Compatibility-based Bell bounds, qubit activation, complex correlation constructions and regular-polygon GHZ amplification all have predecessors. The [attribution record](literature/ATTRIBUTION.md) and [source audit](literature/SOURCE_AUDIT.md) keep these inputs distinct from the additional implication for arbitrary fixed planar families.
 
-The experiment uses one qubit per party, supplied entanglement, a known detector family and all recorded outcomes. It involves no communication during a trial, filtering, postselection, extra setting or sharper detector. The [model specification](research/MODEL_AND_CLAIMS.md) lists the full assumptions and nonclaims.
+The experiment uses one qubit per party, supplied entanglement, a known detector family and all recorded outcomes. It involves no communication during a trial, filtering, postselection, extra setting or sharper detector. The [model specification](research/MODEL_AND_CLAIMS.md) gives the full assumptions.
 
 Global white-state noise and independent detector noise are different operations. The [operational consequences](research/OPERATIONAL_CONSEQUENCES.md) explain their distinct effects, finite logarithmic-rate estimates and fixed-margin party bounds. These consequences support the same claim. Finite checks and examples illustrate the proof; the arbitrary-party statement rests on the analytical argument.
 

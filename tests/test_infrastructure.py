@@ -243,11 +243,12 @@ class InfrastructureTests(unittest.TestCase):
         )[0].strip()
         self.assertEqual(view_bibliography, bibliography)
         for boundary in (
-            'No new compatibility theorem, experimental performance, or exhaustive priority certificate is claimed.',
+            'The geometric norm, its perimeter formula, and its optimal certificates are due to Yoshino and collaborators [Y26].',
             'No communication during the trial, postselection, privileged sharper detector, filtering, or multiple sequential uses at a site is added.',
             'State and Bell-functional design use the known family and its plane; the result is not an uncalibrated device-construction procedure.',
             'This is a comparison of normalized Bell values, not their excess above one, not sample complexity, and not a statement of exact finite-N optimum.',
-            'Biased or noncoplanar measurements, detector no-click models, exact finite-N Bell optima, genuine multipartite nonlocality, self-testing, cryptographic rates and efficient statistical certification are not claimed and are not automatic prerequisites.',
+            'The result concerns full-correlation Bell values for the fixed unbiased binary coplanar measurements defined in Section 1.',
+            'It determines their optimal exponential rate, with finite-party values bounded as in (2).',
         ):
             self.assertIn(renderer.inline_prose(boundary), view)
         self.assertIn('The 13-party and 25-party values have exact certificates.', view)

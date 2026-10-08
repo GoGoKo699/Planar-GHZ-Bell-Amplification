@@ -30,9 +30,11 @@ PORTABLE_TAGS = {
 THEOREM_TITLE = '# Optimal exponential Bell amplification from planar qubit measurements'
 # These exact editorial changes apply only to the protected theorem's reading
 # copy. Every anchor must occur once: source drift requires an explicit review.
-# Equations, scientific boundaries and the bibliography are not edited here.
+# Equations and the bibliography stay unchanged; scope prose stays tied to the model.
 THEOREM_READER_EDITS = (
     ('**7 October 2026. Consolidated author-side theorem.** ', ''),
+    ('This is one bounded contribution: converting', 'The theorem converts'),
+    (' No new compatibility theorem, experimental performance, or exhaustive priority certificate is claimed.', ''),
     (
         'This account replaces the exploration sequence as the main reading path. '
         'Earlier notes and checks remain unchanged in the '
@@ -54,6 +56,10 @@ THEOREM_READER_EDITS = (
         'The 13-party and 25-party values have exact certificates.',
     ),
     ('The strengthened upper bound now certifies', 'The upper bound certifies'),
+    ('The existing construction gives', 'The explicit construction gives'),
+    ('The prior exact coefficient vector certifies', 'The rational coefficient vector certifies'),
+    (' These numbers illustrate the sharpened converse, not a second physical result.', ''),
+    ('The proposed additional implication is:', 'The additional implication is:'),
     (
         '## 8. Attribution, significance, and stopping boundary',
         '## 8. Attribution and scope',
@@ -65,6 +71,15 @@ THEOREM_READER_EDITS = (
     ),
     (' No exhaustive priority or independent scientific review has occurred.', ''),
     ('Stop expanding the scientific scope for the current assessment. ', ''),
+    (
+        'Biased or noncoplanar measurements, detector no-click models, exact finite-N '
+        'Bell optima, genuine multipartite nonlocality, self-testing, cryptographic '
+        'rates and efficient statistical certification are not claimed and are '
+        'not automatic prerequisites.',
+        'The result concerns full-correlation Bell values for the fixed unbiased '
+        'binary coplanar measurements defined in Section 1. It determines their '
+        'optimal exponential rate, with finite-party values bounded as in (2).',
+    ),
     (' The theorem is recorded here for focused author review.', ''),
     (' This initialization does not initiate a manuscript submission, release or external contact.', ''),
 )

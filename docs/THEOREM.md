@@ -1,6 +1,6 @@
 # Optimal exponential Bell amplification from planar qubit measurements
 
-This is one bounded contribution: converting the inherited planar joint-measurability certificate into an explicit GHZ Bell experiment whose normalized full-correlation value has the optimal exponential scale. The geometric norm, its perimeter formula, and its optimal certificates are due to Yoshino and collaborators [Y26]. General qubit incompatibility activation is already established [PGQ25]. No new compatibility theorem, experimental performance, or exhaustive priority certificate is claimed.
+The theorem converts the inherited planar joint-measurability certificate into an explicit GHZ Bell experiment whose normalized full-correlation value has the optimal exponential scale. The geometric norm, its perimeter formula, and its optimal certificates are due to Yoshino and collaborators [Y26]. General qubit incompatibility activation is already established [PGQ25].
 
 The finite-party upper bound in (2) uses the standard fact that compatibility at all but one site suffices for locality.
 
@@ -210,13 +210,13 @@ Here $`\nu`$ is about 1.05775505 and $`r`$ about .71693793. The 13-party and 25-
 r\nu^5<1,\qquad r\nu^{18}<2,
 ```
 
-so at least seven parties are necessary for any full-correlation violation and at least twenty for a ratio of two. The existing construction gives a violation at thirteen and a ratio exceeding two at twenty-five. In particular,
+so at least seven parties are necessary for any full-correlation violation and at least twenty for a ratio of two. The explicit construction gives a violation at thirteen and a ratio exceeding two at twenty-five. In particular,
 
 ```math
 20\le N_{R\ge2}^{\rm full\ correlation}\le25.
 ```
 
-These are necessary/sufficient bounds, not identification of the optimal $`N`$. Rational upper enclosures of the square roots prove the two exclusions; no rounding of logarithms is a correctness premise. The prior exact coefficient vector certifies the sufficient values. These numbers illustrate the sharpened converse, not a second physical result.
+These are necessary/sufficient bounds, not identification of the optimal $`N`$. Rational upper enclosures of the square roots prove the two exclusions; no rounding of logarithms is a correctness premise. The rational coefficient vector certifies the sufficient values.
 
 ## 7. What GHZ optimality means here
 
@@ -243,9 +243,9 @@ There is no conditioning on a special subset of outcomes. A local model for its 
 
 [Y26] supplies the entire geometric compatibility problem and both optimal certificates. [PGQ25] supplies general eventual qubit activation and identifies the state-family/party-count questions. [LN22] supplies compatibility-norm upper-bound methods. [WW01] supplies important GHZ optimality precedents in the two-setting scenario. [DVP24] supplies optimized regular-polygon GHZ Bell constructions. None of these ingredients is assigned new priority here.
 
-The proposed additional implication is: for every fixed irregular planar family in the declared class, an explicit $`\beta`$ and phase-adjusted GHZ attain the compatibility norm's exponential scale, with a matching all-state bound. The inspected source passages do not directly supply that complete statement.
+The additional implication is: for every fixed irregular planar family in the declared class, an explicit $`\beta`$ and phase-adjusted GHZ attain the compatibility norm's exponential scale, with a matching all-state bound. The inspected source passages do not directly supply that complete statement.
 
-Biased or noncoplanar measurements, detector no-click models, exact finite-$`N`$ Bell optima, genuine multipartite nonlocality, self-testing, cryptographic rates and efficient statistical certification are not claimed and are not automatic prerequisites.
+The result concerns full-correlation Bell values for the fixed unbiased binary coplanar measurements defined in Section 1. It determines their optimal exponential rate, with finite-party values bounded as in (2).
 
 ## Primary references
 

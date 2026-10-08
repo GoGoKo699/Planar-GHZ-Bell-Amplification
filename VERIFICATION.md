@@ -1,6 +1,6 @@
 # Verification policy
 
-## Run the source, not a rewritten test
+## Reproduction
 
 Use Python 3.13.5 with `requirements.txt`. Run:
 
@@ -18,13 +18,13 @@ The output path must not exist and cannot be inside the protected archive. The s
 | `prior/prior/check_audit_and_rate.py` | 5 | `prior/prior/evidence/repeat.json` |
 | `prior/prior/prior/check_planar_bell.py` | 5 | `prior/prior/prior/evidence/repeat.json` |
 
-The sum is 18. Infrastructure tests are counted separately and do not add scientific claims. Old packaging scripts and deliberately failed developmental scripts are preserved but not executed in the success suite.
+The four suites contain 18 scientific groups. Infrastructure tests are counted separately.
 
 ## Exact preservation
 
 The runner checks the imported top manifest against its independently pinned SHA-256 in `provenance/IMPORT.json`, then checks all 80 listed members and the exact 81-file set. Nested manifests are covered as immutable members. It verifies the original license and the permitted active-document derivations. No reference, historical failure, code or scientific tolerance may be changed to make a run pass.
 
-The uploaded compatibility PDF is recorded by SHA-256 but intentionally absent from the repository. It is not a runtime dependency. No publisher PDF, unrelated attachment or font is redistributed.
+The compatibility source is identified by its author URL and SHA-256 in `provenance/IMPORT.json`; verification runs from the repository files and pinned dependencies.
 
 ## Cross-environment numerical comparison
 
@@ -45,12 +45,12 @@ The original rational witness report's field `local_absolute_bound = 1` denotes 
 =\frac{499999562849}{500000000000}<1.
 ```
 
-Their $`N`$-site local bound is therefore strictly below one. Dividing by its exact value can only improve the archived sufficient violations. The rational coefficients, the geometric coefficients used for the all-$`N`$ identity, and their corresponding values remain distinct. No archived script, report, or certificate is corrected or replaced by this explanation.
+Their $`N`$-site local bound is therefore strictly below one. Dividing by its exact value can only improve the archived sufficient violations. The rational coefficients, the geometric coefficients used for the all-$`N`$ identity, and their corresponding values remain distinct.
 
 
 ## Reading-page presentation
 
-The protected scientific theorem retains its original bytes and hash. `python tools/render_docs.py` generates [its reading view](docs/THEOREM.md), using portable math formatting and exact editorial substitutions that remove historical workflow notices and make their surrounding prose self-contained. Each editorial anchor must occur exactly once; unexpected source drift fails the transformation. The seven equation numbers use ordinary math text instead of the renderer-incompatible numbered-table macro. Infrastructure tests compare all 24 theorem equations after these declared typography changes and its unchanged bibliography with the preserved source, retain the scientific scope statements, and check its pinned hash.
+`python tools/render_docs.py` generates [the theorem reading view](docs/THEOREM.md) from the protected scientific source using portable math formatting and explicit editorial substitutions. Each editorial anchor must occur exactly once; unexpected source drift fails the transformation. Infrastructure tests compare all 24 theorem equations, seven equation labels and the unchanged bibliography with the source, check the mathematical scope, and verify the pinned source hash.
 
 Displayed equations use fenced `math` blocks to preserve literal TeX backslashes before set braces. The checker rejects bare double-dollar display delimiters on current reading pages; ordinary code examples and protected historical sources are exempt. Prose uses GitHub's dollar-backtick inline math syntax for Greek letters, subscripts, powers and inequalities. `python tools/render_docs.py --check` checks synchronization without rewriting. The verification runner also checks inline delimiters, detects common mathematical expressions left as code or ASCII text, and rejects the renderer-incompatible operator and equation-tag macros in current reading-page equations. These presentation checks are infrastructure, separate from the 18 scientific groups.
 

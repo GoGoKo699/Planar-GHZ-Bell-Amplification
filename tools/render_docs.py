@@ -11,7 +11,7 @@ INLINE_MATH = re.compile(r'\$`([^`\n]+)`\$')
 CODE_FENCE = re.compile(r'^```[^\n]*\n.*?^```\s*$', re.M | re.S)
 FENCE_LINE = re.compile(r'^[ ]{0,3}(`{3,}|~{3,})(.*)$')
 READER_PATHS = (
-    'README.md', 'REVIEW.md', 'docs/THEOREM.md', 'docs/README.md',
+    'README.md', 'REVIEW.md', 'VERIFICATION.md', 'docs/THEOREM.md', 'docs/README.md',
     'research/MODEL_AND_CLAIMS.md', 'research/OPERATIONAL_CONSEQUENCES.md',
     'research/CONTRIBUTION_REVIEW.md', 'literature/SOURCE_AUDIT.md',
     'literature/ATTRIBUTION.md',

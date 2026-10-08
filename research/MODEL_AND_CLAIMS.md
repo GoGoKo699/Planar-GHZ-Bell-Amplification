@@ -1,4 +1,4 @@
-# Model and claim hierarchy
+# Model and claims
 
 ## Fixed experiment
 
@@ -10,7 +10,7 @@ The Bell objective is the absolute full-correlation value divided by its exact l
 
 For $`\nu=\mathrm{perimeter}(\mathrm{conv}\{\pm\mathbf a_x\})/4`$ and $`r=\max_x\|\mathbf a_x\|`$, the [theorem](../docs/THEOREM.md) constructs Bell coefficients and a phase-adjusted canonical GHZ state with value at least $`\nu^N/2`$, while every state and full-correlation tensor obeys the ceiling $`r\nu^{N-1}`$. Their Nth-root limits equal $`\nu`$.
 
-This gives constructive GHZ activation whenever $`\nu>1`$, the exact asymptotic amplification factor, and necessary/sufficient finite-party bounds for a fixed violation margin. Those are consequences of one connection, not separate proposed discoveries. The zero and collinear cases are explicit in the theorem.
+This gives constructive GHZ activation whenever $`\nu>1`$, the exact asymptotic amplification factor, and necessary/sufficient finite-party bounds for a fixed violation margin. The zero and collinear cases are explicit in the theorem.
 
 ## Inherited inputs
 
@@ -22,8 +22,4 @@ Finite exact arithmetic certifies selected Bell witnesses and party bounds. Smal
 
 The chosen GHZ state maximizes our constructed functional. It need not maximize an arbitrary fixed planar functional: another complementary-bitstring block may be optimal. All-state exponential optimality is not exact finite-party optimality.
 
-## Explicit nonclaims
-
-No exact smallest party count for an arbitrarily small violation; no theorem for biased/noncoplanar POVMs or arbitrary marginal terms; no genuine $`N`$-party nonlocality, entanglement-depth bound, self-testing, cryptographic rate, finite-sample efficiency, detector no-click robustness, or implemented GHZ preparation. Global white-state noise is not independent detector noise. The pure full-correlation behavior is normalized and involves no postselection.
-
-No external independent proof review, exhaustive priority clearance or external acceptance has occurred. The [contribution review](CONTRIBUTION_REVIEW.md), [source audit](../literature/SOURCE_AUDIT.md) and [operational consequences](OPERATIONAL_CONSEQUENCES.md) document internal proof scrutiny, predecessor comparisons and operational interpretation.
+The finite-party bounds concern a target ratio fixed above one. The [operational consequences](OPERATIONAL_CONSEQUENCES.md) give their precise rounding and distinguish global white-state visibility from independent detector attenuation. The [proof analysis](CONTRIBUTION_REVIEW.md) and [source comparison](../literature/SOURCE_AUDIT.md) explain the construction's dependencies.

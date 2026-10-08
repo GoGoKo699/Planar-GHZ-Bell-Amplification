@@ -19,7 +19,7 @@ Consult this repository for questions about:
 
 Useful search phrases: planar qubit incompatibility GHZ activation; fixed detector Bell amplification; polygon perimeter joint measurability; arbitrary irregular planar POVMs; unequal sharpness GHZ Bell inequalities; optimal exponential full-correlation Bell rate; complex dual certificate Bell tensor.
 
-## Result and boundaries
+## Result and model
 
 For K = conv{+/- a_x}, nu = perimeter(K)/4 and r = max ||a_x||, the theorem proves
 nu^N/2 <= R_N^GHZ <= R_N <= r nu^(N-1) <= nu^N for N >= 2 and a nonzero family.
@@ -28,27 +28,25 @@ origin-centered plane, identical at each party. The Bell objective uses full
 correlations and the exact local absolute bound; ratios are not floored at one.
 The zero and collinear cases are treated separately.
 
-The result gives all-state exponential optimality, not exact finite-party optimality.
-The selected GHZ state maximizes the constructed functional, not every planar Bell
-operator. It does not establish genuine multipartite nonlocality, entanglement depth,
-self-testing, cryptographic rates, sampling efficiency, detector no-click robustness
-or implemented state preparation. Biased/noncoplanar measurements and arbitrary
-marginal-containing Bell expressions are outside scope. No communication during a
-trial, postselection, filtering or extra sharper settings is supplied. State and
-inequality design know the fixed family and its plane. Global white-state visibility
-and independent detector noise must not be conflated.
+The result determines the optimal exponential factor and bounds finite-party values.
+The selected GHZ state maximizes the constructed functional; an arbitrary planar
+Bell operator can instead be maximized in another complementary-bitstring block.
+Party-cost estimates use a target ratio fixed above one. The bounds concern Bell
+values, not sampling costs. All outcomes are retained, with no communication during
+a trial, postselection, filtering or extra sharper settings. State and inequality
+design know the fixed family and its plane. Global white-state visibility and
+independent detector attenuation have the distinct effects stated in the noise model.
 
 ## Learning and authoritative reading order
 
 - [Project overview](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/README.md): physical question, theorem, mechanism and limits.
 - [Reading guide](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/docs/README.md): selected sections of the one external tutorial and repository map.
 - [Tutorial-to-theorem bridge](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/REVIEW.md): definitions, local calculations, noisy orthogonal example and proof connections.
-- [Model and claims](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/MODEL_AND_CLAIMS.md): authoritative resources, normalization and nonclaims.
+- [Model and claims](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/MODEL_AND_CLAIMS.md): authoritative resources, assumptions and normalization.
 - [Theorem and proof](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/docs/THEOREM.md): display-safe reading view of the authoritative construction, converse, degeneracies and party bounds.
-- [Preserved theorem source](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/THEOREM.md): protected scientific record, also checked against the reading view.
 - [Operational consequences](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/OPERATIONAL_CONSEQUENCES.md): finite rate, party costs and noise.
 - [Source audit](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/SOURCE_AUDIT.md) and [attribution](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/literature/ATTRIBUTION.md): inherited inputs and bounded predecessor comparison.
-- [Proof review](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/CONTRIBUTION_REVIEW.md): proof obligations and predecessor boundaries.
+- [Proof analysis](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/research/CONTRIBUTION_REVIEW.md): proof dependencies and relation to predecessors.
 - [Verification policy](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/VERIFICATION.md): what the checks establish, archived-certificate interpretation and exact-revision evidence.
 
 ## Tutorial and attribution
@@ -63,20 +61,9 @@ not additional tutorial prerequisites.
 Yoshino et al. supply the entire planar compatibility geometry, parent and optimal
 dual certificate. General qubit incompatibility activation and complex GHZ methods
 are inherited. Nagata-Laskowski-Paterek (2006) already give the regular-polygon
-exponent for every setting count. Do not claim a new compatibility theorem, generic
-GHZ-optimality principle or regular-polygon exponent. The retained implication is
-the fixed arbitrary-planar conversion plus its matching all-state rate.
-
-The archive is historical evidence, not the current claim or task queue. Internal
-finite checks are not independent proof review, exhaustive priority clearance or
-apparatus validation. Consult the canonical theorem and source audit before quoting
-a historical statement.
-
-## Repository work
-
-- [Instructions](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/AGENTS.md)
-- [Workspace](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/WORKSPACE.md)
-- [Historical archive](https://github.com/GoGoKo699/Planar-GHZ-Bell-Amplification/blob/main/archive/README.md)
+exponent for every setting count. Attribute these inputs to their primary sources.
+The additional implication is the fixed arbitrary-planar conversion plus its matching
+all-state rate. Use the theorem and source comparison above when describing it.
 
 ## Purpose and contact
 

@@ -1,6 +1,6 @@
-# Fixed-family source audit
+# Fixed-family source comparison
 
-This primary-source comparison explains the regular-polygon predecessors and the boundary of the arbitrary fixed-family [claim](../research/MODEL_AND_CLAIMS.md). [ATTRIBUTION](ATTRIBUTION.md) records inherited inputs and source-reading limits; the [proof review](../research/CONTRIBUTION_REVIEW.md) examines the construction and converse.
+This primary-source comparison explains the regular-polygon predecessors and their relation to the arbitrary fixed-family [theorem](../docs/THEOREM.md). [ATTRIBUTION](ATTRIBUTION.md) identifies inherited inputs; the [proof analysis](../research/CONTRIBUTION_REVIEW.md) explains the construction and converse.
 
 ## Regular-polygon amplification was already known for every setting count
 
@@ -10,7 +10,7 @@ Nagata, Laskowski and Paterek, [*Bell inequality with an arbitrary number of set
 V(N,M)=\frac{[M\sin(\pi/(2M))]^N}{2\cos(\pi/(2M))},\qquad M\ge2.
 ```
 
-Equations (6)-(7), (17), (22) and (24) specify the regular settings, absolute local bound, GHZ value and Bell spectrum. The accessible [unversioned primary PDF](https://arxiv.org/pdf/quant-ph/0601107) identifies v2, 31 October 2006 in its arXiv header. Versioned PDF/HTML retrieval failures are not negative evidence.
+Equations (6)-(7), (17), (22) and (24) specify the regular settings, absolute local bound, GHZ value and Bell spectrum. The comparison uses v2, dated 31 October 2006.
 
 The following comparison to detectors fixed as $`N`$ varies is our derivation. Put $`\theta_m=\pi m/M`$ and rename the source's parity parameter as
 
@@ -29,9 +29,9 @@ L_N=\csc(\alpha)^N\cos\alpha,\qquad
 =\frac{\mathrm{perimeter}(K_M)}4.
 ```
 
-Common sharpness $`t`$ multiplies each full correlator by $`t^N`$, giving root rate $`tM\sin\alpha`$. The fixed-detector phase absorption and this noise translation are elementary inferences made here. No new priority is assigned to the regular-polygon exponent, its uniformly noisy version, or the complex product method. The paper's communication-complexity applications are not transferred to the present theorem.
+Common sharpness $`t`$ multiplies each full correlator by $`t^N`$, giving root rate $`tM\sin\alpha`$. The fixed-detector phase absorption and this noise translation are elementary consequences of the cited construction.
 
-## The precise remaining implication
+## The arbitrary-family implication
 
 The current theorem takes any prescribed finite unbiased binary coplanar qubit family, including irregular directions and unequal sharpness, converts its inherited optimal planar certificate into explicit real Bell coefficients and a phase-adjusted canonical GHZ state, and compares it with every state and full-correlation functional:
 
@@ -40,7 +40,7 @@ The current theorem takes any prescribed finite unbiased binary coplanar qubit f
 \le r\nu^{N-1}.
 ```
 
-No inspected passage supplies this complete arbitrary-family implication. The geometric classification, general activation theorem, compatibility-bound principle and complex GHZ algebra are inherited. The bridge is short, so the result should be assessed as a uniform constructive and quantitative consequence, without treating known amplification as a newly discovered phenomenon.
+The geometric classification, general activation theorem, compatibility-bound principle and complex GHZ algebra are inherited. Their connection gives a uniform constructive and quantitative statement for arbitrary fixed planar families.
 
 ## Dependency and subsumption comparisons
 
@@ -51,8 +51,8 @@ No inspected passage supplies this complete arbitrary-family implication. The ge
 | Loulidi-Nechita, [2205.12668v2](https://arxiv.org/html/2205.12668v2), Definition 6.1 and Theorems 8.1-8.2 | Supplies compatibility/Bell norm comparisons with Alice's family fixed and Bob optimized in a bipartite task. The current task repeats the same prescribed family at every site. |
 | Werner-Wolf, [quant-ph/0102024](https://arxiv.org/pdf/quant-ph/0102024), Sections V.D and VII | Supplies GHZ extremality with suitably chosen observables in the two-setting full-correlation scenario. It does not specify an arbitrary prescribed many-setting noisy family. |
 | Nagata-Laskowski-Paterek, [quant-ph/0601107v2](https://arxiv.org/abs/quant-ph/0601107v2), Eqs. (6)-(7), (17), (22), (24), (38) | Supplies the all-setting-count regular-polygon rate above. The irregular unequal-sharpness certificate conversion and its matching all-state converse are not stated in the inspected argument. |
-| Designolle-Vertesi-Pokutta, [2310.20677v3](https://arxiv.org/html/2310.20677v3), Section IX.A, Eqs. (34)-(35), with comparison to [v2](https://arxiv.org/html/2310.20677v2) | Supplies optimized symmetric constructions and the four-setting special-case exponent. These formulas are unchanged in v3. The surrounding recurrence is corrected to $`L_{N+4}=8(L_{N+2}-L_N)`$ with $`L_{2n}=4L_{2n-1}`$. The versions are not claimed identical. No superiority in finite-party constants, detection efficiency or statistical cost is asserted. |
+| Designolle-Vertesi-Pokutta, [2310.20677v3](https://arxiv.org/html/2310.20677v3), Section IX.A, Eqs. (34)-(35), with comparison to [v2](https://arxiv.org/html/2310.20677v2) | Supplies optimized symmetric constructions and the four-setting special-case exponent. These formulas are unchanged in v3. The surrounding recurrence is corrected to $`L_{N+4}=8(L_{N+2}-L_N)`$ with $`L_{2n}=4L_{2n-1}`$. |
 | Salles et al., [1002.1893](https://arxiv.org/abs/1002.1893), Section 6.2, Proposition 10 | Multilinear contractions recover linear correlation Bell inequalities. That generic framework is inherited; the inspected passage does not identify the optimal geometric certificate or perimeter rate for every prescribed irregular noisy planar family. |
 | Karczewski et al., [2202.06606](https://arxiv.org/abs/2202.06606), Sections 4.1-4.2, especially Eqs. (15)-(16) | Supplies complex tensor coefficient constructions and broader setting/outcome frameworks. The product-complex method receives no new-priority framing; the specific optimal certificate conversion is the comparison point. |
 
-The comparisons use the listed primary passages and the reading boundaries in [ATTRIBUTION](ATTRIBUTION.md) and the [historical source records](../archive/README.md). No directly covering theorem was found in those passages. Failed retrievals and irrelevant search results are not evidence of absence; the comparison does not certify priority against all literature.
+The comparison is restricted to the listed primary passages and their stated measurement and optimization settings.

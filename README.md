@@ -95,17 +95,15 @@ The additional implication is the conversion of **every fixed planar family** in
 
 ## One finite-party illustration
 
-For the retained irregular three-setting family in [Section 6](docs/THEOREM.md#6-a-fixed-violation-margin-and-an-exact-example), any full-correlation Bell/local ratio of at least two requires at least **20 parties**, while the existing **25-party GHZ witness** exceeds two. These are necessary and sufficient bounds, not an exact minimum. The example illustrates the theorem; the arbitrary-party result rests on its analytical proof.
+For the irregular three-setting family in [Section 6](docs/THEOREM.md#6-a-fixed-violation-margin-and-an-exact-example), any full-correlation Bell/local ratio of at least two requires at least **20 parties**, while the **25-party GHZ witness** exceeds two. These are necessary and sufficient bounds, not an exact minimum. The example illustrates the theorem; the arbitrary-party result rests on its analytical proof.
 
 ## Scope and reading map
 
 The state is supplied before the measurement choices. Every outcome is retained, with no communication during a trial, postselection, filtering, extra setting or sharper detector. State and inequality design use the known measurement family and plane.
 
-The [model specification](research/MODEL_AND_CLAIMS.md) lists the full assumptions and nonclaims. The result does not establish exact finite-party optimality or genuine multipartite nonlocality. Global white-state noise and independent detector noise are distinct. Internal checks do not establish external independent proof review or exhaustive priority clearance.
+The [model specification](research/MODEL_AND_CLAIMS.md) gives the assumptions and normalization. The [operational consequences](research/OPERATIONAL_CONSEQUENCES.md) distinguish global white-state noise from independent detector noise and give finite-party bounds for a fixed violation margin.
 
 The [reading guide](docs/README.md#repository-map) locates the proof, operational consequences, source comparisons and verification policy. The [LLM guide](llms.txt) gives relevant research questions, search terms and the authoritative reading order.
-
-Historical derivations, original reports and failed attempts are preserved in the [archive](archive/README.md).
 
 ## Evidence and reproduction
 

@@ -181,7 +181,7 @@ def main() -> int:
         lines.append(f"| {row['name']} | {row['groups']} | {row['byte_identical']} | {row['changed_fields']} |")
     if 'error' in summary:
         lines.extend(['', 'Error: '+summary['error']])
-    lines.extend(['', 'Finite checks and source preservation are not independent proof review or a priority certificate.', ''])
+    lines.extend(['', 'Finite suites verify selected witnesses and numerical examples. The all-party result follows from the analytical theorem.', ''])
     (out/'SUMMARY.md').write_text('\n'.join(lines))
     return 0 if summary['status'] == 'PASS' else 1
 

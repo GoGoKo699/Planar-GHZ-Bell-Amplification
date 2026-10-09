@@ -1,6 +1,6 @@
 # Operational consequences
 
-These consequences follow from [THEOREM](../docs/THEOREM.md) for the same fixed, finite, unbiased binary coplanar qubit family and full-correlation objective.
+These consequences follow from [THEOREM](../docs/THEOREM.md) for the same fixed, finite, unbiased binary coplanar qubit family. Bell-value bounds use its full-correlation objective.
 
 ## What the geometric quantity measures
 
@@ -28,6 +28,74 @@ The maximal compatible depolarizing visibility is
 ```
 
 For the zero family it is one. For an originally incompatible family, eventual GHZ activation under this attenuation occurs exactly when $`\eta\nu>1`$; equality is compatible. Thus the optimal exponential factor is $`\eta\nu`$. This is a uniform, unbiased outcome-noise model, not a no-click or detection-efficiency model. Under the convention $`(M+tI/2)/(1+t)`$, the white-noise mixing ratio required for compatibility is $`\max\{0,\nu-1\}`$. Neither this number nor $`\nu`$ is assigned the meaning of arbitrary-noise robustness.
+
+## Finite-party convergence of Bell-locality visibility
+
+Fix an incompatible family from above, so $`\nu>1`$ and $`\eta_{\rm JM}=1/\nu`$, and let $`N\ge2`$. Every site uses the same prescribed measurements with uniform local attenuation:
+
+```math
+M^{(\eta)}_{s|x}=\frac{I+s\eta A_x}{2}
+=\eta M_{s|x}+(1-\eta)\frac I2,
+\qquad 0\le\eta\le1.
+```
+
+For an $`N`$-qubit state $`\rho`$, the complete behavior is
+
+```math
+p_{\rho,\eta}(\mathbf s|\mathbf x)
+=\mathrm{tr}\!\left[\rho\bigotimes_{j=1}^N M^{(\eta)}_{s_j|x_j}\right].
+```
+
+Define two thresholds, keeping the family, settings and party number fixed:
+
+- $`\eta_N^{\mathrm{Bell}}`$ is the supremum of $`\eta\in[0,1]`$ for which $`p_{\rho,\eta}`$ is Bell local for **every** $`N`$-qubit state. This tests arbitrary Bell inequalities, including marginal terms.
+- $`\eta_N^{\mathrm{fc}}`$ is the supremum of $`\eta\in[0,1]`$ for which **no** $`N`$-qubit state violates any full-correlation Bell inequality. It tests locality of the full-correlation tensor alone.
+
+Reducing a positive $`\eta`$ to $`\eta'\le\eta`$ is independent local output processing: keep an outcome with probability $`\eta'/\eta`$, otherwise replace it by a fair random sign. At zero visibility all outputs are uniform. Locality is preserved in both cases, so the admissible visibilities form intervals starting at zero. The finite-setting local polytopes are closed, and the probabilities depend continuously on visibility; intersecting over all states includes each threshold endpoint. Complete-behavior locality implies full-correlation locality, hence $`\eta_N^{\mathrm{Bell}}\le\eta_N^{\mathrm{fc}}`$.
+
+**Complete behavior.** For every $`N\ge2`$,
+
+```math
+\frac1\nu\le\eta_N^{\mathrm{Bell}}
+\le\min\left\{1,\frac{2^{1/N}}\nu\right\}.
+```
+
+At $`\eta\le1/\nu`$, joint parents give locality for every state. At $`\eta>2^{1/N}/\nu`$, the explicit GHZ construction in [theorem Eq. (2)](../docs/THEOREM.md#2-the-theorem), together with exact attenuation, gives a normalized full-correlation value at least $`(\eta\nu)^N/2>1`$. This also witnesses nonlocality of the complete behavior. Equality of that lower bound to one does not establish violation. If $`2^{1/N}/\nu\ge1`$, the upper bound is the physical endpoint one. Consequently,
+
+```math
+0\le\frac{\eta_N^{\mathrm{Bell}}}{\eta_{\rm JM}}-1
+\le 2^{1/N}-1
+=\frac{\ln2}{N}+O(N^{-2}).
+```
+
+This is an explicit relative $`O(1/N)`$ upper bound on the gap, rather than an exact finite-party threshold or asymptotic coefficient. The complete-behavior convergence is due to Plávala–Gühne–Quintino, Definition 5 and Corollary 6; the [source comparison](../literature/SOURCE_AUDIT.md#visibility-threshold-comparison) matches the conventions.
+
+**Full correlations.** The theorem's $`\mathcal R_N(A)`$ optimizes over all states and nonzero real full-correlation functionals, using the exact local absolute bound without flooring the ratio at one. The full-correlation local polytope is centrally symmetric: flipping every output at one site negates its tensor. Thus its supporting inequalities are precisely those absolute local bounds. All states satisfy them exactly when $`\eta^N\mathcal R_N(A)\le1`$, by the attenuation identity above. Since $`\mathcal R_N(A)>0`$,
+
+```math
+\eta_N^{\mathrm{fc}}
+=\min\left\{1,\mathcal R_N(A)^{-1/N}\right\}.
+```
+
+Taking reciprocal Nth roots in theorem Eq. (2) reverses the inequalities and gives
+
+```math
+\min\left\{1,\frac{(\nu/r)^{1/N}}\nu\right\}
+\le\eta_N^{\mathrm{fc}}
+\le\min\left\{1,\frac{2^{1/N}}\nu\right\}.
+```
+
+For each **fixed** incompatible family, sufficiently large $`N`$ makes both clipped expressions smaller than one. Then
+
+```math
+\frac{(\nu/r)^{1/N}-1}{\nu}
+\le\eta_N^{\mathrm{fc}}-\eta_{\rm JM}
+\le\frac{2^{1/N}-1}{\nu}.
+```
+
+Because $`\nu>1`$ and $`0<r\le1`$, the constant $`\ln(\nu/r)`$ is positive. Expanding the exponentials proves $`\eta_N^{\mathrm{fc}}-\eta_{\rm JM}=\Theta(1/N)`$ for that fixed family; the bounds do not determine the exact leading coefficient. This quantifier keeps the family independent of $`N`$.
+
+The positive lower gap applies only to full correlations. Attenuation scales a $`k`$-party marginal correlator by $`\eta^k`$, so an arbitrary Bell expression with marginal terms need not scale by $`\eta^N`$ and may detect nonlocality earlier. Complete behavior has the $`O(1/N)`$ upper gap above; full correlations have the fixed-family $`\Theta(1/N)`$ gap.
 
 ## A finite bound on the logarithmic rate
 
